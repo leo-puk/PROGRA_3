@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechShopper</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #d1b9d8;
+            width: 250px;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .sidebar h1 {
+                font-family: 'Comic Sans MS', cursive;
+                font-size: 24px;
+                margin-bottom: 40px;
+            }
+
+        .nav-link {
+            padding: 10px 0;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid purple;
+            margin-bottom: 10px;
+        }
+
+            .nav-link:last-child {
+                border-bottom: none;
+            }
+
+        /* Main content */
+        .main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #d1b9d8;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+            .header h2 {
+                margin: 0;
+            }
+
+        .user-icon {
+            background-color: #ccc;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+            .content h1 {
+                font-size: 32px;
+            }
+
+            .content p {
+                font-size: 18px;
+                line-height: 1.6;
+                max-width: 800px;
+            }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1>TechShopper</h1>
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Productos</a>
+        <a href="#" class="nav-link">Empresa</a>
+        <a href="#" class="nav-link">Dashboard</a>
+        <a href="#" class="nav-link">Reporte Ventas</a>
+        <a href="#" class="nav-link">Gestión de ventas</a>
+    </div>
+
+    <div class="main">
+        <div class="header">
+            <h2>Home</h2>
+            <div class="user-icon">👤</div>
+        </div>
+
+        <div class="content">
+            <h1>¡Bienvenido a TechShopper!</h1>
+            <p>
+                Tu punto de partida para una experiencia de compra tecnológica más simple, rápida y organizada.
+                Nuestra plataforma está diseñada para brindarte acceso inmediato a una amplia variedad de productos electrónicos,
+                desde computadoras de alto rendimiento hasta periféricos esenciales.
+            </p>
+            <p>
+                Gracias a una interfaz intuitiva y un sistema de búsqueda avanzado, podrás explorar, filtrar y encontrar justo
+                lo que necesitas sin complicaciones, manteniendo siempre la esencia y el orden que distinguen nuestro negocio.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,12 +1,71 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3-1\\proyecto_lab8\\TechShopperWA\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3-1\\TechShopper\\TechShopperWA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEAC540-A802-4455-8EAE-32D7B2CC7BC8}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\desktop\\programacion_3\\repo_ta\\progra_3-1\\techshopper\\techshopperwa\\techshopperwa\\htmlpage1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2FEAC540-A802-4455-8EAE-32D7B2CC7BC8}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\htmlpage1.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEAC540-A802-4455-8EAE-32D7B2CC7BC8}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\desktop\\programacion_3\\repo_ta\\progra_3-1\\techshopper\\techshopperwa\\techshopperwa\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2FEAC540-A802-4455-8EAE-32D7B2CC7BC8}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2FEAC540-A802-4455-8EAE-32D7B2CC7BC8}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\desktop\\programacion_3\\repo_ta\\progra_3-1\\techshopper\\techshopperwa\\techshopperwa\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2FEAC540-A802-4455-8EAE-32D7B2CC7BC8}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HtmlPage1.html",
+              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3-1\\TechShopper\\TechShopperWA\\TechShopperWA\\HtmlPage1.html",
+              "RelativeDocumentMoniker": "TechShopperWA\\HtmlPage1.html",
+              "ToolTip": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3-1\\TechShopper\\TechShopperWA\\TechShopperWA\\HtmlPage1.html",
+              "RelativeToolTip": "TechShopperWA\\HtmlPage1.html",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAwHYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-05-13T22:09:35.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3-1\\TechShopper\\TechShopperWA\\TechShopperWA\\Web.config",
+              "RelativeDocumentMoniker": "TechShopperWA\\Web.config",
+              "ToolTip": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3-1\\TechShopper\\TechShopperWA\\TechShopperWA\\Web.config",
+              "RelativeToolTip": "TechShopperWA\\Web.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-13T22:03:54.289Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3-1\\TechShopper\\TechShopperWA\\TechShopperWA\\packages.config",
+              "RelativeDocumentMoniker": "TechShopperWA\\packages.config",
+              "ToolTip": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3-1\\TechShopper\\TechShopperWA\\TechShopperWA\\packages.config",
+              "RelativeToolTip": "TechShopperWA\\packages.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-13T22:04:01.024Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
