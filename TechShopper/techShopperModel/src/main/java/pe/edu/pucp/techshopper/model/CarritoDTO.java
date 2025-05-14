@@ -16,9 +16,10 @@ public class CarritoDTO {
         this.precio = null;
     }
     
-    public CarritoDTO(Integer idCarrito, Double precio){
+    public CarritoDTO(Integer idCarrito, Double precio,ClienteDTO cliente){
         this.idCarrito = idCarrito;
         this.precio = precio;
+        this.cliente = cliente;
     }
     
     public Integer getIdCarrito() {
