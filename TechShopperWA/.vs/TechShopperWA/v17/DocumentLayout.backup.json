@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3\\TechShopperWA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\desktop\\programacion_3\\repo_ta\\progra_3\\techshopperwa\\techshopperwa\\techshopperadmin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\techshopperadmin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\desktop\\programacion_3\\repo_ta\\progra_3\\techshopperwa\\techshopperwa\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\webform1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\desktop\\programacion_3\\repo_ta\\progra_3\\techshopperwa\\techshopperwa\\techshopperuser.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\techshopperuser.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WebForm1.aspx",
+              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3\\TechShopperWA\\TechShopperWA\\WebForm1.aspx",
+              "RelativeDocumentMoniker": "TechShopperWA\\WebForm1.aspx",
+              "ToolTip": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3\\TechShopperWA\\TechShopperWA\\WebForm1.aspx",
+              "RelativeToolTip": "TechShopperWA\\WebForm1.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-31T00:29:18.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TechShopperUser.Master",
+              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3\\TechShopperWA\\TechShopperWA\\TechShopperUser.Master",
+              "RelativeDocumentMoniker": "TechShopperWA\\TechShopperUser.Master",
+              "ToolTip": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3\\TechShopperWA\\TechShopperWA\\TechShopperUser.Master",
+              "RelativeToolTip": "TechShopperWA\\TechShopperUser.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-31T00:28:19.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TechShopperAdmin.Master",
+              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3\\TechShopperWA\\TechShopperWA\\TechShopperAdmin.Master",
+              "RelativeDocumentMoniker": "TechShopperWA\\TechShopperAdmin.Master",
+              "ToolTip": "C:\\Users\\usuario\\Desktop\\PROGRAMACION_3\\REPO_TA\\PROGRA_3\\TechShopperWA\\TechShopperWA\\TechShopperAdmin.Master",
+              "RelativeToolTip": "TechShopperWA\\TechShopperAdmin.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-05-31T00:25:33.647Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
