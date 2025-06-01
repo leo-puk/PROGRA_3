@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace TechShopperWA
 {
-	public partial class WebForm1 : System.Web.UI.Page
+	public partial class Productos : System.Web.UI.Page
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
