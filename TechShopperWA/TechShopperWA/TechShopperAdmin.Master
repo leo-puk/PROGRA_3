@@ -45,6 +45,13 @@
                             <a class="nav-link" href="ReporteVentas.aspx"><i class="fas fa-file-invoice-dollar me-1"></i> Reporte Ventas</a>
                         </li>
                     </ul>
+                    <ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+        <asp:LinkButton ID="btnCerrarSesion" runat="server" CssClass="nav-link text-white" OnClick="btnCerrarSesion_Click">
+            <i class="fas fa-sign-out-alt me-1"></i> Cerrar sesión
+        </asp:LinkButton>
+    </li>
+</ul>
                 </div>
             </div>
         </nav>

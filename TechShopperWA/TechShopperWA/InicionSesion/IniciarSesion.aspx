@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/InicionSesion/InicioSesion.Master" AutoEventWireup="true" CodeBehind="IniciarSesion.aspx.cs" Inherits="TechShopperWA.InicionSesion.IniciarSesion1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="IniciarSesionContent" runat="server">
@@ -8,7 +9,7 @@
                 <!-- Tarjeta de Login -->
                 <div class="card shadow-lg border-0" style="border-radius: 15px; overflow: hidden;">
                     <div class="card-header py-3" style="background-color: #835da2;">
-                        <h2 class="text-center mb-0 text-white"><i class="fas fa-sign-in-alt me-2"></i>INICIAR SESIÓN</h2>
+                        <h2 class="text-center mb-0 text-white"><i class="fas fa-sign-in-alt me-1"></i> INICIAR SESIÓN</h2>
                     </div>
                     <div class="card-body p-4" style="background-color: #f8f9fa;">
                         <form>
@@ -19,9 +20,12 @@
                                     <span class="input-group-text" style="background-color: #cfbdd8; color: #835da2;">
                                         <i class="fas fa-user"></i>
                                     </span>
-                                    <input type="text" class="form-control form-control-lg" id="txtUsuario" 
-                                        placeholder="Ingrese su usuario" required
-                                        style="border-left: none; border-color: #cfbdd8;">
+                                    <asp:TextBox ID="txtUsuario" runat="server"
+                                        CssClass="form-control form-control-lg"
+                                        placeholder="Ingrese su usuario"
+                                        required="true"
+                                        Style="border-left: none; border-color: #cfbdd8;" />
+
                                 </div>
                             </div>
 
@@ -32,9 +36,9 @@
                                     <span class="input-group-text" style="background-color: #cfbdd8; color: #835da2;">
                                         <i class="fas fa-lock"></i>
                                     </span>
-                                    <input type="password" class="form-control form-control-lg" id="txtPassword" 
-                                        placeholder="Ingrese su contraseña" required
-                                        style="border-left: none; border-color: #cfbdd8;">
+                                    <asp:TextBox ID="txtContraseña" runat="server" CssClass="form-control form-control-lg" placeholder="Ingrese su contraseña" 
+                                        required="true" Style="border-left: none; border-color: #cfdbb8;" type="password"/>
+                                    
                                 </div>
                                 <div class="text-end mt-2">
                                     <a href="#" class="text-decoration-none small" style="color: #835da2;">¿Olvidaste tu contraseña?</a>
@@ -43,10 +47,11 @@
 
                             <!-- Botón de Login -->
                             <div class="d-grid gap-2">
-                                <button type="submit" class="btn btn-lg fw-bold text-white" 
-                                    style="background-color: #835da2; border-radius: 50px; border: none;">
-                                    INGRESAR <i class="fas fa-arrow-right ms-2"></i>
-                                </button>
+                                <asp:Button ID="btnIngresar" runat="server"
+                                    CssClass="btn btn-lg fw-bold text-white"
+                                    Style="background-color: #835da2; border-radius: 50px; border: none;"
+                                    Text='INGRESAR'
+                                    OnClick="btnIngresar_Click" />
                             </div>
                         </form>
 
@@ -61,9 +66,8 @@
                         <!-- Registro -->
                         <div class="text-center">
                             <p class="mb-2" style="color: #835da2;">¿No estás registrado?</p>
-                            <a href="#" class="btn btn-lg fw-bold" 
-                               style="background-color: #cfbdd8; color: #835da2; border-radius: 50px; border: 1px solid #835da2;">
-                                REGÍSTRATE <i class="fas fa-user-plus ms-2"></i>
+                            <a href="Registro.aspx" class="btn btn-lg fw-bold"
+                                style="background-color: #cfbdd8; color: #835da2; border-radius: 50px; border: 1px solid #835da2;">REGÍSTRATE <i class="fas fa-user-plus ms-2"></i>
                             </a>
                         </div>
                     </div>

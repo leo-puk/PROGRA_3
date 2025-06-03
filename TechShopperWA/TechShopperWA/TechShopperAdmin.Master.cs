@@ -12,6 +12,17 @@ namespace TechShopperWA
 		protected void Page_Load(object sender, EventArgs e)
 		{
 
-		}
-	}
+            
+
+    }
+        protected void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            // Limpia la sesión
+            Session.Clear();
+            Session.Abandon();
+
+            // Redirige al login o página principal
+            Response.Redirect("InicionSesion/IniciarSesion.aspx");
+        }
+    }
 }

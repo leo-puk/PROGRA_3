@@ -87,6 +87,7 @@
     <Content Include="Empresa.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="InicionSesion\IniciarSesion.aspx" />
+    <Content Include="InicionSesion\Registro.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="ReporteVentas.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -131,6 +132,13 @@
     </Compile>
     <Compile Include="InicionSesion\InicioSesion.Master.designer.cs">
       <DependentUpon>InicioSesion.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InicionSesion\Registro.aspx.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicionSesion\Registro.aspx.designer.cs">
+      <DependentUpon>Registro.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
