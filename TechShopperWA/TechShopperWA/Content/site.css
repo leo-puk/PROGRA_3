@@ -2,7 +2,8 @@
 
 /* Estilos generales */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif; /* Base segura */
+
     background-color: #f8f9fa;
 }
 
@@ -31,9 +32,12 @@ footer {
 .navbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+h1, h2, h3, .btn {
+    font-family: 'Poppins', sans-serif; /* Jerarquía tecnológica */
+}
 
-.navbar-brand {
-    font-weight: bold;
+.navbar-brand, .card-title {
+    font-family: 'Exo 2', sans-serif; /* Toque futurista */
     font-size: 1.5rem;
 }
 
@@ -42,3 +46,5 @@ footer {
     min-height: 400px;
     padding: 20px 0;
 }
+
+
