@@ -11,7 +11,11 @@ namespace TechShopperWA
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-
-		}
+            if (Session["Acceso"] == null)
+            {
+                Response.Redirect("/InicionSesion/IniciarSesion.aspx");
+                return;
+            }
+        }
 	}
 }

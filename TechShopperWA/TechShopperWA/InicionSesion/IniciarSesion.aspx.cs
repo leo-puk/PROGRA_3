@@ -47,7 +47,7 @@ namespace TechShopperWA.InicionSesion
                     // Redirigir si las credenciales son correctas
 
                     //ACTUALIZAR SESIÓN (DESDE BO)
-                    //actualizarSessionUsuario(usuario, ip);
+                    //actualizarSessionUsuario(usuario);
 
                     //Guardamos que iniciamos sesión en esta instancia con la variable global Session
                     //Todas las páginas ahora verificarán las variables globales de la instancia front para poder acceder a ellas

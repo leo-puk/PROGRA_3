@@ -46,7 +46,7 @@ namespace TechShopperWA.InicionSesion
             // Expresión regular para validar correo electrónico
             string patronEmail = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
 
-            return Regex.IsMatch(email, patronEmail));
+            return Regex.IsMatch(email, patronEmail);
            
         }
 

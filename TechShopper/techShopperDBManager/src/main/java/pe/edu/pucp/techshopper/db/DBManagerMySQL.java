@@ -14,6 +14,8 @@ public class DBManagerMySQL extends DBManager {
         url = url.concat(this.puerto);
         url = url.concat("/");
         url = url.concat(this.base_de_datos);
+        //System.out.println(url);
+        url = url.concat("?useSSL=false");
         return url;
     }
 
