@@ -14,12 +14,13 @@ public class CarritoDTO {
     public CarritoDTO(){
         this.idCarrito = null;
         this.precio = null;
+        this.cliente = null;
     }
     
-    public CarritoDTO(Integer idCarrito, Double precio,ClienteDTO cliente){
+    public CarritoDTO(Integer idCarrito, Double precio, ClienteDTO cliente){
         this.idCarrito = idCarrito;
         this.precio = precio;
-        this.cliente = cliente;
+        this.cliente=cliente;
     }
     
     public Integer getIdCarrito() {

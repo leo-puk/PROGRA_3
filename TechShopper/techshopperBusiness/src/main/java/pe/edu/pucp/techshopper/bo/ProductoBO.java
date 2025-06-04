@@ -1,9 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.pucp.techshopper.bo;
 
+import java.util.ArrayList;
 import java.util.List;
 import pe.edu.pucp.techshopper.dao.ProductoDAO;
 import pe.edu.pucp.techshopper.daoImp.ProductoDAOImp;
@@ -11,60 +8,93 @@ import pe.edu.pucp.techshopper.model.AdministradorDTO;
 import pe.edu.pucp.techshopper.model.CategoriaDTO;
 import pe.edu.pucp.techshopper.model.ProductoDTO;
 
-/**
- *
- * @author CRISTHIAN
- */
 public class ProductoBO {
-    private ProductoDAO productoDAO;
+
+    private final ProductoDAO productoDAO;
     
-    public ProductoBO (){
+    public ProductoBO() {
         this.productoDAO = new ProductoDAOImp();
     }
     
-    public Integer insertar(Double precio, Integer stock, String nombre, String marca, 
-            CategoriaDTO categoria, String descripcion, AdministradorDTO administrador){
-        ProductoDTO productosDTO = new ProductoDTO();
-//        productosDTO.setIdProducto(id);
-        productosDTO.setPrecio(precio);
-        productosDTO.setStock(stock);
-        productosDTO.setNombre(nombre);
-        productosDTO.setMarca(marca);
-        productosDTO.setDescripcion(descripcion);
-        productosDTO.setCategoria(categoria);
-        productosDTO.setAdministrador(administrador);
+    public Integer registrarProducto(Double precio, Integer stock, String nombre, 
+                                  String marca, CategoriaDTO categoria, 
+                                  String descripcion, Integer idAdministrador) {
+        // Validaciones básicas
+        if (precio == null || precio <= 0 || stock == null || stock < 0 ||
+            nombre == null || nombre.trim().isEmpty() || marca == null || 
+            marca.trim().isEmpty() || categoria == null || descripcion == null || 
+            idAdministrador == null || idAdministrador <= 0) {
+            return -1;
+        }
         
-        return this.productoDAO.insertar(productosDTO);
+        ProductoDTO producto = new ProductoDTO();
+        producto.setPrecio(precio);
+        producto.setStock(stock);
+        producto.setNombre(nombre.trim());
+        producto.setMarca(marca.trim());
+        producto.setCategoria(categoria);
+        producto.setDescripcion(descripcion);
         
+        // Asignar administrador (solo se necesita el ID)
+        AdministradorDTO admin = new AdministradorDTO();
+        admin.setIdPersona(idAdministrador);
+        producto.setAdministrador(admin);
+        
+        return productoDAO.insertar(producto);
     }
     
-    public boolean modificar(Integer productoId, Double precio, Integer stock, String nombre, String marca, 
-            CategoriaDTO categoria, String descripcion, AdministradorDTO administrador){
-        ProductoDTO productosDTO = new ProductoDTO();
-        productosDTO.setIdProducto(productoId);
-        productosDTO.setPrecio(precio);
-        productosDTO.setStock(stock);
-        productosDTO.setNombre(nombre);
-        productosDTO.setMarca(marca);
-        productosDTO.setDescripcion(descripcion);
-        productosDTO.setCategoria(categoria);
-        productosDTO.setAdministrador(administrador);
+    public Integer actualizarProducto(Integer idProducto, Double precio, Integer stock, 
+                                    String nombre, String marca, CategoriaDTO categoria, 
+                                    String descripcion) {
+        // Validaciones básicas
+        if (idProducto == null || idProducto <= 0 || precio == null || precio <= 0 || 
+            stock == null || stock < 0 || nombre == null || nombre.trim().isEmpty() || 
+            marca == null || marca.trim().isEmpty() || categoria == null) {
+            return -1;
+        }
         
-        return this.productoDAO.modificar(productosDTO);
-    }
-    
-    public boolean eliminar (Integer productoId){
-//        ProductoDTO productosDTO = new ProductoDTO();
-//        productosDTO.setIdProducto(productoId);
+        ProductoDTO producto = productoDAO.obtenerPorId(idProducto);
+        if (producto == null) {
+            return -1;
+        }
         
-        return this.productoDAO.eliminar(productoId);
-    } 
-    
-    public ProductoDTO buscar (Integer productoId){
-        return this.productoDAO.buscar(productoId);
+        producto.setPrecio(precio);
+        producto.setStock(stock);
+        producto.setNombre(nombre.trim());
+        producto.setMarca(marca.trim());
+        producto.setCategoria(categoria);
+        
+        if (descripcion != null) {
+            producto.setDescripcion(descripcion);
+        }
+        
+        return productoDAO.modificar(producto);
     }
     
-    public List<ProductoDTO> listar(){
-        return this.productoDAO.listar();
+    public Integer eliminarProducto(Integer idProducto) {
+        if (idProducto == null || idProducto <= 0) {
+            return -1;
+        }
+        
+        ProductoDTO producto = new ProductoDTO();
+        producto.setIdProducto(idProducto);
+        
+        return productoDAO.eliminar(producto);
     }
+    
+    public ProductoDTO obtenerProductoPorId(Integer idProducto) {
+        if (idProducto == null || idProducto <= 0) {
+            return null;
+        }
+        return productoDAO.obtenerPorId(idProducto);
+    }
+    
+    public ArrayList<ProductoDTO> listarTodosProductos() {
+        return productoDAO.listarTodos();
+    }
+    
+    public List<ProductoDTO> listarPor3criterios(String nombre, String categoria, String marca){
+        return this.productoDAO.listarPor3criterios(nombre,categoria,marca);
+    }
+    
 }

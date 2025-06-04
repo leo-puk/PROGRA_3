@@ -1,11 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.pucp.techshopper.bo;
 
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.ArrayList;
 import pe.edu.pucp.techshopper.dao.AdministradorDAO;
 import pe.edu.pucp.techshopper.daoImp.AdministradorDAOImp;
 import pe.edu.pucp.techshopper.model.AdministradorDTO;
@@ -13,48 +9,70 @@ import pe.edu.pucp.techshopper.model.EstadoConexionDTO;
 
 public class AdministradorBO {
     
-    private AdministradorDAO administradorDAO;
+    private final AdministradorDAO administradorDAO;
     
-    public AdministradorBO(){
+    public AdministradorBO() {
         this.administradorDAO = new AdministradorDAOImp();
     }
     
     public Integer insertar(String contraseña, EstadoConexionDTO estadoConexion, 
-                        LocalDateTime fechaRegistro, String nombre, String email){
+                          LocalDateTime fechaRegistro, String nombre, String email) {
+        if (contraseña == null || contraseña.isEmpty() || estadoConexion == null || 
+            fechaRegistro == null || nombre == null || nombre.isEmpty() || 
+            email == null || email.isEmpty()) {
+            return -1;
+        }
+        
         AdministradorDTO administradorDTO = new AdministradorDTO();
-        administradorDTO.setNombre(nombre);
-        administradorDTO.setEmail(email);
         administradorDTO.setContraseña(contraseña);
         administradorDTO.setEstadoConexion(estadoConexion);
         administradorDTO.setFechaRegistro(fechaRegistro);
-        
-        return this.administradorDAO.insertar(administradorDTO);
-    }
-    
-    public Boolean modificar(Integer idPersona, String contraseña, EstadoConexionDTO estadoConexion, 
-                        LocalDateTime fechaRegistro, String nombre, String email){
-        AdministradorDTO administradorDTO = new AdministradorDTO();
-        administradorDTO.setIdPersona(idPersona);
         administradorDTO.setNombre(nombre);
         administradorDTO.setEmail(email);
+        
+        return administradorDAO.insertar(administradorDTO);
+    }
+    
+    public Integer modificar(Integer idAdministrador, String contraseña, 
+                           EstadoConexionDTO estadoConexion, LocalDateTime fechaRegistro, 
+                           String nombre, String email) {
+        if (idAdministrador == null || idAdministrador <= 0 || contraseña == null || 
+            contraseña.isEmpty() || estadoConexion == null || fechaRegistro == null || 
+            nombre == null || nombre.isEmpty() || email == null || email.isEmpty()) {
+            return -1;
+        }
+        
+        AdministradorDTO administradorDTO = new AdministradorDTO();
+        administradorDTO.setIdPersona(idAdministrador);
         administradorDTO.setContraseña(contraseña);
         administradorDTO.setEstadoConexion(estadoConexion);
         administradorDTO.setFechaRegistro(fechaRegistro);
+        administradorDTO.setNombre(nombre);
+        administradorDTO.setEmail(email);
         
-        return this.administradorDAO.modificar(administradorDTO);
+        return administradorDAO.modificar(administradorDTO);
     }
     
-    public Boolean eliminar(int id){
-//        AdministradorDTO administradorDTO = new AdministradorDTO();
-        return this.administradorDAO.eliminar(id);
+    public Integer eliminar(Integer idAdministrador) {
+        if (idAdministrador == null || idAdministrador <= 0) {
+            return -1;
+        }
+        
+        AdministradorDTO administradorDTO = new AdministradorDTO();
+        administradorDTO.setIdPersona(idAdministrador);
+        
+        return administradorDAO.eliminar(administradorDTO);
     }
     
-    public AdministradorDTO buscar(int id){
-        return this.administradorDAO.buscar(id);
+    public AdministradorDTO obtenerPorId(Integer idAdministrador) {
+        if (idAdministrador == null || idAdministrador <= 0) {
+            return null;
+        }
+        return administradorDAO.obtenerPorId(idAdministrador);
     }
     
-    public List<AdministradorDTO> listar(){
-        return this.administradorDAO.listar();
+    public ArrayList<AdministradorDTO> listarTodos() {
+        return administradorDAO.listarTodos();
     }
     
 }

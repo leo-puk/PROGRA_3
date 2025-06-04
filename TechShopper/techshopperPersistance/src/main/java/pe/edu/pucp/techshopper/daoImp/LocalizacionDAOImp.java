@@ -1,80 +1,128 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.pucp.techshopper.daoImp;
-import pe.edu.pucp.techshopper.db.DBManager;
-import pe.edu.pucp.techshopper.model.LocalizacionDTO;
-import java.util.ArrayList;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+
 import java.sql.SQLException;
-import java.sql.ResultSet;
-import pe.edu.pucp.techshopper.model.ClienteDTO;
-import pe.edu.pucp.techshopper.dao.BaseDAOImp;
+import java.util.ArrayList;
+import java.util.List;
 import pe.edu.pucp.techshopper.dao.LocalizacionDAO;
+import pe.edu.pucp.techshopper.daoImp.util.Columna;
+import pe.edu.pucp.techshopper.daoImp.util.Tipo_Dato;
+import pe.edu.pucp.techshopper.model.ClienteDTO;
+import pe.edu.pucp.techshopper.model.LocalizacionDTO;
 
-public class LocalizacionDAOImp extends BaseDAOImp<LocalizacionDTO> implements LocalizacionDAO{
-    public LocalizacionDAOImp(){
+public class LocalizacionDAOImp extends DAOImplBase implements LocalizacionDAO {
+
+    private LocalizacionDTO localizacion;
+
+    public LocalizacionDAOImp() {
+        super("TCS_LOCALIZACIONES");
+        this.retornarLlavePrimaria = true;
+        this.localizacion = null;
+    }
+
+    @Override
+    protected void configurarListaDeColumnas() {
+        this.listaColumnas.clear();
+        this.listaColumnas.add(new Columna("ID_LOCALIZACION", Tipo_Dato.ENTERO, true, true));
+        this.listaColumnas.add(new Columna("LATITUD", Tipo_Dato.REAL, false, false));
+        this.listaColumnas.add(new Columna("LONGITUD", Tipo_Dato.REAL, false, false));
+        this.listaColumnas.add(new Columna("DIRECCION", Tipo_Dato.CADENA, false, false));
+        this.listaColumnas.add(new Columna("ID_CLIENTE", Tipo_Dato.ENTERO, false, false));
+    }
+
+    @Override
+    protected void incluirValorDeParametrosParaInsercion() throws SQLException {
+        this.statement.setDouble(1, this.localizacion.getLatitud());
+        this.statement.setDouble(2, this.localizacion.getLongitud());
+        this.statement.setString(3, this.localizacion.getDireccion());
+        this.statement.setInt(4, this.localizacion.getCliente().getIdPersona());
+    }
+
+    @Override
+    protected void incluirValorDeParametrosParaModificacion() throws SQLException {
+        this.statement.setDouble(1, this.localizacion.getLatitud());
+        this.statement.setDouble(2, this.localizacion.getLongitud());
+        this.statement.setString(3, this.localizacion.getDireccion());
+        this.statement.setInt(4, this.localizacion.getCliente().getIdPersona());
+        this.statement.setInt(5, this.localizacion.getIdLocalizacion());
+    }
+
+    @Override
+    protected void incluirValorDeParametrosParaEliminacion() throws SQLException {
+        this.statement.setInt(1, this.localizacion.getIdLocalizacion());
+    }
+
+    @Override
+    protected void incluirValorDeParametrosParaObtenerPorId() throws SQLException {
+        this.statement.setInt(1, this.localizacion.getIdLocalizacion());
+    }
+
+    @Override
+    protected void instanciarObjetoDelResultSet() throws SQLException {
+        this.localizacion = new LocalizacionDTO();
+        this.localizacion.setIdLocalizacion(this.resultSet.getInt("ID_LOCALIZACION"));
+        this.localizacion.setLatitud(this.resultSet.getDouble("LATITUD"));
+        this.localizacion.setLongitud(this.resultSet.getDouble("LONGITUD"));
+        this.localizacion.setDireccion(this.resultSet.getString("DIRECCION"));
         
-    }
-    
-    @Override
-    protected String getInsertarQuery() {
-        return  "insert into Localizacion (idLocalizacion,latitud,longitud,direccion, idCliente) values (?,?,?,?,?)";
+        ClienteDTO cliente = new ClienteDTO();
+        cliente.setIdPersona(this.resultSet.getInt("ID_CLIENTE"));
+        this.localizacion.setCliente(cliente);
     }
 
     @Override
-    protected String getUpdateQuery() {
-       return  "update Localizacion SET latitud = ?, longitud = ?, direccion = ?, idCliente_localizacion=? where idLocalizacion = ?";
+    protected void limpiarObjetoDelResultSet() {
+        this.localizacion = null;
     }
 
     @Override
-    protected String getSelectByIdQuery() {
-        return "select * from Localizacion WHERE idLocalizacion = ?";
+    protected void agregarObjetoALaLista(List lista) throws SQLException {
+        this.instanciarObjetoDelResultSet();
+        if (this.localizacion != null) {
+            lista.add(this.localizacion);
+        }
     }
 
     @Override
-    protected String getSelectAllQuery() {
-        return "select * from Localizacion";
+    public Integer insertar(LocalizacionDTO localizacion) {
+        if (localizacion == null) {
+            return -1;
+        }
+        this.localizacion = localizacion;
+        return super.insertar();
     }
 
     @Override
-    protected String getDeleteQuery() {
-        return "delete from Localizacion WHERE idLocalizacion = ?";
+    public LocalizacionDTO obtenerPorId(Integer idLocalizacion) {
+        if (idLocalizacion == null || idLocalizacion <= 0) {
+            return null;
+        }
+        this.localizacion = new LocalizacionDTO();
+        this.localizacion.setIdLocalizacion(idLocalizacion);
+        super.obtenerPorId();
+        return this.localizacion;
     }
 
     @Override
-    protected void setInsertParameters(PreparedStatement ps, LocalizacionDTO modelo) throws SQLException {
-        ps.setInt(1,modelo.getIdLocalizacion());
-        ps.setDouble(2,modelo.getLatitud());
-        ps.setDouble(3,modelo.getLongitud());
-        ps.setString(4,modelo.getDireccion());
-        ps.setInt(5,modelo.getCliente().getIdPersona());
-        
+    public ArrayList<LocalizacionDTO> listarTodos() {
+        return (ArrayList<LocalizacionDTO>) super.listarTodos();
     }
 
     @Override
-    protected void setUpdateParameters(PreparedStatement ps, LocalizacionDTO modelo) throws SQLException {
-        ps.setDouble(1,modelo.getLatitud());
-        ps.setDouble(2,modelo.getLongitud());
-        ps.setString(3,modelo.getDireccion());
-        ps.setInt(4,modelo.getCliente().getIdPersona());
-        ps.setInt(5,modelo.getIdLocalizacion());
+    public Integer modificar(LocalizacionDTO localizacion) {
+        if (localizacion == null || localizacion.getIdLocalizacion() == null) {
+            return -1;
+        }
+        this.localizacion = localizacion;
+        return super.modificar();
     }
 
     @Override
-    protected LocalizacionDTO createFromResultado(ResultSet rs) throws SQLException {
-        LocalizacionDTO p = new LocalizacionDTO();
-        p.setIdLocalizacion(rs.getInt("idLocalizacion"));
-        p.setLatitud(rs.getDouble("latitud"));
-        p.setLongitud(rs.getDouble("longitud"));
-        p.setDireccion(rs.getString("direccion"));
-
-        ClienteDTO cli = new ClienteDTO();
-        cli.setIdPersona(rs.getInt("idCliente_localizacion"));
-        p.setCliente(cli);
-        return p;
+    public Integer eliminar(LocalizacionDTO localizacion) {
+        if (localizacion == null || localizacion.getIdLocalizacion() == null) {
+            return -1;
+        }
+        this.localizacion = localizacion;
+        return super.eliminar();
     }
     
 }

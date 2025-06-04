@@ -1,85 +1,143 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.pucp.techshopper.daoImp;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 import pe.edu.pucp.techshopper.dao.AdministradorDAO;
-import pe.edu.pucp.techshopper.dao.BaseDAOImp;
+import pe.edu.pucp.techshopper.daoImp.util.Columna;
+import pe.edu.pucp.techshopper.daoImp.util.Tipo_Dato;
 import pe.edu.pucp.techshopper.model.AdministradorDTO;
-import pe.edu.pucp.techshopper.model.ClienteDTO;
 import pe.edu.pucp.techshopper.model.EstadoConexionDTO;
 
+public class AdministradorDAOImp extends DAOImplBase implements AdministradorDAO {
 
-public class AdministradorDAOImp  extends BaseDAOImp <AdministradorDTO> implements AdministradorDAO {
-    public AdministradorDAOImp(){ 
+    private AdministradorDTO administrador;
 
-    }
-    
-    @Override
-    protected String getInsertarQuery() {
-        return  "insert into Administrador (idAdministrador, contraseña, estadoConexion,fechaRegistro,nombre,email) values (?,?,?,?,?,?)";
-    }
-
-    @Override
-    protected String getUpdateQuery() {
-       return  "update Cliente SET contraseña = ?, estadoConexion = ?,fechaRegistro = ?,nombreAdmin = ?,email = ? where userId = ?";
+    public AdministradorDAOImp() {
+        super("TCS_ADMINISTRADORES");
+        this.retornarLlavePrimaria = true;
+        this.administrador = null;
     }
 
     @Override
-    protected String getSelectByIdQuery() {
-        return "select * from Administrador WHERE userId = ?";
+    protected void configurarListaDeColumnas() {
+        this.listaColumnas.clear(); // Limpiar lista para evitar duplicados
+        this.listaColumnas.add(new Columna("ID_ADMINISTRADOR", Tipo_Dato.ENTERO, true, true));
+        this.listaColumnas.add(new Columna("CONTRASENA", Tipo_Dato.CADENA, false, false));
+        this.listaColumnas.add(new Columna("ESTADO_CONEXION", Tipo_Dato.CADENA, false, false));
+        this.listaColumnas.add(new Columna("FECHA_REGISTRO", Tipo_Dato.FECHA_HORA, false, false));
+        this.listaColumnas.add(new Columna("NOMBRE", Tipo_Dato.CADENA, false, false));
+        this.listaColumnas.add(new Columna("EMAIL", Tipo_Dato.CADENA, false, false));
     }
 
     @Override
-    protected String getSelectAllQuery() {
-        return "select * from Administrador";
+    protected void incluirValorDeParametrosParaInsercion() throws SQLException {
+        this.statement.setString(1, this.administrador.getContraseña());
+        this.statement.setString(2, this.administrador.getEstadoConexion().name()); 
+        this.statement.setTimestamp(3, java.sql.Timestamp.valueOf(this.administrador.getFechaRegistro()));
+        this.statement.setString(4, this.administrador.getNombre());
+        this.statement.setString(5, this.administrador.getEmail());
     }
 
     @Override
-    protected String getDeleteQuery() {
-        return "delete from Administrador WHERE userId = ?";
+    protected void incluirValorDeParametrosParaModificacion() throws SQLException {
+        this.statement.setString(1, this.administrador.getContraseña());
+        this.statement.setString(2, this.administrador.getEstadoConexion().name());
+        this.statement.setTimestamp(3, java.sql.Timestamp.valueOf(this.administrador.getFechaRegistro()));
+        this.statement.setString(4, this.administrador.getNombre());
+        this.statement.setString(5, this.administrador.getEmail());
+        this.statement.setInt(6, this.administrador.getIdPersona()); 
     }
 
     @Override
-    protected void setInsertParameters(PreparedStatement ps, AdministradorDTO modelo) throws SQLException {
-        ps.setInt(1,modelo.getIdPersona());
-        ps.setString(2,modelo.getContraseña());
-        ps.setString(3, modelo.getEstadoConexion().name());
-        ps.setTimestamp(4, Timestamp.valueOf(modelo.getFechaRegistro()));
-        ps.setString(5,modelo.getNombre());
-        ps.setString(6,modelo.getEmail());
+    protected void incluirValorDeParametrosParaEliminacion() throws SQLException {
+        this.statement.setInt(1, this.administrador.getIdPersona());
+    }
+
+    @Override
+    protected void incluirValorDeParametrosParaObtenerPorId() throws SQLException {
+        this.statement.setInt(1, this.administrador.getIdPersona());
+    }
+
+    @Override
+    protected void instanciarObjetoDelResultSet() throws SQLException {
+        this.administrador = new AdministradorDTO();
+        this.administrador.setIdPersona(this.resultSet.getInt("ID_ADMINISTRADOR"));
+        this.administrador.setContraseña(this.resultSet.getString("CONTRASENA"));
         
-        
-    }
-
-    @Override
-    protected void setUpdateParameters(PreparedStatement ps, AdministradorDTO modelo) throws SQLException {
-        
-        ps.setString(1,modelo.getContraseña());
-        ps.setString(2, modelo.getEstadoConexion().name());
-        ps.setTimestamp(3, Timestamp.valueOf(modelo.getFechaRegistro()));
-        ps.setString(4,modelo.getNombre());
-        ps.setString(5,modelo.getEmail());
-        ps.setInt(6,modelo.getIdPersona());
-    }
-
-    @Override
-    protected AdministradorDTO createFromResultado(ResultSet rs) throws SQLException {
-        AdministradorDTO p = new AdministradorDTO();
-        p.setIdPersona(rs.getInt("idAdministrador"));
-        p.setContraseña(rs.getString("contraseña"));
-        p.setEstadoConexion(EstadoConexionDTO.valueOf(rs.getString("estadoConexion")));
-        p.setNombre(rs.getString("nombre"));
-        p.setEmail(rs.getString("email"));
-        Timestamp timestamp = rs.getTimestamp("fechaRegistro");
-        if (timestamp != null) {
-           p.setFechaRegistro(timestamp.toLocalDateTime());
+        // Manejo seguro del ENUM
+        try {
+            String estadoConexionStr = this.resultSet.getString("ESTADO_CONEXION");
+            EstadoConexionDTO estadoDeConexion = EstadoConexionDTO.valueOf(estadoConexionStr);
+            this.administrador.setEstadoConexion(estadoDeConexion);
+        } catch (IllegalArgumentException e) {
+            // Manejar error de conversión de ENUM
+            this.administrador.setEstadoConexion(EstadoConexionDTO.DESCONECTADO); // Valor por defecto
         }
-        return p;
+        
+        // Manejo seguro de fechas
+        java.sql.Timestamp timestamp = this.resultSet.getTimestamp("FECHA_REGISTRO");
+        if (timestamp != null) {
+            this.administrador.setFechaRegistro(timestamp.toLocalDateTime());
+        }
+        
+        this.administrador.setNombre(this.resultSet.getString("NOMBRE"));
+        this.administrador.setEmail(this.resultSet.getString("EMAIL"));
+    }
+
+    @Override
+    protected void limpiarObjetoDelResultSet() {
+        this.administrador = null;
+    }
+
+    @Override
+    protected void agregarObjetoALaLista(List lista) throws SQLException {
+        this.instanciarObjetoDelResultSet();
+        if (this.administrador != null) {
+            lista.add(this.administrador);
+        }
+    }
+
+    @Override
+    public Integer insertar(AdministradorDTO administrador) {
+        if (administrador == null) {
+            return -1; 
+        }
+        this.administrador = administrador;
+        return super.insertar();
+    }
+
+    @Override
+    public AdministradorDTO obtenerPorId(Integer idAdministrador) {
+        if (idAdministrador == null || idAdministrador <= 0) {
+            return null; 
+        }
+        this.administrador = new AdministradorDTO();
+        this.administrador.setIdPersona(idAdministrador);
+        super.obtenerPorId();
+        return this.administrador;
+    }
+
+    @Override
+    public ArrayList<AdministradorDTO> listarTodos() {
+        return (ArrayList<AdministradorDTO>) super.listarTodos();
+    }
+
+    @Override
+    public Integer modificar(AdministradorDTO administrador) {
+        if (administrador == null || administrador.getIdPersona() == null) {
+            return -1; 
+        }
+        this.administrador = administrador;
+        return super.modificar();
+    }
+
+    @Override
+    public Integer eliminar(AdministradorDTO administrador) {
+        if (administrador == null || administrador.getIdPersona() == null) {
+            return -1; 
+        }
+        this.administrador = administrador;
+        return super.eliminar();
     }
 }

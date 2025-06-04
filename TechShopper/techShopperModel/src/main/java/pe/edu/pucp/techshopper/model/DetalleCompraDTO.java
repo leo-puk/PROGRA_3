@@ -11,6 +11,7 @@ public class DetalleCompraDTO {
     private ProductoDTO producto;
     private Integer cantidad;
     private Double precioUnitario;
+    private Double igv;
     
     public DetalleCompraDTO(){
         this.idDetalleCompra = null;
@@ -18,16 +19,18 @@ public class DetalleCompraDTO {
         this.producto = null;
         this.cantidad = null;
         this.precioUnitario = null;
+        this.igv = null;
     }
     
     public DetalleCompraDTO(Integer idDetalleCompra,CompraDTO compra,ProductoDTO producto,Integer cantidad,
-            Double precioUnitario){
+            Double precioUnitario, Double igv){
         
         this.idDetalleCompra = idDetalleCompra;
         this.compra = compra;
         this.producto = producto;
         this.cantidad = cantidad;
         this.precioUnitario = precioUnitario;
+        this.igv = igv;
         
     }
     
@@ -69,6 +72,14 @@ public class DetalleCompraDTO {
 
     public void setPrecioUnitario(Double precioUnitario) {
         this.precioUnitario = precioUnitario;
+    }
+    
+    public Double getIgv() {
+        return igv;
+    }
+
+    public void setIgv(Double igv) {
+        this.igv = igv;
     }
 
 }

@@ -7,5 +7,7 @@ package pe.edu.pucp.techshopper.dao;
 import pe.edu.pucp.techshopper.model.CarritoDTO;
 
 public interface CarritoDAO extends ICrud<CarritoDTO>{
+    
+    Double montoAPagar (Integer idCarrito);
 
 }

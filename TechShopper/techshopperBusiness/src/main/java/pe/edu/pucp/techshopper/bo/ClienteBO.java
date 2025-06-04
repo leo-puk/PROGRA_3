@@ -1,74 +1,119 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.pucp.techshopper.bo;
 
-import java.time.LocalDateTime;
-import java.util.List;
+import java.util.ArrayList;
 import pe.edu.pucp.techshopper.dao.ClienteDAO;
 import pe.edu.pucp.techshopper.daoImp.ClienteDAOImp;
 import pe.edu.pucp.techshopper.model.ClienteDTO;
 import pe.edu.pucp.techshopper.model.EstadoConexionDTO;
 
-/**
- *
- * @author CRISTHIAN
- */
 public class ClienteBO {
-    private ClienteDAO clienteDAO;
+
+    private final ClienteDAO clienteDAO;
     
-    public ClienteBO(){
+    public ClienteBO() {
         this.clienteDAO = new ClienteDAOImp();
     }
     
-    public Integer insertar(String contraseña, EstadoConexionDTO estadoConexion, 
-                  LocalDateTime fechaRegistro, String nombre, String direccion, String telefono, String email,
-                  String infoTarjetaCredito, String infoCompra, Double balanceCuenta){
-        ClienteDTO clienteDTO= new ClienteDTO();
-        clienteDTO.setBalanceCuenta(balanceCuenta);
-        clienteDTO.setContraseña(contraseña);
-        clienteDTO.setDireccion(direccion);
-        clienteDTO.setEmail(email);
-        clienteDTO.setEstadoConexion(estadoConexion);
-        clienteDTO.setFechaRegistro(fechaRegistro);
-        clienteDTO.setInfoCompra(infoCompra);
-        clienteDTO.setInfoTarjetaCredito(infoTarjetaCredito);
-        clienteDTO.setNombre(nombre);
-        clienteDTO.setTelefono(telefono);
+    public Integer registrarCliente(String contraseña, EstadoConexionDTO estadoConexion,
+                                  String nombre, String direccion, String telefono,
+                                  String email, String infoTarjetaCredito, Double balanceCuenta) {
+        // Validaciones básicas
+        if (contraseña == null || contraseña.isEmpty() || nombre == null || nombre.isEmpty() ||
+            direccion == null || direccion.isEmpty() || email == null || email.isEmpty()) {
+            return -1;
+        }
         
-        return this.clienteDAO.insertar(clienteDTO);
-    }
-    
-    public Boolean modificar(Integer idPersona, String contraseña, EstadoConexionDTO estadoConexion, 
-                  LocalDateTime fechaRegistro, String nombre, String direccion, String telefono, String email,
-                  String infoTarjetaCredito, String infoCompra, Double balanceCuenta){
-        ClienteDTO clienteDTO= new ClienteDTO();
-        clienteDTO.setIdPersona(idPersona);
-        clienteDTO.setBalanceCuenta(balanceCuenta);
-        clienteDTO.setContraseña(contraseña);
-        clienteDTO.setDireccion(direccion);
-        clienteDTO.setEmail(email);
-        clienteDTO.setEstadoConexion(estadoConexion);
-        clienteDTO.setFechaRegistro(fechaRegistro);
-        clienteDTO.setInfoCompra(infoCompra);
-        clienteDTO.setInfoTarjetaCredito(infoTarjetaCredito);
-        clienteDTO.setNombre(nombre);
-        clienteDTO.setTelefono(telefono);
+        ClienteDTO cliente = new ClienteDTO();
+        cliente.setContraseña(contraseña);
+        cliente.setEstadoConexion(estadoConexion != null ? estadoConexion : EstadoConexionDTO.DESCONECTADO);
+        cliente.setNombre(nombre);
+        cliente.setDireccion(direccion);
+        cliente.setTelefono(telefono);
+        cliente.setEmail(email);
+        cliente.setInfoTarjetaCredito(infoTarjetaCredito);
+        cliente.setBalanceCuenta(balanceCuenta != null ? balanceCuenta : 0.0f);
         
-        return this.clienteDAO.modificar(clienteDTO);
+        // Validar email único
+        if (obtenerClientePorEmail(email) != null) {
+            return -2; // Código para email duplicado
+        }
+        
+        return clienteDAO.insertar(cliente);
     }
     
-    public Boolean eliminar(int id){
-//        AdministradorDTO administradorDTO = new AdministradorDTO();
-        return this.clienteDAO.eliminar(id);
+    public Integer actualizarCliente(Integer idCliente, String contraseña, EstadoConexionDTO estadoConexion,
+                                   String nombre, String direccion, String telefono,
+                                   String email, String infoTarjetaCredito, Double balanceCuenta) {
+        // Validaciones básicas
+        if (idCliente == null || idCliente <= 0 || nombre == null || nombre.isEmpty() ||
+            direccion == null || direccion.isEmpty() || email == null || email.isEmpty()) {
+            return -1;
+        }
+        
+        ClienteDTO cliente = clienteDAO.obtenerPorId(idCliente);
+        if (cliente == null) {
+            return -1;
+        }
+        
+        // Validar email único (si cambió)
+        if (!cliente.getEmail().equals(email) && obtenerClientePorEmail(email) != null) {
+            return -2; // Código para email duplicado
+        }
+        
+        if (contraseña != null && !contraseña.isEmpty()) {
+            cliente.setContraseña(contraseña);
+        }
+        if (estadoConexion != null) {
+            cliente.setEstadoConexion(estadoConexion);
+        }
+        cliente.setNombre(nombre);
+        cliente.setDireccion(direccion);
+        cliente.setTelefono(telefono);
+        cliente.setEmail(email);
+        if (infoTarjetaCredito != null) {
+            cliente.setInfoTarjetaCredito(infoTarjetaCredito);
+        }
+        if (balanceCuenta != null) {
+            cliente.setBalanceCuenta(balanceCuenta);
+        }
+        
+        return clienteDAO.modificar(cliente);
     }
     
-    public ClienteDTO buscar(int id){
-        return this.clienteDAO.buscar(id);
+    public Integer eliminarCliente(Integer idCliente) {
+        if (idCliente == null || idCliente <= 0) {
+            return -1;
+        }
+        
+        ClienteDTO cliente = new ClienteDTO();
+        cliente.setIdPersona(idCliente);
+        
+        return clienteDAO.eliminar(cliente);
     }
     
-    public List<ClienteDTO> listar(){
-        return this.clienteDAO.listar();
+    public ClienteDTO obtenerClientePorId(Integer idCliente) {
+        if (idCliente == null || idCliente <= 0) {
+            return null;
+        }
+        return clienteDAO.obtenerPorId(idCliente);
     }
+    
+    public ClienteDTO obtenerClientePorEmail(String email) {
+        if (email == null || email.isEmpty()) {
+            return null;
+        }
+        
+        ArrayList<ClienteDTO> clientes = clienteDAO.listarTodos();
+        for (ClienteDTO cliente : clientes) {
+            if (email.equalsIgnoreCase(cliente.getEmail())) {
+                return cliente;
+            }
+        }
+        return null;
+    }
+    
+    public ArrayList<ClienteDTO> listarTodosClientes() {
+        return clienteDAO.listarTodos();
+    }
+    
 }

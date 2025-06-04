@@ -4,12 +4,13 @@
  */
 package pe.edu.pucp.techshopper.dao;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface ICrud<T> {
-    int insertar(T modelo);
-    boolean modificar(T modelo);
-    boolean eliminar(int id);
-    T buscar(int id);
-    List<T> listar();
+    Integer insertar(T modelo);
+    Integer modificar(T modelo);
+    Integer eliminar(T modelo);
+    T obtenerPorId(Integer id);
+    ArrayList<T> listarTodos();
+    
 }

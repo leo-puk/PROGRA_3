@@ -1,63 +1,79 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.pucp.techshopper.bo;
 
 import java.time.LocalDateTime;
-import java.util.List;
+import java.util.ArrayList;
 import pe.edu.pucp.techshopper.dao.CompraDAO;
 import pe.edu.pucp.techshopper.daoImp.CompraDAOImp;
-import pe.edu.pucp.techshopper.model.CarritoDTO;
 import pe.edu.pucp.techshopper.model.CompraDTO;
-import pe.edu.pucp.techshopper.model.EnvioDTO;
 import pe.edu.pucp.techshopper.model.EstadoCompraDTO;
+import pe.edu.pucp.techshopper.model.EnvioDTO;
 
-/**
- *
- * @author CRISTHIAN
- */
 public class CompraBO {
-    private CompraDAO compraDAO;
     
-    public CompraBO(){
-        compraDAO = new CompraDAOImp();
+    private final CompraDAO compraDAO;
+    
+    public CompraBO() {
+        this.compraDAO = new CompraDAOImp();
     }
     
-    Integer insertar( CarritoDTO carrito,Double precioTotal,LocalDateTime  fechaCompra,
-            EstadoCompraDTO estadoCompra,EnvioDTO entrega){
+    public Integer insertar(Double precioTotal, LocalDateTime fechaCompra, 
+                          EstadoCompraDTO estadoCompra, Integer idEnvio) {
+        if (precioTotal == null || precioTotal <= 0 || fechaCompra == null || 
+            estadoCompra == null || idEnvio == null || idEnvio <= 0) {
+            return -1;
+        }
+        
         CompraDTO compraDTO = new CompraDTO();
-        compraDTO.setCarrito(carrito);
-        compraDTO.setEntrega(entrega);
-        compraDTO.setEstadoCompra(estadoCompra);
-        compraDTO.setFechaCompra(fechaCompra);
         compraDTO.setPrecioTotal(precioTotal);
-        return this.compraDAO.insertar(compraDTO);
+        compraDTO.setFechaCompra(fechaCompra);
+        compraDTO.setEstadoCompra(estadoCompra);
+        
+        EnvioDTO envio = new EnvioDTO();
+        envio.setIdEnvio(idEnvio);
+        compraDTO.setEntrega(envio);
+        
+        return compraDAO.insertar(compraDTO);
     }
     
-    Boolean modificar(Integer idCompra,CarritoDTO carrito,Double precioTotal,LocalDateTime  fechaCompra,
-            EstadoCompraDTO estadoCompra,EnvioDTO entrega){
+    public Integer modificar(Integer idCompra, Double precioTotal, LocalDateTime fechaCompra, 
+                           EstadoCompraDTO estadoCompra, Integer idEnvio) {
+        if (idCompra == null || idCompra <= 0 || precioTotal == null || precioTotal <= 0 || 
+            fechaCompra == null || estadoCompra == null || idEnvio == null || idEnvio <= 0) {
+            return -1;
+        }
+        
         CompraDTO compraDTO = new CompraDTO();
         compraDTO.setIdCompra(idCompra);
-        compraDTO.setCarrito(carrito);
-        compraDTO.setEntrega(entrega);
-        compraDTO.setEstadoCompra(estadoCompra);
-        compraDTO.setFechaCompra(fechaCompra);
         compraDTO.setPrecioTotal(precioTotal);
-        return this.compraDAO.modificar(compraDTO);
+        compraDTO.setFechaCompra(fechaCompra);
+        compraDTO.setEstadoCompra(estadoCompra);
+        
+        EnvioDTO envio = new EnvioDTO();
+        envio.setIdEnvio(idEnvio);
+        compraDTO.setEntrega(envio);
+        
+        return compraDAO.modificar(compraDTO);
     }
     
-    Boolean  eliminar(int id){
-        return this.compraDAO.eliminar(id);
+    public Integer eliminar(Integer idCompra) {
+        if (idCompra == null || idCompra <= 0) {
+            return -1;
+        }
+        
+        CompraDTO compraDTO = new CompraDTO();
+        compraDTO.setIdCompra(idCompra);
+        
+        return compraDAO.eliminar(compraDTO);
     }
     
-    CompraDTO buscar(int id){
-        return this.compraDAO.buscar(id);
+    public CompraDTO obtenerPorId(Integer idCompra) {
+        if (idCompra == null || idCompra <= 0) {
+            return null;
+        }
+        return compraDAO.obtenerPorId(idCompra);
     }
     
-    
-    List<CompraDTO> listar(){
-        return this.compraDAO.listar();
+    public ArrayList<CompraDTO> listarTodos() {
+        return compraDAO.listarTodos();
     }
-    
 }

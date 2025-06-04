@@ -1,97 +1,160 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.pucp.techshopper.daoImp;
 
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 import pe.edu.pucp.techshopper.dao.ClienteDAO;
-import pe.edu.pucp.techshopper.dao.BaseDAOImp;
+import pe.edu.pucp.techshopper.daoImp.util.Columna;
+import pe.edu.pucp.techshopper.daoImp.util.Tipo_Dato;
 import pe.edu.pucp.techshopper.model.ClienteDTO;
 import pe.edu.pucp.techshopper.model.EstadoConexionDTO;
 
+public class ClienteDAOImp extends DAOImplBase implements ClienteDAO {
 
-public class ClienteDAOImp extends BaseDAOImp<ClienteDTO> implements ClienteDAO{
-    
-    public ClienteDAOImp(){ 
+    private ClienteDTO cliente;
 
-    }
-    
-    @Override
-    protected String getInsertarQuery() {
-        return  "insert into Cliente (userId, contraseña, estadoConexion,fechaRegistro,nombreCliente,direccion,email,infoTarjetaCredito,infoCompra, balanceCuenta) values (?,?,?,?,?,?,?,?,?,?)";
+    public ClienteDAOImp() {
+        super("TCS_CLIENTES");
+        this.retornarLlavePrimaria = true;
+        this.cliente = null;
     }
 
     @Override
-    protected String getUpdateQuery() {
-       return  "update Cliente SET contraseña = ?, estadoConexion = ?,fechaRegistro = ?,nombreCliente = ?,direccion = ?,email = ?,infoTarjetaCredito = ? ,infoCompra = =?, balanceCuenta = ? where userId = ?";
+    protected void configurarListaDeColumnas() {
+        this.listaColumnas.clear();
+        this.listaColumnas.add(new Columna("ID_CLIENTE", Tipo_Dato.ENTERO, true, true));
+        this.listaColumnas.add(new Columna("CONTRASENA", Tipo_Dato.CADENA, false, false));
+        this.listaColumnas.add(new Columna("ESTADO_CONEXION", Tipo_Dato.CADENA, false, false));
+        this.listaColumnas.add(new Columna("FECHA_REGISTRO", Tipo_Dato.FECHA_HORA, false, false));
+        this.listaColumnas.add(new Columna("NOMBRE", Tipo_Dato.CADENA, false, false));
+        this.listaColumnas.add(new Columna("DIRECCION", Tipo_Dato.CADENA, false, false));
+        this.listaColumnas.add(new Columna("TELEFONO", Tipo_Dato.CADENA, false, false));
+        this.listaColumnas.add(new Columna("EMAIL", Tipo_Dato.CADENA, false, false));
+        this.listaColumnas.add(new Columna("INFO_TARJETA_CREDITO", Tipo_Dato.CADENA, false, false));
+        this.listaColumnas.add(new Columna("BALANCE_CUENTA", Tipo_Dato.REAL, false, false));
     }
 
     @Override
-    protected String getSelectByIdQuery() {
-        return "select * from Cliente WHERE userId = ?";
+    protected void incluirValorDeParametrosParaInsercion() throws SQLException {
+        this.statement.setString(1, this.cliente.getContraseña());
+        this.statement.setString(2, this.cliente.getEstadoConexion().name());
+        this.statement.setTimestamp(3, java.sql.Timestamp.valueOf(this.cliente.getFechaRegistro()));
+        this.statement.setString(4, this.cliente.getNombre());
+        this.statement.setString(5, this.cliente.getDireccion());
+        this.statement.setString(6, this.cliente.getTelefono());
+        this.statement.setString(7, this.cliente.getEmail());
+        this.statement.setString(8, this.cliente.getInfoTarjetaCredito());
+        this.statement.setDouble(9, this.cliente.getBalanceCuenta());
     }
 
     @Override
-    protected String getSelectAllQuery() {
-        return "select * from Cliente";
+    protected void incluirValorDeParametrosParaModificacion() throws SQLException {
+        this.statement.setString(1, this.cliente.getContraseña());
+        this.statement.setString(2, this.cliente.getEstadoConexion().name());
+        this.statement.setTimestamp(3, java.sql.Timestamp.valueOf(this.cliente.getFechaRegistro()));
+        this.statement.setString(4, this.cliente.getNombre());
+        this.statement.setString(5, this.cliente.getDireccion());
+        this.statement.setString(6, this.cliente.getTelefono());
+        this.statement.setString(7, this.cliente.getEmail());
+        this.statement.setString(8, this.cliente.getInfoTarjetaCredito());
+        this.statement.setDouble(9, this.cliente.getBalanceCuenta());
+        this.statement.setInt(10, this.cliente.getIdPersona());
     }
 
     @Override
-    protected String getDeleteQuery() {
-        return "delete from Cliente WHERE userId = ?";
+    protected void incluirValorDeParametrosParaEliminacion() throws SQLException {
+        this.statement.setInt(1, this.cliente.getIdPersona());
     }
 
     @Override
-    protected void setInsertParameters(PreparedStatement ps, ClienteDTO modelo) throws SQLException {
-        ps.setInt(1,modelo.getIdPersona());
-        ps.setString(2,modelo.getContraseña());
-        ps.setString(3, modelo.getEstadoConexion().name());
-        ps.setTimestamp(4, Timestamp.valueOf(modelo.getFechaRegistro()));
-        ps.setString(5,modelo.getNombre());
-        ps.setString(6,modelo.getDireccion());
-        ps.setString(7,modelo.getEmail());
-        ps.setString(8, modelo.getInfoTarjetaCredito());
-        ps.setString(9, modelo.getInfoCompra());
-        ps.setDouble(10,modelo.getBalanceCuenta());
+    protected void incluirValorDeParametrosParaObtenerPorId() throws SQLException {
+        this.statement.setInt(1, this.cliente.getIdPersona());
+    }
+
+    @Override
+    protected void instanciarObjetoDelResultSet() throws SQLException {
+        this.cliente = new ClienteDTO();
+        this.cliente.setIdPersona(this.resultSet.getInt("ID_CLIENTE"));
+        this.cliente.setContraseña(this.resultSet.getString("CONTRASENA"));
         
-    }
-
-    @Override
-    protected void setUpdateParameters(PreparedStatement ps, ClienteDTO modelo) throws SQLException {
-        
-        ps.setString(1,modelo.getContraseña());
-        ps.setString(2, modelo.getEstadoConexion().name());
-        ps.setTimestamp(3, Timestamp.valueOf(modelo.getFechaRegistro()));
-        ps.setString(4,modelo.getNombre());
-        ps.setString(5,modelo.getDireccion());
-        ps.setString(6,modelo.getEmail());
-        ps.setString(7, modelo.getInfoTarjetaCredito());
-        ps.setString(8, modelo.getInfoCompra());
-        ps.setDouble(9,modelo.getBalanceCuenta());
-        ps.setInt(10,modelo.getIdPersona());
-    }
-
-    @Override
-    protected ClienteDTO createFromResultado(ResultSet rs) throws SQLException {
-        ClienteDTO p = new ClienteDTO();
-        p.setIdPersona(rs.getInt("userId"));
-        p.setContraseña(rs.getString("contraseña"));
-        p.setEstadoConexion(EstadoConexionDTO.valueOf(rs.getString("estadoConexion")));
-        p.setNombre(rs.getString("nombreCliente"));
-        p.setDireccion(rs.getString("direccion"));
-        p.setEmail(rs.getString("email"));
-        p.setInfoTarjetaCredito(rs.getString("infoTarjetaCredito"));
-        p.setInfoCompra(rs.getString("infoCompra"));
-        p.setBalanceCuenta(rs.getDouble("balanceCuenta"));
-        Timestamp timestamp = rs.getTimestamp("fechaRegistro");
-        if (timestamp != null) {
-           p.setFechaRegistro(timestamp.toLocalDateTime());
+        try {
+            String estadoConexionStr = this.resultSet.getString("ESTADO_CONEXION");
+            EstadoConexionDTO estadoDeConexion = EstadoConexionDTO.valueOf(estadoConexionStr);
+            this.cliente.setEstadoConexion(estadoDeConexion);
+        } catch (IllegalArgumentException e) {
+            this.cliente.setEstadoConexion(EstadoConexionDTO.DESCONECTADO);
         }
-        return p;
+        
+        java.sql.Timestamp timestamp = this.resultSet.getTimestamp("FECHA_REGISTRO");
+        if (timestamp != null) {
+            this.cliente.setFechaRegistro(timestamp.toLocalDateTime());
+        }
+        
+        this.cliente.setNombre(this.resultSet.getString("NOMBRE"));
+        this.cliente.setDireccion(this.resultSet.getString("DIRECCION"));
+        this.cliente.setTelefono(this.resultSet.getString("TELEFONO"));
+        this.cliente.setEmail(this.resultSet.getString("EMAIL"));
+        this.cliente.setInfoTarjetaCredito(this.resultSet.getString("INFO_TARJETA_CREDITO"));
+        this.cliente.setBalanceCuenta(this.resultSet.getDouble("BALANCE_CUENTA"));
     }
+
+    @Override
+    protected void limpiarObjetoDelResultSet() {
+        this.cliente = null;
+    }
+
+    @Override
+    protected void agregarObjetoALaLista(List lista) throws SQLException {
+        this.instanciarObjetoDelResultSet();
+        if (this.cliente != null) {
+            lista.add(this.cliente);
+        }
+    }
+
+    @Override
+    public Integer insertar(ClienteDTO cliente) {
+        if (cliente == null) {
+            return -1;
+        }
+        this.cliente = cliente;
+        return super.insertar();
+    }
+
+    @Override
+    public ClienteDTO obtenerPorId(Integer idCliente) {
+        if (idCliente == null || idCliente <= 0) {
+            return null;
+        }
+        this.cliente = new ClienteDTO();
+        this.cliente.setIdPersona(idCliente);
+        super.obtenerPorId();
+        return this.cliente;
+    }
+
+    @Override
+    public ArrayList<ClienteDTO> listarTodos() {
+        return (ArrayList<ClienteDTO>) super.listarTodos();
+    }
+
+    @Override
+    public Integer modificar(ClienteDTO cliente) {
+        if (cliente == null || cliente.getIdPersona() == null) {
+            return -1;
+        }
+        this.cliente = cliente;
+        return super.modificar();
+    }
+
+    @Override
+    public Integer eliminar(ClienteDTO cliente) {
+        if (cliente == null || cliente.getIdPersona() == null) {
+            return -1;
+        }
+        this.cliente = cliente;
+        return super.eliminar();
+    }
+    
+    /***Otros métodos***/
+    
     
 }

@@ -1,77 +1,141 @@
- /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package pe.edu.pucp.techshopper.daoImp;
 
-import com.mysql.cj.xdevapi.Client;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import pe.edu.pucp.techshopper.dao.CarritoDAO;
-import pe.edu.pucp.techshopper.dao.BaseDAOImp;
-import pe.edu.pucp.techshopper.db.DBManager;
+import pe.edu.pucp.techshopper.dao.CarritoItemsDAO;
+import pe.edu.pucp.techshopper.daoImp.util.Columna;
+import pe.edu.pucp.techshopper.daoImp.util.Tipo_Dato;
 import pe.edu.pucp.techshopper.model.CarritoDTO;
+import pe.edu.pucp.techshopper.model.CarritoItemsDTO;
 import pe.edu.pucp.techshopper.model.ClienteDTO;
 
+public class CarritoDAOImp extends DAOImplBase implements CarritoDAO {
 
-public class CarritoDAOImp extends BaseDAOImp <CarritoDTO> implements CarritoDAO{
-    public CarritoDAOImp(){ 
+    private CarritoDTO carrito;
 
+    public CarritoDAOImp() {
+        super("TCS_CARRITOS");
+        this.retornarLlavePrimaria = true;
+        this.carrito = null;
+    }
+
+    @Override
+    protected void configurarListaDeColumnas() {
+        this.listaColumnas.clear();
+        this.listaColumnas.add(new Columna("ID_CARRITO", Tipo_Dato.ENTERO, true, true));
+        this.listaColumnas.add(new Columna("PRECIO", Tipo_Dato.REAL, false, false));
+        this.listaColumnas.add(new Columna("ID_CLIENTE", Tipo_Dato.ENTERO, false, false));
+    }
+
+    @Override
+    protected void incluirValorDeParametrosParaInsercion() throws SQLException {
+        this.statement.setDouble(1, this.carrito.getPrecio());
+        this.statement.setInt(2, this.carrito.getCliente().getIdPersona());
+    }
+
+    @Override
+    protected void incluirValorDeParametrosParaModificacion() throws SQLException {
+        this.statement.setDouble(1, this.carrito.getPrecio());
+        this.statement.setInt(2, this.carrito.getCliente().getIdPersona());
+        this.statement.setInt(3, this.carrito.getIdCarrito());
+    }
+
+    @Override
+    protected void incluirValorDeParametrosParaEliminacion() throws SQLException {
+        this.statement.setInt(1, this.carrito.getIdCarrito());
+    }
+
+    @Override
+    protected void incluirValorDeParametrosParaObtenerPorId() throws SQLException {
+        this.statement.setInt(1, this.carrito.getIdCarrito());
+    }
+
+    @Override
+    protected void instanciarObjetoDelResultSet() throws SQLException {
+        this.carrito = new CarritoDTO();
+        this.carrito.setIdCarrito(this.resultSet.getInt("ID_CARRITO"));
+        this.carrito.setPrecio(this.resultSet.getDouble("PRECIO"));
+        ClienteDTO cliente = new ClienteDTO();
+        cliente.setIdPersona(this.resultSet.getInt("ID_CLIENTE"));
+        this.carrito.setCliente(cliente);
+    }
+
+    @Override
+    protected void limpiarObjetoDelResultSet() {
+        this.carrito = null;
+    }
+
+    @Override
+    protected void agregarObjetoALaLista(List lista) throws SQLException {
+        this.instanciarObjetoDelResultSet();
+        if (this.carrito != null) {
+            lista.add(this.carrito);
+        }
+    }
+
+    @Override
+    public Integer insertar(CarritoDTO carrito) {
+        if (carrito == null) {
+            return -1;
+        }
+        this.carrito = carrito;
+        return super.insertar();
+    }
+
+    @Override
+    public CarritoDTO obtenerPorId(Integer idCarrito) {
+        if (idCarrito == null || idCarrito <= 0) {
+            return null;
+        }
+        this.carrito = new CarritoDTO();
+        this.carrito.setIdCarrito(idCarrito);
+        super.obtenerPorId();
+        return this.carrito;
+    }
+
+    @Override
+    public ArrayList<CarritoDTO> listarTodos() {
+        return (ArrayList<CarritoDTO>) super.listarTodos();
+    }
+
+    @Override
+    public Integer modificar(CarritoDTO carrito) {
+        if (carrito == null || carrito.getIdCarrito() == null) {
+            return -1;
+        }
+        this.carrito = carrito;
+        return super.modificar();
+    }
+
+    @Override
+    public Integer eliminar(CarritoDTO carrito) {
+        if (carrito == null || carrito.getIdCarrito() == null) {
+            return -1;
+        }
+        this.carrito = carrito;
+        return super.eliminar();
     }
     
+    
     @Override
-    protected String getInsertarQuery() {
-        return "insert into Carrito (idCarrito, precio,idPersona_carrito) values (?,?,?)";
-    }
-
-    @Override
-    protected String getUpdateQuery() {
-       return  "update Carrito SET precio = ?,idCliente_carrito = ? where idCarrito = ?";
-    }
-
-    @Override
-    protected String getSelectByIdQuery() {
-        return "select * from Carrito WHERE idCarrito = ?";
-    }
-
-    @Override
-    protected String getSelectAllQuery() {
-        return  "select * from Carrito"; 
-    }
-
-    @Override
-    protected String getDeleteQuery() {
-        return "delete from Carrito WHERE idCarrito = ?";
-    }
-
-    @Override
-    protected void setInsertParameters(PreparedStatement ps, CarritoDTO modelo) throws SQLException {
-        ps.setInt(1,modelo.getIdCarrito());
-        ps.setDouble(2,modelo.getPrecio());
-        ps.setInt(3,modelo.getCliente().getIdPersona());
+    public Double montoAPagar (Integer idCarrito) {
+        List<CarritoItemsDTO> listadoItemsCarrito = new ArrayList<>();
+        CarritoItemsDAO carritoItemDAO = new CarritoItemsDAOImp();
+        listadoItemsCarrito = carritoItemDAO.listarTodos();
         
+        Double precioTotal=0.0;
+        for(CarritoItemsDTO elem : listadoItemsCarrito){
+            if (elem.getCarrito().getIdCarrito()==idCarrito){ //aqui reemplaza por el id que quieras
+                
+                precioTotal = precioTotal + (elem.getCantidad()*elem.getPrecioUnitario());
+            }
+        }
+        CarritoDAO carritoDAO = new CarritoDAOImp();
+        CarritoDTO carrito = carritoDAO.obtenerPorId(idCarrito);
+        
+        return precioTotal+carrito.getPrecio();
     }
 
-    @Override
-    protected void setUpdateParameters(PreparedStatement ps, CarritoDTO modelo) throws SQLException {
-        ps.setDouble(1,modelo.getPrecio());
-        ps.setInt(2,modelo.getCliente().getIdPersona());
-        ps.setInt(3,modelo.getIdCarrito());
-    }
-
-    @Override
-    protected CarritoDTO createFromResultado(ResultSet rs) throws SQLException {
-        CarritoDTO p = new CarritoDTO();
-        p.setIdCarrito(rs.getInt("idCarrito"));
-        p.setPrecio(rs.getDouble("precio"));
-
-        ClienteDTO cli = new ClienteDTO();
-        cli.setIdPersona(rs.getInt("idCliente_carrito"));
-        p.setCliente(cli);
-
-        return p;
-    }
 }
