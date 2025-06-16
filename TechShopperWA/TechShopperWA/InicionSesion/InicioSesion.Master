@@ -36,10 +36,10 @@
     </div>
 </nav>
 
-        <div>
+        <main class="conainer-fluid min-vh-100 mt-2">
             <asp:ContentPlaceHolder ID="IniciarSesionContent" runat="server">
             </asp:ContentPlaceHolder>
-        </div>
+        </main>
         <footer class="mt-5 py-3" style="background-color: #835da2;">
     <div class="container text-center text-white">
         <p class="mb-0">&copy; <%: DateTime.Now.Year %> - TechShopper. Todos los derechos reservados.</p>

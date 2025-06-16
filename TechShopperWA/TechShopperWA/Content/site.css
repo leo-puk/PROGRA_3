@@ -1,9 +1,30 @@
 ﻿/* Estilos personalizados para TechShopper */
+/* Estructura principal */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#form1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor principal que empuja el footer hacia abajo */
+main {
+    flex: 1;
+    padding-bottom: 20px; /* Espacio antes del footer */
+}
 
 /* Estilos generales */
 body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Viewport Height */
     font-family: 'Arial', sans-serif; /* Base segura */
-
     background-color: #f8f9fa;
 }
 
@@ -25,6 +46,9 @@ body {
 
 /* Estilos para el footer */
 footer {
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: auto; /* Empuja el footer hacia abajo */
     background-color: #212529 !important;
 }
 
@@ -32,6 +56,7 @@ footer {
 .navbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 h1, h2, h3, .btn {
     font-family: 'Poppins', sans-serif; /* Jerarquía tecnológica */
 }
@@ -46,5 +71,3 @@ h1, h2, h3, .btn {
     min-height: 400px;
     padding: 20px 0;
 }
-
-

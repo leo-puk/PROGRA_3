@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Titulo" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="card">
+    <div class="card mt-2">
         <div class="card-header">
 
             <h2>Agregar/Modificar</h2>
