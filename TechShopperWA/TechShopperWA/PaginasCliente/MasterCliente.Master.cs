@@ -43,9 +43,9 @@ namespace TechShopperWA.PaginasCliente
             // Simulando datos de categorías (deberías obtenerlos de tu BD)
             var categorias = new List<Categoria>
     {
-        new Categoria { Id = 1, Nombre = "Electrónicos" },
-        new Categoria { Id = 2, Nombre = "Computación" },
-        new Categoria { Id = 3, Nombre = "Hogar" }
+        new Categoria ( 1, "Electrónicos" ),
+        new Categoria (2, "Computación"),
+        new Categoria (3, "Hogar")
     };
 
             foreach (var categoria in categorias)
@@ -79,6 +79,7 @@ protected void Categoria_Click(object sender, EventArgs e)
 
             // Aquí tu lógica para manejar el click
             
+
             // Por ejemplo:
             Response.Redirect($"/Productos/Categoria.aspx?id={idCategoria}&nombre={Server.UrlEncode(nombreCategoria)}");
 
@@ -88,8 +89,15 @@ protected void Categoria_Click(object sender, EventArgs e)
 
         public class Categoria
         {
-            public int Id { get; set; }
-            public string Nombre { get; set; }
+            private int Id;
+            private string Nombre;
+
+            public Categoria(int id, string nombre)
+            {
+                Id = id;
+                Nombre = nombre;
+            }
+            
         }
 
     }
