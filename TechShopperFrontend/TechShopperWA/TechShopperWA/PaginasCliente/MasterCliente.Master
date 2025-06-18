@@ -1,0 +1,150 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterCliente.master.cs" Inherits="TechShopperWA.PaginasCliente.MasterCliente" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Hojas de estilo -->
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/Fonts/css/all.css" rel="stylesheet" />
+    <link href="../Content/site.css" rel="stylesheet" />
+    
+<title> <asp:ContentPlaceHolder ID="head" runat="server">
+ </asp:ContentPlaceHolder>
+
+</title>
+   
+</head>
+<body class="d-flex flex-column">
+    <form id="form1" runat="server">
+        <!-- Barra de navegación principal -->
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #835da2;">
+            <div class="container">
+                <!-- Logo/Marca -->
+                <a class="navbar-brand fw-bold" href="/Index.aspx">
+                    <i class="fas fa-shopping-bag me-2"></i>TechShopper
+                </a>
+                
+                <!-- Botón para móviles -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Contenido del navbar -->
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <!-- Menú principal -->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarCategories" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-list me-1"></i>Categorías
+                            </a>
+                <!-- LAPTOP,PC,MOUSE,MONITOR,TECLADO,AURICULARES,AUDIFONOS,MICROFONO,PARLANTES -->
+
+                            <ul class="dropdown-menu" id="menuCategorias" runat="server">
+
+                                <!-- acá se cargarán las categorías según la BD-->                                
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-fire me-1"></i>Más Vendidos
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-tag me-1"></i>Mejores Precios
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-star me-1"></i>Lo Nuevo
+                            </a>
+                        </li>
+                    </ul>
+                    
+                    <!-- Barra de búsqueda -->
+                    <div class="d-flex me-3">
+                        <div class="input-group">
+                            <asp:TextBox ID="txtBusqueda" runat="server" CssClass="form-control" placeholder="Buscar productos..." />
+                            <asp:Button ID="btnBuscar" runat="server" CssClass="btn btn-light" Text="Buscar" OnClick="btnBuscar_Click" />
+                        </div>
+                    </div>
+                    
+                    <!-- Menú usuario -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarUser" role="button" data-bs-toggle="dropdown">
+                                <i class="fas fa-user-circle me-1"></i>Mi Cuenta
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-user me-1"></i>Mi perfil</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-clipboard-list me-1"></i>Mis pedidos</a></li>
+                                <li><a class="dropdown-item" href="#"><i class="fas fa-heart me-1"></i>Favoritos</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <asp:LinkButton ID="btnCerrarSesion" runat="server" CssClass="dropdown-item" OnClick="btnCerrarSesion_Click">
+                                        <i class="fas fa-sign-out-alt me-1"></i>Cerrar sesión
+                                    </asp:LinkButton>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link position-relative" href="Carrito.aspx">
+                                <i class="fas fa-shopping-cart me-1"></i>Carrito
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    <asp:Label ID="lblCarritoCount" runat="server" Text="0" />
+                                    <span class="visually-hidden">items en el carrito</span>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main class="container-fluid min-vh-100">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </main>
+            <!-- Pie de página -->
+ <footer class="bg-dark text-white py-4 mt-auto" style="background-color: #835da2;">
+     <div class="container">
+         <div class="row">
+             <div class="col-md-4">
+                 <h5><i class="fas fa-shopping-bag me-2"></i>TechShopper</h5>
+                 <p>Tu tienda de tecnología favorita con los mejores precios y productos.</p>
+             </div>
+             <div class="col-md-4">
+                 <h5>Enlaces rápidos</h5>
+                 <ul class="list-unstyled">
+                     <li><a href="/Contacto.aspx" class="text-white">Contacto</a></li>
+                     <li><a href="/PreguntasFrecuentes.aspx" class="text-white">Preguntas frecuentes</a></li>
+                     <li><a href="/Terminos.aspx" class="text-white">Términos y condiciones</a></li>
+                 </ul>
+             </div>
+             <div class="col-md-4">
+                 <h5>Métodos de pago</h5>
+                 <div class="d-flex gap-2">
+                     <i class="fab fa-cc-visa fa-2x"></i>
+                     <i class="fab fa-cc-mastercard fa-2x"></i>
+                     <i class="fab fa-cc-paypal fa-2x"></i>
+                 </div>
+             </div>
+         </div>
+         <hr class="my-3">
+         <div class="text-center">
+             <p class="mb-0">&copy; <%: DateTime.Now.Year %> TechShopper. Todos los derechos reservados.</p>
+         </div>
+     </div>
+ </footer>
+
+ <!-- Scripts -->
+ <script src="../Scripts/jquery-3.7.1.min.js"></script>
+ <script src="../Scripts/bootstrap.bundle.min.js"></script>
+ <script src="../Scripts/site.js"></script>
+    </form>
+</body>
+</html>

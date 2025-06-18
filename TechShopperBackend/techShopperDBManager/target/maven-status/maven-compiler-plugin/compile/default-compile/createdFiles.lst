@@ -1,0 +1,5 @@
+pe\edu\pucp\techshopper\db\DBManagerMSSQL.class
+pe\edu\pucp\techshopper\db\DBManager.class
+pe\edu\pucp\techshopper\db\DBManagerMySQL.class
+pe\edu\pucp\techshopper\db\util\Cifrado.class
+pe\edu\pucp\techshopper\db\util\MotorDeBaseDeDatos.class
