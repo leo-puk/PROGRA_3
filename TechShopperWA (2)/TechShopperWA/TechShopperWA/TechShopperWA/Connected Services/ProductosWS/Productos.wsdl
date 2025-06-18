@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.techshopper.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Productos" targetNamespace="http://services.techshopper.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/techShopperWS/Productos?xsd=1" namespace="http://services.techshopper.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="actualizarProducto">
+    <part name="parameters" element="tns:actualizarProducto" />
+  </message>
+  <message name="actualizarProductoResponse">
+    <part name="parameters" element="tns:actualizarProductoResponse" />
+  </message>
+  <message name="registrarProductosssss">
+    <part name="parameters" element="tns:registrarProductosssss" />
+  </message>
+  <message name="registrarProductosssssResponse">
+    <part name="parameters" element="tns:registrarProductosssssResponse" />
+  </message>
+  <message name="eliminarProducto">
+    <part name="parameters" element="tns:eliminarProducto" />
+  </message>
+  <message name="eliminarProductoResponse">
+    <part name="parameters" element="tns:eliminarProductoResponse" />
+  </message>
+  <message name="obtenerProductoPorId">
+    <part name="parameters" element="tns:obtenerProductoPorId" />
+  </message>
+  <message name="obtenerProductoPorIdResponse">
+    <part name="parameters" element="tns:obtenerProductoPorIdResponse" />
+  </message>
+  <message name="listarTodosProductos">
+    <part name="parameters" element="tns:listarTodosProductos" />
+  </message>
+  <message name="listarTodosProductosResponse">
+    <part name="parameters" element="tns:listarTodosProductosResponse" />
+  </message>
+  <message name="listarPor3criterios">
+    <part name="parameters" element="tns:listarPor3criterios" />
+  </message>
+  <message name="listarPor3criteriosResponse">
+    <part name="parameters" element="tns:listarPor3criteriosResponse" />
+  </message>
+  <portType name="Productos">
+    <operation name="actualizarProducto">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/actualizarProductoRequest" message="tns:actualizarProducto" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/actualizarProductoResponse" message="tns:actualizarProductoResponse" />
+    </operation>
+    <operation name="registrarProductosssss">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/registrarProductosssssRequest" message="tns:registrarProductosssss" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/registrarProductosssssResponse" message="tns:registrarProductosssssResponse" />
+    </operation>
+    <operation name="eliminarProducto">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/eliminarProductoRequest" message="tns:eliminarProducto" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/eliminarProductoResponse" message="tns:eliminarProductoResponse" />
+    </operation>
+    <operation name="obtenerProductoPorId">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdRequest" message="tns:obtenerProductoPorId" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdResponse" message="tns:obtenerProductoPorIdResponse" />
+    </operation>
+    <operation name="listarTodosProductos">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosRequest" message="tns:listarTodosProductos" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosResponse" message="tns:listarTodosProductosResponse" />
+    </operation>
+    <operation name="listarPor3criterios">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/listarPor3criteriosRequest" message="tns:listarPor3criterios" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/listarPor3criteriosResponse" message="tns:listarPor3criteriosResponse" />
+    </operation>
+  </portType>
+  <binding name="ProductosPortBinding" type="tns:Productos">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="actualizarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarProductosssss">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerProductoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosProductos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPor3criterios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Productos">
+    <port name="ProductosPort" binding="tns:ProductosPortBinding">
+      <soap:address location="http://localhost:8080/techShopperWS/Productos" />
+    </port>
+  </service>
+</definitions>

@@ -1,0 +1,59 @@
+﻿
+footer {
+    color: white;
+    padding: 1.5rem 0;
+    margin-top: auto; /* Empuja el footer hacia abajo */
+    background-color: #212529 !important;
+}
+
+
+/* Paginador GridView personalizado */
+.custom-pager {
+    text-align: center;
+    margin-top: 15px;
+}
+
+    .custom-pager a,
+    .custom-pager span {
+        display: inline-block;
+        padding: 6px 12px;
+        margin: 0 1px;
+        text-decoration: none !important;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        color: #333;
+        background-color: #f8f9fa;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        font-weight: bold;
+    }
+
+        .custom-pager a:hover {
+            background-color: white;
+            color: white;
+        }
+
+    .custom-pager span {
+        background-color: #835da2;
+        color: white;
+    }
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Viewport Height */
+    font-family: 'Arial', sans-serif; /* Base segura */
+    background-color: #f8f9fa;
+}
+
+
+.footer-button {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.titulo {
+    font-family: 'Exo 2', sans-serif;
+}
+
