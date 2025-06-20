@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
@@ -142,12 +143,17 @@ namespace TechShopperWA.PaginasCliente
                     HtmlGenericControl btnContainer = new HtmlGenericControl("div");
                     btnContainer.Attributes.Add("class", "d-grid gap-2 mt-2");
 
+                    // Crear botón tipo link (HtmlAnchor)
                     HtmlAnchor btn = new HtmlAnchor();
                     btn.Attributes.Add("class", "btn btn-purple");
-                    btn.HRef = $"#"; // Link temporal
-                    btn.InnerText = "Ver detalle";
-                    btnContainer.Controls.Add(btn);
 
+                    string id = producto.idProducto.ToString();
+
+                    // Redirección directa (misma pantalla)
+                    btn.HRef = $"/PaginasCliente/DetalleProducto.aspx?id={id}";
+                    btn.InnerText = "Ver detalle";
+
+                    btnContainer.Controls.Add(btn);
                     cardBody.Controls.Add(btnContainer);
                     card.Controls.Add(cardBody);
                     col.Controls.Add(card);

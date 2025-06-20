@@ -26,12 +26,12 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>techShopperModel</artifactId>
+            <artifactId>techShopperDBManager</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>techShopperDBManager</artifactId>
+            <artifactId>techShopperModel</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
