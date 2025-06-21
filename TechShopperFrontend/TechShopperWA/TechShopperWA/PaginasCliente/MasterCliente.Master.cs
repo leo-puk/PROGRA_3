@@ -6,19 +6,54 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using TechShopperWA.CarritosWS;
+using TechShopperWA.ReferenciaCliente;
 
 namespace TechShopperWA.PaginasCliente
 {
 	public partial class MasterCliente : System.Web.UI.MasterPage
 	{
+        private clienteDTO cliente;
+        private carritoDTO carrito;
+
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            //siempre compruebo la sesion
+            if (Session["Usuario"] != null)
+            {
+                var _carrito = Session["Carrito"];
+                carrito = (carritoDTO)_carrito;
+                //se ha iniciado sesión
+                mostrarItemsCarrito();
+            }
+
+
+        }
 		protected void Page_Load(object sender, EventArgs e)
 		{
-            if (!IsPostBack)
-            {
+            ////siempre compruebo la sesion
+            //if (Session["Usuario"] != null) 
+            //{ 
+            
+            //    //se ha iniciado sesión
+            //    mostrarItemsCarrito();
+            //}
+
+            
                 CargarCategorias();
-            }
+            
 		}
 
+        private void mostrarItemsCarrito()
+        {
+            //editar lbl de navbar
+            lblCarritoCount.Text = obtenerCantidadItemsCarrito();
+
+        }
+        private string obtenerCantidadItemsCarrito()
+        {
+            return "100";
+        }
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -27,7 +62,9 @@ namespace TechShopperWA.PaginasCliente
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-
+            Session["Usuario"] = null;
+            Session["Carrito"] = null;
+            Response.Redirect("VistaProductosCliente.aspx");
         }
 
         protected void CargarCategorias()

@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TechShopperWA.AdministradoresWS;
+using TechShopperWA.CarritosWS;
 using TechShopperWA.ProductosWS;
 
 namespace TechShopperWA.InicionSesion
@@ -15,6 +16,7 @@ namespace TechShopperWA.InicionSesion
 		//valores que se necesitan para la modificación de un usuario (inactivo a activo)
 		private string usuario;
 		private string contraseña;
+        private carritoDTO carrito;
         private string ip;
 
 
@@ -44,8 +46,16 @@ namespace TechShopperWA.InicionSesion
                 {
                     // Usuario válido
                     Session["Acceso"] = true;
-                    Session["Usuario"] = usuarioDTO.nombre;
+                    Session["Usuario"] = usuarioDTO;
                     Session["IdUsuario"] = usuarioDTO.idUsuario;
+                    var clientCarrito = new CarritosClient();
+                    var carrito = clientCarrito.obtenerCarritoPorId(1);//falta agregar otro método
+                    if(carrito == null)
+                    {
+                        Response.Redirect("P");
+                    }
+                    Session["Carrito"] = (carritoDTO)carrito;
+
                     Response.Redirect("../Index.aspx");
                 }
                 else
@@ -62,7 +72,10 @@ namespace TechShopperWA.InicionSesion
         }
         
         
-
+        public void iniciarSesion()
+        {
+            Response.Redirect("");
+        }
 
         private bool esUsuarioValido(string usuario, string contraseña)
         {

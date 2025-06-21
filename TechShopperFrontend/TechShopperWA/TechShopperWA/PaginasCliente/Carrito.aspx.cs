@@ -1,20 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using TechShopperWA.CarritoItemsWS;
+using TechShopperWA.CarritosWS;
 
 namespace TechShopperWA.PaginasCliente
 {
     public partial class Carrito : System.Web.UI.Page
     {
-        public class ProductoCarrito
-        {
-            public int Id { get; set; }
-            public string Nombre { get; set; }
-            public decimal Precio { get; set; }
-            public int Cantidad { get; set; }
-            public string ImagenUrl { get; set; }
-        }
+        private CarritosWS.carritoDTO carrito;
+        private List<carritoItemsDTO> items;
 
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            if (Session["Acceso"] != null)
+            {
+                var _carrito = Session["Carrito"];
+                carrito = (CarritosWS.carritoDTO)_carrito;
+            } else
+            {
+                Response.Redirect("../InicionSesion/IniciarSesion.aspx");
+            }
+        }
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -25,12 +32,12 @@ namespace TechShopperWA.PaginasCliente
 
         private void CargarCarrito()
         {
-            var carrito = Session["Carrito"] as List<ProductoCarrito> ?? new List<ProductoCarrito>();
-            rptCarrito.DataSource = carrito;
-            rptCarrito.DataBind();
+            //var carrito = Session["Carrito"] as List<ProductoCarrito> ?? new List<ProductoCarrito>();
+            //rptCarrito.DataSource = carrito;
+            //rptCarrito.DataBind();
 
-            decimal total = carrito.Sum(p => p.Precio * p.Cantidad);
-            lblTotal.Text = $"Total: ${total:N2}";
+            //decimal total = carrito.Sum(p => p.Precio * p.Cantidad);
+            //lblTotal.Text = $"Total: ${total:N2}";
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
@@ -38,12 +45,12 @@ namespace TechShopperWA.PaginasCliente
             var btn = (System.Web.UI.WebControls.Button)sender;
             int id = int.Parse(btn.CommandArgument);
 
-            var carrito = Session["Carrito"] as List<ProductoCarrito>;
-            if (carrito != null)
-            {
-                carrito.RemoveAll(p => p.Id == id);
-                Session["Carrito"] = carrito;
-            }
+            //var carrito = Session["Carrito"] as List<ProductoCarrito>;
+            //if (carrito != null)
+            //{
+            //    carrito.RemoveAll(p => p.Id == id);
+            //    Session["Carrito"] = carrito;
+            //}
 
             CargarCarrito();
         }

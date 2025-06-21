@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
@@ -11,8 +12,7 @@ using TechShopperWA.ProductosWS;
 namespace TechShopperWA.PaginasCliente
 {
     public partial class Index : System.Web.UI.Page
-    {
-        
+    { 
         public class Producto
         {
             public int Id { get; set; }
@@ -29,20 +29,35 @@ namespace TechShopperWA.PaginasCliente
             public string Nombre { get; set; }
         }
 
-        protected void Page_init(object sender, EventArgs e)
+        protected void Page_Init(object sender, EventArgs e)
         {
-
             Page.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
 
-            if (!IsPostBack)
+            // Validar si existe la sesión y si es booleana
+            bool access = false;
+
+            if (Session["Acceso"] != null && bool.TryParse(Session["Acceso"].ToString(), out bool result))
             {
-                CargarMarcas();
-                CargarProductos();
+                access = result;
+            }
+
+            if (access)
+            {
+                // Realizar cambios para el usuario autenticado o autorizado
+            }
+            else
+            {
+                Response.Redirect("~/Login.aspx");
+                return;
             }
 
 
 
+            // Siempre cargar marcas y productos
+            CargarMarcas();
+            CargarProductos();
         }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             

@@ -62,8 +62,6 @@
 
                 <div class="d-flex align-items-center mb-4">
                     <span runat="server" id="lblPrecio" class="fs-3 fw-bold text-danger">$99.99</span>
-                    <span runat="server" id="lblPrecioOriginal" class="fs-6 text-decoration-line-through text-muted ms-2">$129.99</span>
-                    <span runat="server" id="lblDescuento" class="badge bg-danger ms-2">25% OFF</span>
                 </div>
 
                 <div class="mb-4">
@@ -84,10 +82,11 @@
                     <h5 class="fw-bold mb-0 me-3">Cantidad:</h5>
                     <div class="input-group" style="width: 120px;">
                         <button class="btn btn-outline-secondary" type="button" onclick="decrementQuantity()">-</button>
-                        <input type="text" class="form-control text-center" value="1" id="quantityInput" />
+                        <asp:TextBox ID="txtCantidad" runat="server" CssClass="form-control text-center" Text="1" />
                         <button class="btn btn-outline-secondary" type="button" onclick="incrementQuantity()">+</button>
                     </div>
                 </div>
+
 
                 <!-- Botones de acción -->
                 <div class="d-flex flex-wrap gap-3 mb-4">
@@ -142,15 +141,18 @@
 
     <script>
         function incrementQuantity() {
-            var input = document.getElementById('quantityInput');
-            input.value = parseInt(input.value) + 1;
-        }
+            const input = document.getElementById('<%= txtCantidad.ClientID %>');
+        let current = parseInt(input.value) || 1;
+        input.value = current + 1;
+    }
 
-        function decrementQuantity() {
-            var input = document.getElementById('quantityInput');
-            if (parseInt(input.value) > 1) {
-                input.value = parseInt(input.value) - 1;
+    function decrementQuantity() {
+        const input = document.getElementById('<%= txtCantidad.ClientID %>');
+            let current = parseInt(input.value) || 1;
+            if (current > 1) {
+                input.value = current - 1;
             }
         }
     </script>
+
 </asp:Content>

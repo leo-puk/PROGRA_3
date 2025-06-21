@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.techshopper.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CarritoItems" targetNamespace="http://services.techshopper.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/techShopperWS/CarritoItems?xsd=1" namespace="http://services.techshopper.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="vaciarCarrito">
+    <part name="parameters" element="tns:vaciarCarrito" />
+  </message>
+  <message name="vaciarCarritoResponse">
+    <part name="parameters" element="tns:vaciarCarritoResponse" />
+  </message>
+  <message name="actualizarCantidadProducto">
+    <part name="parameters" element="tns:actualizarCantidadProducto" />
+  </message>
+  <message name="actualizarCantidadProductoResponse">
+    <part name="parameters" element="tns:actualizarCantidadProductoResponse" />
+  </message>
+  <message name="eliminarProductoDelCarrito">
+    <part name="parameters" element="tns:eliminarProductoDelCarrito" />
+  </message>
+  <message name="eliminarProductoDelCarritoResponse">
+    <part name="parameters" element="tns:eliminarProductoDelCarritoResponse" />
+  </message>
+  <message name="calcularTotalCarrito">
+    <part name="parameters" element="tns:calcularTotalCarrito" />
+  </message>
+  <message name="calcularTotalCarritoResponse">
+    <part name="parameters" element="tns:calcularTotalCarritoResponse" />
+  </message>
+  <message name="agregarProductoAlCarrito">
+    <part name="parameters" element="tns:agregarProductoAlCarrito" />
+  </message>
+  <message name="agregarProductoAlCarritoResponse">
+    <part name="parameters" element="tns:agregarProductoAlCarritoResponse" />
+  </message>
+  <message name="listarPorCarrito">
+    <part name="parameters" element="tns:listarPorCarrito" />
+  </message>
+  <message name="listarPorCarritoResponse">
+    <part name="parameters" element="tns:listarPorCarritoResponse" />
+  </message>
+  <message name="obtenerPorId">
+    <part name="parameters" element="tns:obtenerPorId" />
+  </message>
+  <message name="obtenerPorIdResponse">
+    <part name="parameters" element="tns:obtenerPorIdResponse" />
+  </message>
+  <message name="eliminar">
+    <part name="parameters" element="tns:eliminar" />
+  </message>
+  <message name="eliminarResponse">
+    <part name="parameters" element="tns:eliminarResponse" />
+  </message>
+  <message name="insertar">
+    <part name="parameters" element="tns:insertar" />
+  </message>
+  <message name="insertarResponse">
+    <part name="parameters" element="tns:insertarResponse" />
+  </message>
+  <message name="modificar">
+    <part name="parameters" element="tns:modificar" />
+  </message>
+  <message name="modificarResponse">
+    <part name="parameters" element="tns:modificarResponse" />
+  </message>
+  <message name="listarTodos">
+    <part name="parameters" element="tns:listarTodos" />
+  </message>
+  <message name="listarTodosResponse">
+    <part name="parameters" element="tns:listarTodosResponse" />
+  </message>
+  <portType name="CarritoItems">
+    <operation name="vaciarCarrito">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/vaciarCarritoRequest" message="tns:vaciarCarrito" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/vaciarCarritoResponse" message="tns:vaciarCarritoResponse" />
+    </operation>
+    <operation name="actualizarCantidadProducto">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/actualizarCantidadProductoRequest" message="tns:actualizarCantidadProducto" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/actualizarCantidadProductoResponse" message="tns:actualizarCantidadProductoResponse" />
+    </operation>
+    <operation name="eliminarProductoDelCarrito">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarProductoDelCarritoRequest" message="tns:eliminarProductoDelCarrito" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarProductoDelCarritoResponse" message="tns:eliminarProductoDelCarritoResponse" />
+    </operation>
+    <operation name="calcularTotalCarrito">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/calcularTotalCarritoRequest" message="tns:calcularTotalCarrito" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/calcularTotalCarritoResponse" message="tns:calcularTotalCarritoResponse" />
+    </operation>
+    <operation name="agregarProductoAlCarrito">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/agregarProductoAlCarritoRequest" message="tns:agregarProductoAlCarrito" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/agregarProductoAlCarritoResponse" message="tns:agregarProductoAlCarritoResponse" />
+    </operation>
+    <operation name="listarPorCarrito">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/listarPorCarritoRequest" message="tns:listarPorCarrito" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/listarPorCarritoResponse" message="tns:listarPorCarritoResponse" />
+    </operation>
+    <operation name="obtenerPorId">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/obtenerPorIdRequest" message="tns:obtenerPorId" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/obtenerPorIdResponse" message="tns:obtenerPorIdResponse" />
+    </operation>
+    <operation name="eliminar">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarRequest" message="tns:eliminar" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarResponse" message="tns:eliminarResponse" />
+    </operation>
+    <operation name="insertar">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/insertarRequest" message="tns:insertar" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/insertarResponse" message="tns:insertarResponse" />
+    </operation>
+    <operation name="modificar">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/modificarRequest" message="tns:modificar" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/modificarResponse" message="tns:modificarResponse" />
+    </operation>
+    <operation name="listarTodos">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/listarTodosRequest" message="tns:listarTodos" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/CarritoItems/listarTodosResponse" message="tns:listarTodosResponse" />
+    </operation>
+  </portType>
+  <binding name="CarritoItemsPortBinding" type="tns:CarritoItems">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="vaciarCarrito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarCantidadProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarProductoDelCarrito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="calcularTotalCarrito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="agregarProductoAlCarrito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarPorCarrito">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="insertar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CarritoItems">
+    <port name="CarritoItemsPort" binding="tns:CarritoItemsPortBinding">
+      <soap:address location="http://localhost:8080/techShopperWS/CarritoItems" />
+    </port>
+  </service>
+</definitions>
