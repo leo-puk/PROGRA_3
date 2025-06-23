@@ -72,6 +72,7 @@ namespace TechShopperWA.PaginasCliente
                 Response.Redirect("Carrito.aspx");
             } else
             {
+                //añadir una alerta bacán
                 Response.Redirect("../InicionSesion/IniciarSesion.aspx");
             }
                 
@@ -80,7 +81,7 @@ namespace TechShopperWA.PaginasCliente
 
         private void aniadirProdCarrito()
         {
-            
+            //Intercambiar por lógica de añadir producto desde el cliente
             var clientCarritoItems = new CarritoItemsClient();
             if(carrito!=null)
                 clientCarritoItems.agregarProductoAlCarrito(carrito.idCarrito, producto.idProducto, cantidad, producto.precio);

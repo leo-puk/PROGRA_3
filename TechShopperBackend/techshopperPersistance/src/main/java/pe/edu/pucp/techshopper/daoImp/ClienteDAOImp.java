@@ -1,12 +1,21 @@
 package pe.edu.pucp.techshopper.daoImp;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import pe.edu.pucp.techshopper.dao.CarritoDAO;
 import pe.edu.pucp.techshopper.dao.ClienteDAO;
+import pe.edu.pucp.techshopper.dao.ProductoDAO;
 import pe.edu.pucp.techshopper.daoImp.util.Columna;
 import pe.edu.pucp.techshopper.daoImp.util.Tipo_Dato;
+import pe.edu.pucp.techshopper.db.DBManager;
+import pe.edu.pucp.techshopper.model.CarritoDTO;
+import pe.edu.pucp.techshopper.model.CarritoItemsDTO;
 import pe.edu.pucp.techshopper.model.ClienteDTO;
+import pe.edu.pucp.techshopper.model.ProductoDTO;
+import pe.edu.pucp.techshopper.model.UsuarioDTO;
 
 public class ClienteDAOImp extends DAOImplBase implements ClienteDAO {
 
@@ -128,5 +137,79 @@ public class ClienteDAOImp extends DAOImplBase implements ClienteDAO {
         this.cliente = cliente;
         return super.eliminar();
     }
+    
+    @Override
+//    public Integer insertarCarrito(Integer id_usuario,ProductoDTO producto,Integer cantidad){
+    public Integer insertarCarrito(Integer id_usuario,Integer id_producto,Integer cantidad){
+//        if (producto.getIdProducto() < 0 && cantidad < 0) {
+        if (id_producto < 0 && cantidad < 0) {
+            return -1;
+        }
+        CarritoDAO carrito = new CarritoDAOImp();
+        ProductoDAO productodao = new ProductoDAOImp();
+        ProductoDTO producto = new ProductoDTO();
+        producto = productodao.obtenerPorId(id_producto);
+        if(producto == null){
+            System.out.println("No se encontró producto");
+            return -1;
+        }
+//        producto = productodao.obtenerPorId(producto.getIdProducto());
+        return carrito.insertaPorUsuario(id_usuario,producto,cantidad);
 
+    }
+    
+    @Override
+    public ArrayList<CarritoItemsDTO> MostrarCarritoDeCliente(Integer id_usuario){
+        CarritoDAO carrito = new CarritoDAOImp();
+        return carrito.devolverItemsDeCarrito(id_usuario);
+//        return carrItem.listarPorUsuario(id_usuario); 
+    }
+    
+    
+//    @Override
+//    public List<ProductoDTO> listarPor3criterios(String nombre, String categoria, String marca) {
+//        String sql = getSelectedAlQueryByFilters();
+//
+//        if ((nombre == null || nombre.isBlank()) &&
+//            (marca == null || marca.isBlank()) &&
+//            (categoria == null || categoria.isBlank())) {
+//            return new ArrayList<>(); // Nada que buscar
+//        }
+//
+//        try (Connection conn = DBManager.getInstance().getConnection();
+//             PreparedStatement cmd = conn.prepareStatement(sql)) {
+//
+//             //Normaliza filtros
+//            String nombreFiltro = (nombre == null || nombre.isBlank()) ? null : "%" + nombre + "%";
+//            String marcaFiltro = (marca == null || marca.isBlank()) ? null : "%" + marca + "%";
+//            String categoriaFiltro = (categoria == null || categoria.isBlank()) ? null : categoria;
+//
+//             //Set de parámetros (cada valor se repite para IS NULL y la condición)
+//            cmd.setString(1, (nombreFiltro == null) ? null : nombreFiltro); // IS NULL
+//            cmd.setString(2, nombreFiltro);                                 // LIKE
+//
+//            cmd.setString(3, (marcaFiltro == null) ? null : marcaFiltro);   // IS NULL
+//            cmd.setString(4, marcaFiltro);                                  // LIKE
+//
+//            cmd.setString(5, (categoriaFiltro == null) ? null : categoriaFiltro); // IS NULL
+//            cmd.setString(6, categoriaFiltro);                                   // =
+//
+//            ResultSet rs = cmd.executeQuery();
+//            List<ProductoDTO> objetos = new ArrayList<>();
+//            while (rs.next()) {
+//                objetos.add(createFromResultado(rs));
+//            }
+//
+//            return objetos;
+//
+//        } catch (SQLException e) {
+//            System.err.println("Error SQL durante búsqueda: " + e.getMessage());
+//            throw new RuntimeException("No se pudo buscar el registro.", e);
+//        } catch (Exception e) {
+//            System.err.println("Error inesperado: " + e.getMessage());
+//            throw new RuntimeException("Error inesperado al buscar registros.", e);
+//        }
+//    }
+    
+    
 }

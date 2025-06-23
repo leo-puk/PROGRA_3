@@ -7,6 +7,7 @@ import pe.edu.pucp.techshopper.dao.UsuarioDAO;
 import pe.edu.pucp.techshopper.daoImp.ClienteDAOImp;
 import pe.edu.pucp.techshopper.daoImp.UsuarioDAOImp;
 import pe.edu.pucp.techshopper.db.util.Cifrado;
+import pe.edu.pucp.techshopper.model.CarritoItemsDTO;
 import pe.edu.pucp.techshopper.model.ClienteDTO;
 import pe.edu.pucp.techshopper.model.EstadoConexionDTO;
 import pe.edu.pucp.techshopper.model.RolUsuarioDTO;
@@ -225,6 +226,25 @@ public class ClienteBO {
     }
 
     
+    public Integer insertarCarrito(Integer id_usuario,Integer id_producto,Integer cantidad){
+        if(id_usuario == null || id_usuario<=0 || id_producto == null || cantidad < 0)
+            return -1;
+        
+//        ProductoDTO producto = new ProductoDTO();
+//        producto.setIdProducto(id_producto);
+        
+        return clienteDAO.insertarCarrito(id_usuario,id_producto, cantidad);
+    }
+    
+    public ArrayList<CarritoItemsDTO> MostrarCarritoDeCliente(Integer id_usuario){
+        ArrayList<CarritoItemsDTO> lista = new ArrayList<CarritoItemsDTO>();
+        if(id_usuario == null || id_usuario <=0){
+            return lista;
+        }
+        
+        return this.clienteDAO.MostrarCarritoDeCliente(id_usuario);
+        
+    }
     
     
 }

@@ -34,21 +34,15 @@ namespace TechShopperWA.PaginasCliente
             Page.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
 
             // Validar si existe la sesión y si es booleana
-            bool access = false;
+            
 
-            if (Session["Acceso"] != null && bool.TryParse(Session["Acceso"].ToString(), out bool result))
-            {
-                access = result;
-            }
-
-            if (access)
+            if (Session["Acceso"] != null)
             {
                 // Realizar cambios para el usuario autenticado o autorizado
             }
             else
             {
-                Response.Redirect("~/Login.aspx");
-                return;
+                
             }
 
 

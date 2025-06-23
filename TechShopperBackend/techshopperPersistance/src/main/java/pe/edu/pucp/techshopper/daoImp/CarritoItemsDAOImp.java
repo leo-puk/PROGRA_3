@@ -137,4 +137,78 @@ public class CarritoItemsDAOImp extends DAOImplBase implements CarritoItemsDAO {
         this.carritoItem = carritoItem;
         return super.eliminar();
     }
+
+    @Override
+    public Integer salvar(CarritoItemsDTO itemsDTO){
+        Integer Itemid = itemsDTO.getIdCarritoItems();
+        CarritoItemsDTO carritoBD = this.obtenerPorIdProdIdCarrito(itemsDTO.getProducto().getIdProducto(),itemsDTO.getCarrito().getIdCarrito());
+        if(carritoBD ==null){
+            //no existe este item por lo que, crearemos uno nuevo
+            Integer res= this.insertar(itemsDTO);
+            return res;
+        }else{
+            //si existe el item, asi que, solo se modifica
+            carritoBD.setCantidad(itemsDTO.getCantidad()+carritoBD.getCantidad());
+            Integer resmodif = this.modificar(carritoBD);
+            return resmodif;
+        }
+        //return 0;
+    }
+    
+    @Override 
+    public CarritoItemsDTO obtenerPorIdProdIdCarrito(Integer productoId,Integer carritoId){
+        this.carritoItem = new CarritoItemsDTO();
+//        this.carrito.setUsuario(idUsuario);
+//        super.obtenerPorId();
+        
+        try {
+            this.abrirConexion();
+            String sql = "select * from TCS_ITEMS_CARRITO where ID_PRODUCTO = ? and id_carrito = ?";
+            this.colocarSQLenStatement(sql);
+            this.statement.setInt(1, productoId);
+            this.statement.setInt(2, carritoId);
+            this.ejecutarConsultaEnBD();
+            if (this.resultSet.next()) {
+                instanciarObjetoDelResultSet();
+            } else {
+                limpiarObjetoDelResultSet();
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al intentar obtenerPorId - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        return this.carritoItem;
+    }
+    
+    @Override
+    public ArrayList<CarritoItemsDTO> listarPorCarrito(Integer id_carrito){
+        List lista = new ArrayList<>();
+        try {
+            this.abrirConexion();
+            String sql = "select * from TCS_ITEMS_CARRITO where id_carrito = ?";
+            this.colocarSQLenStatement(sql);
+            this.statement.setInt(1, id_carrito);
+            this.ejecutarConsultaEnBD();
+            while (this.resultSet.next()) {
+                agregarObjetoALaLista(lista);
+            }
+        } catch (SQLException ex) {
+            System.err.println("Error al intentar listarTodos - " + ex);
+        } finally {
+            try {
+                this.cerrarConexion();
+            } catch (SQLException ex) {
+                System.err.println("Error al cerrar la conexión - " + ex);
+            }
+        }
+        return (ArrayList<CarritoItemsDTO>)lista;
+        
+    }
+    
+    
 }

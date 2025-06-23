@@ -6,6 +6,7 @@ import jakarta.jws.WebParam;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import pe.edu.pucp.techshopper.bo.ClienteBO;
+import pe.edu.pucp.techshopper.model.CarritoItemsDTO;
 import pe.edu.pucp.techshopper.model.ClienteDTO;
 import pe.edu.pucp.techshopper.model.EstadoConexionDTO;
 
@@ -27,20 +28,13 @@ public class Clientes {
             @WebParam(name = "telefono") String telefono,
             @WebParam(name = "infoTarjetaCredito") String infoTarjetaCredito,
             @WebParam(name = "balanceCuenta") Double balanceCuenta) {
-        
+
         try {
+            return clienteBO.registrarClienteCompleto(contraseña, nombre, email, direccion, telefono, infoTarjetaCredito, balanceCuenta)
+            ;
             
-            return clienteBO.registrarClienteCompleto(
-                contraseña,
-                nombre, 
-                email,
-                direccion, 
-                telefono,
-                infoTarjetaCredito, 
-                balanceCuenta
-            );
         } catch (IllegalArgumentException e) {
-            return -3; 
+            return -3;
         }
     }
 
@@ -55,85 +49,75 @@ public class Clientes {
             @WebParam(name = "email") String email,
             @WebParam(name = "infoTarjetaCredito") String infoTarjetaCredito,
             @WebParam(name = "balanceCuenta") Double balanceCuenta) {
-        
+
         try {
-            EstadoConexionDTO estadoConexion = estadoConexionStr != null ? 
-                EstadoConexionDTO.valueOf(estadoConexionStr) : null;
-            
+            EstadoConexionDTO estadoConexion = estadoConexionStr != null ?
+                    EstadoConexionDTO.valueOf(estadoConexionStr) : null;
+
             return clienteBO.actualizarDatosclienteCompleto(
-                idCliente,
-                contraseña, 
-                estadoConexion,
-                nombre, 
-                direccion, 
-                telefono,
-                email, 
-                infoTarjetaCredito, 
-                balanceCuenta
+                    idCliente,
+                    contraseña,
+                    estadoConexion,
+                    nombre,
+                    email,
+                    direccion,
+                    telefono,
+                    infoTarjetaCredito,
+                    balanceCuenta
             );
         } catch (IllegalArgumentException e) {
-            return -3; 
+            return -3;
         }
     }
 
     @WebMethod(operationName = "eliminarCliente")
-    public Integer eliminarCliente(
-            @WebParam(name = "idCliente") Integer idCliente) {
+    public Integer eliminarCliente(@WebParam(name = "idCliente") Integer idCliente) {
         return clienteBO.eliminarDatosCliente(idCliente);
     }
 
     @WebMethod(operationName = "obtenerClientePorId")
-    public ClienteDTO obtenerClientePorId(
-            @WebParam(name = "idCliente") Integer idCliente) {
+    public ClienteDTO obtenerClientePorId(@WebParam(name = "idCliente") Integer idCliente) {
         return clienteBO.obtenerClienteCompleto(idCliente);
     }
 
-    @WebMethod(operationName = "actualizarEstadoConexionCliente")
-    public Integer actualizarEstadoConexionCliente(
-            @WebParam(name = "idCliente") Integer idCliente,
-            @WebParam(name = "nuevoEstado") String nuevoEstadoStr) {
-        
-        try {
-            EstadoConexionDTO nuevoEstado = EstadoConexionDTO.valueOf(nuevoEstadoStr);
-            ClienteDTO cliente = clienteBO.obtenerClienteCompleto(idCliente);
-            if (cliente != null) {
-                return clienteBO.actualizarDatosclienteCompleto(
-                    cliente.getIdUsuario(),
-                    cliente.getContraseña(),
-                    nuevoEstado,
-                    cliente.getNombre(),
-                    cliente.getEmail(),
-                    cliente.getDireccion(),
-                    cliente.getTelefono(),
-                    cliente.getInfoTarjetaCredito(),
-                    cliente.getBalanceCuenta()
-                );
-            }
-            return -1;
-        } catch (IllegalArgumentException e) {
-            return -3; 
-        }
+    @WebMethod(operationName = "listarClientes")
+    public ArrayList<ClienteDTO> listarClientes() {
+        return clienteBO.listarTodosDatosClientes();
     }
 
     @WebMethod(operationName = "actualizarBalanceCliente")
     public Integer actualizarBalanceCliente(
             @WebParam(name = "idCliente") Integer idCliente,
             @WebParam(name = "nuevoBalance") Double nuevoBalance) {
-        
+
         ClienteDTO cliente = clienteBO.obtenerClienteCompleto(idCliente);
         if (cliente != null) {
             return clienteBO.actualizarDatosclienteCompleto(
-                cliente.getIdUsuario(),
-                cliente.getContraseña(),
-                cliente.getEstadoConexion(),
-                cliente.getNombre(),
-                cliente.getEmail(),
-                cliente.getDireccion(),
-                cliente.getTelefono(),
-                cliente.getInfoTarjetaCredito(),
-                nuevoBalance
+                    cliente.getIdUsuario(),
+                    cliente.getContraseña(),
+                    cliente.getEstadoConexion(),
+                    cliente.getNombre(),
+                    cliente.getEmail(),
+                    cliente.getDireccion(),
+                    cliente.getTelefono(),
+                    cliente.getInfoTarjetaCredito(),
+                    nuevoBalance
             );
         }
         return -1;
+    }
+
+    @WebMethod(operationName = "insertarCarrito")
+    public Integer insertarCarrito(
+            @WebParam(name = "idUsuario") Integer idUsuario,
+            @WebParam(name = "idProducto") Integer idProducto,
+            @WebParam(name = "cantidad") Integer cantidad) {
+        return clienteBO.insertarCarrito(idUsuario, idProducto, cantidad);
+    }
+
+    @WebMethod(operationName = "mostrarCarritoDeCliente")
+    public ArrayList<CarritoItemsDTO> mostrarCarritoDeCliente(
+            @WebParam(name = "idUsuario") Integer idUsuario) {
+        return clienteBO.MostrarCarritoDeCliente(idUsuario);
     }
 }

@@ -4,8 +4,12 @@
  */
 package pe.edu.pucp.techshopper.dao;
 
+import java.util.ArrayList;
 import pe.edu.pucp.techshopper.model.CarritoItemsDTO;
 
 public interface CarritoItemsDAO extends ICrud<CarritoItemsDTO>{
-
+    
+    public Integer salvar(CarritoItemsDTO itemsDTO);
+    public CarritoItemsDTO obtenerPorIdProdIdCarrito(Integer productoId,Integer carritoId);
+    public ArrayList<CarritoItemsDTO> listarPorCarrito(Integer id_usuario);
 }
