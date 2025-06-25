@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.techshopper.pucp.edu.pe/" targetNamespace="http://services.techshopper.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="eliminarMovimiento" type="tns:eliminarMovimiento" />
+  <xs:element name="eliminarMovimientoResponse" type="tns:eliminarMovimientoResponse" />
+  <xs:element name="listarMovimientosPorProducto" type="tns:listarMovimientosPorProducto" />
+  <xs:element name="listarMovimientosPorProductoResponse" type="tns:listarMovimientosPorProductoResponse" />
+  <xs:element name="listarTodosLosMovimientos" type="tns:listarTodosLosMovimientos" />
+  <xs:element name="listarTodosLosMovimientosResponse" type="tns:listarTodosLosMovimientosResponse" />
+  <xs:element name="modificarMovimiento" type="tns:modificarMovimiento" />
+  <xs:element name="modificarMovimientoResponse" type="tns:modificarMovimientoResponse" />
+  <xs:element name="obtenerMovimientoPorId" type="tns:obtenerMovimientoPorId" />
+  <xs:element name="obtenerMovimientoPorIdResponse" type="tns:obtenerMovimientoPorIdResponse" />
+  <xs:element name="registrarEntradaStock" type="tns:registrarEntradaStock" />
+  <xs:element name="registrarEntradaStockResponse" type="tns:registrarEntradaStockResponse" />
+  <xs:element name="registrarMovimiento" type="tns:registrarMovimiento" />
+  <xs:element name="registrarMovimientoResponse" type="tns:registrarMovimientoResponse" />
+  <xs:element name="registrarSalidaStock" type="tns:registrarSalidaStock" />
+  <xs:element name="registrarSalidaStockResponse" type="tns:registrarSalidaStockResponse" />
+  <xs:complexType name="listarMovimientosPorProducto">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarMovimientosPorProductoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:movimientoStockDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="movimientoStockDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="fechaMovimiento" type="tns:localDateTime" />
+      <xs:element minOccurs="0" name="idMovimiento" type="xs:int" />
+      <xs:element minOccurs="0" name="producto" type="tns:productoDTO" />
+      <xs:element minOccurs="0" name="tipo" type="tns:tipoMovimientoDTO" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="localDateTime" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="productoDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categoria" type="tns:categoriaDTO" />
+      <xs:element minOccurs="0" name="descripcion" type="xs:string" />
+      <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="imagenURL" type="xs:string" />
+      <xs:element minOccurs="0" name="marca" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="precio" type="xs:double" />
+      <xs:element minOccurs="0" name="stockDisponible" type="xs:int" />
+      <xs:element minOccurs="0" name="stockMinimo" type="xs:int" />
+      <xs:element minOccurs="0" name="stockReservado" type="xs:int" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuarioDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoConexion" type="tns:estadoConexionDTO" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="tns:localDateTime" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rol" type="tns:rolUsuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarMovimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMovimiento" type="xs:int" />
+      <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+      <xs:element minOccurs="0" name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" type="tns:localDateTime" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarMovimientoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarMovimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+      <xs:element minOccurs="0" name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="fecha" type="tns:localDateTime" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarMovimientoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosLosMovimientos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosLosMovimientosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:movimientoStockDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMovimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMovimiento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarMovimientoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarSalidaStock">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarSalidaStockResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarEntradaStock">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarEntradaStockResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMovimientoPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idMovimiento" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerMovimientoPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:movimientoStockDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="categoriaDTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LAPTOP" />
+      <xs:enumeration value="PC" />
+      <xs:enumeration value="MOUSE" />
+      <xs:enumeration value="MONITOR" />
+      <xs:enumeration value="TECLADO" />
+      <xs:enumeration value="AURICULARES" />
+      <xs:enumeration value="AUDIFONOS" />
+      <xs:enumeration value="MICROFONO" />
+      <xs:enumeration value="PARLANTES" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="estadoConexionDTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CONECTADO" />
+      <xs:enumeration value="DESCONECTADO" />
+      <xs:enumeration value="EN_eSPERA" />
+      <xs:enumeration value="RECONECTADO" />
+      <xs:enumeration value="ERROR" />
+      <xs:enumeration value="LIMITADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="rolUsuarioDTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CLIENTE" />
+      <xs:enumeration value="ADMINISTRADOR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="tipoMovimientoDTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ENTRADA" />
+      <xs:enumeration value="SALIDA" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

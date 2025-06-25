@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using TechShopperWA.ProductosWS;
+using TechShopperBO;
+using TechShopperBO.ProductosWS;
+
 
 namespace TechShopperWA
 {
@@ -37,6 +39,24 @@ namespace TechShopperWA
                 lblStockDisponible.Text = producto.stockDisponible.ToString();
                 lblStockMinimo.Text = producto.stockMinimo.ToString();
                 lblPrecio.Text = "S/ " + producto.precio.ToString("F2");
+
+                if (!string.IsNullOrWhiteSpace(producto.imagenURL) && producto.imagenURL.StartsWith("http"))
+                {
+                    phImagen.Controls.Add(new Literal
+                    {
+                        Text = $"<img src='{producto.imagenURL}' class='img-thumbnail' width='200' height='200' alt='Imagen del producto' />"
+                    });
+                }
+                else
+                {
+                    phImagen.Controls.Add(new Literal
+                    {
+                        Text = "<div class='d-flex align-items-center justify-content-center bg-light border rounded' style='width:200px; height:200px;'>" +
+                               "<i class='bi bi-image text-muted' style='font-size: 3rem;'></i>" +
+                               "</div>"
+                    });
+                }
+
                 if (producto.usuario == null)
                 {
                     lblIdAdmin.Text = "0";

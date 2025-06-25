@@ -6,7 +6,9 @@ using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using TechShopperWA.ProductosWS;
+using TechShopperBO;
+using TechShopperBO.ProductosWS;
+
 
 namespace TechShopperWA
 {
@@ -16,6 +18,7 @@ namespace TechShopperWA
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (Session["Acceso"] == null)
             {
                 Response.Redirect("/InicionSesion/IniciarSesion.aspx");
@@ -35,8 +38,12 @@ namespace TechShopperWA
                     var productos = client.ListarTodos();
 
                     var prod = client.ObtenerPorId(id);
+
+                    
+
                     if (prod != null)
                     {
+                        imgVistaPrevia.ImageUrl = !string.IsNullOrEmpty(prod.imagenURL) ? prod.imagenURL : "/img/placeholder.png"; //Vista previa
                         txtCodigo.Text = prod.idProducto.ToString();
                         txtNombre.Text = prod.nombre;
                         txtDescripcion.Text = prod.descripcion;
@@ -45,8 +52,12 @@ namespace TechShopperWA
                         txtMarca.Text = prod.marca;
                         txtStockDisponible.Text = prod.stockDisponible.ToString();
                         txtStockMinimo.Text = prod.stockMinimo.ToString();
-                        txtIdAdmin.Text = prod.usuario.idUsuario.ToString();
                         txtIdAdmin.Text = prod.usuario != null ? prod.usuario.idUsuario.ToString() : "";
+                        if(prod.imagenURL!= null)
+                        {
+                            txtImg.Text = prod.imagenURL;
+                        }
+
                     }
 
                 }
@@ -89,6 +100,7 @@ namespace TechShopperWA
                 marca = txtMarca.Text,
                 stockDisponible = int.Parse(txtStockDisponible.Text),
                 stockMinimo = int.Parse(txtStockMinimo.Text),
+                imagenURL = string.IsNullOrEmpty(txtImg.Text) ? null : txtImg.Text,
                 usuario = new usuarioDTO
                 {
                     idUsuario = int.Parse(txtIdAdmin.Text)
@@ -97,11 +109,19 @@ namespace TechShopperWA
 
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
+                //var clientMov = new MovimientoStockClient();
                 client.RegistrarProducto(prod);
             }
             else
             {
+                //int sisiosino = client.VerificarStock(prod.idProducto, prod.stockDisponible);
                 client.ActualizarProducto(prod);
+                /*if (sisiosino !=0)
+                {
+                    var clientMov = new MovimientoStockClient();
+                    clientMov.insertar();
+                }*/
+                
             }
 
             Response.Redirect("Productos.aspx");

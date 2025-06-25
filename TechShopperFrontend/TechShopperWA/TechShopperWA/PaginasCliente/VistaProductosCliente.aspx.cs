@@ -6,21 +6,14 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
-using TechShopperWA.ProductosWS;
+using TechShopperBO.ProductosWS;
+using TechShopperBO;
 
 
 namespace TechShopperWA.PaginasCliente
 {
     public partial class Index : System.Web.UI.Page
     { 
-        public class Producto
-        {
-            public int Id { get; set; }
-            public string Nombre { get; set; }
-            public string Marca { get; set; }
-            public decimal Precio { get; set; }
-            public string ImagenUrl { get; set; }
-        }
 
         // Clase modelo para Marca (hardcodeada)
         public class Marca
@@ -33,17 +26,13 @@ namespace TechShopperWA.PaginasCliente
         {
             Page.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
 
-            // Validar si existe la sesión y si es booleana
             
+            if (Session["Usuario"] != null)
+            {
+                //cambios si es que es inicio sesión
 
-            if (Session["Acceso"] != null)
-            {
-                // Realizar cambios para el usuario autenticado o autorizado
             }
-            else
-            {
-                
-            }
+            
 
 
 
@@ -69,7 +58,11 @@ namespace TechShopperWA.PaginasCliente
                     new Marca { Id = 2, Nombre = "Apple" },
                     new Marca { Id = 3, Nombre = "LG" },
                     new Marca { Id = 4, Nombre = "Sony" },
-                    new Marca { Id = 5, Nombre = "HP" }
+                    new Marca { Id = 5, Nombre = "HP" },
+                    new Marca { Id = 6, Nombre = "DELL" },
+                    new Marca { Id = 7, Nombre = "LENOVO" },
+                    new Marca { Id = 8, Nombre = "RAZER" },
+                    new Marca { Id = 9, Nombre = "BLUE" }
                 };
 
                 cblMarcas.DataSource = marcas;
@@ -80,7 +73,7 @@ namespace TechShopperWA.PaginasCliente
                 // Seleccionar todas las marcas por defecto
                 foreach (ListItem item in cblMarcas.Items)
                 {
-                    item.Selected = true;
+                    //item.Selected = true;
                 }
             }
             catch (Exception ex)
@@ -104,13 +97,38 @@ namespace TechShopperWA.PaginasCliente
                 .ToList();
 
                 var client = new ProductoClient();
-                var productos = client.ListarTodos();
+                var productos = client.ListarTodos().AsQueryable();
+
+                // Filtro por nombre
+                if (!string.IsNullOrWhiteSpace(nombre))
+                {
+                    productos = productos.Where(p => p.nombre != null && p.nombre.ToLower().Contains(nombre.ToLower()));
+                }
+
+                // Filtro por precios
+                if (precioMin.HasValue)
+                {
+                    productos = productos.Where(p => p.precio >= (double)precioMin.Value);
+                }
+
+                if (precioMax.HasValue)
+                {
+                    productos = productos.Where(p => p.precio <= (double)precioMax.Value);
+                }
+
+                // Filtro por marcas seleccionadas
+                if (marcasSeleccionadas != null && marcasSeleccionadas.Any())
+                {
+                    productos = productos.Where(p => marcasSeleccionadas.Contains(NormalizarMarca(p.marca)));
+                }
+
+                var listaFiltrada = productos.ToList();
 
                 productosContainer.Controls.Clear();
 
 
                 // Generar tarjetas de productos
-                foreach (var producto in productos)
+                foreach (var producto in listaFiltrada)
                 {
                     HtmlGenericControl col = new HtmlGenericControl("div");
                     col.Attributes.Add("class", "col-md-4 col-lg-3 mb-4");
@@ -121,7 +139,8 @@ namespace TechShopperWA.PaginasCliente
                     // Imagen del producto
                     HtmlGenericControl img = new HtmlGenericControl("img");
                     img.Attributes.Add("class", "card-img-top p-3");
-                    //img.Attributes.Add("src", producto.ImagenUrl);
+                    string imgUrl = string.IsNullOrEmpty(producto.imagenURL) ? "/img/placeholder.png" : producto.imagenURL;
+                    img.Attributes.Add("src", imgUrl);
                     img.Attributes.Add("alt", producto.nombre);
                     img.Style.Add("height", "180px");
                     img.Style.Add("object-fit", "contain");
@@ -175,10 +194,26 @@ namespace TechShopperWA.PaginasCliente
             }
         }
 
+        private int NormalizarMarca(string marca)
+        {
+            switch (marca?.ToUpper())
+            {
+                case "SAMSUNG": return 1;
+                case "APPLE": return 2;
+                case "LG": return 3;
+                case "SONY": return 4;
+                case "HP": return 5;
+                case "DELL": return 6;
+                case "Lenovo": return 7;
+                case "Razer": return 8;
+                case "Blue": return 9;
+                default: return -1; // Marca no válida
+            }
+        }
+
         protected void btnAplicarFiltros_Click(object sender, EventArgs e)
         {
-            // En esta versión hardcodeada, los filtros no tendrán efecto real
-            // pero se mantiene la estructura para demostración
+            
             CargarProductos();
         }
 
@@ -208,5 +243,7 @@ namespace TechShopperWA.PaginasCliente
             ScriptManager.RegisterStartupScript(this, GetType(), "showError",
                 $"alert('{mensaje}');", true);
         }
+
+
     }
 }

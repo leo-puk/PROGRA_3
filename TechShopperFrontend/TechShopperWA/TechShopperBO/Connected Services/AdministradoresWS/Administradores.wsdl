@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.techshopper.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Administradores" targetNamespace="http://services.techshopper.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/techShopperWS/Administradores?xsd=1" namespace="http://services.techshopper.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="iniciarSesion">
+    <part name="parameters" element="tns:iniciarSesion" />
+  </message>
+  <message name="iniciarSesionResponse">
+    <part name="parameters" element="tns:iniciarSesionResponse" />
+  </message>
+  <message name="registrarAdministrador">
+    <part name="parameters" element="tns:registrarAdministrador" />
+  </message>
+  <message name="registrarAdministradorResponse">
+    <part name="parameters" element="tns:registrarAdministradorResponse" />
+  </message>
+  <message name="actualizarEstadoConexion">
+    <part name="parameters" element="tns:actualizarEstadoConexion" />
+  </message>
+  <message name="actualizarEstadoConexionResponse">
+    <part name="parameters" element="tns:actualizarEstadoConexionResponse" />
+  </message>
+  <message name="eliminarAdministrador">
+    <part name="parameters" element="tns:eliminarAdministrador" />
+  </message>
+  <message name="eliminarAdministradorResponse">
+    <part name="parameters" element="tns:eliminarAdministradorResponse" />
+  </message>
+  <message name="obtenerAdministradorPorId">
+    <part name="parameters" element="tns:obtenerAdministradorPorId" />
+  </message>
+  <message name="obtenerAdministradorPorIdResponse">
+    <part name="parameters" element="tns:obtenerAdministradorPorIdResponse" />
+  </message>
+  <message name="actualizarAdministrador">
+    <part name="parameters" element="tns:actualizarAdministrador" />
+  </message>
+  <message name="actualizarAdministradorResponse">
+    <part name="parameters" element="tns:actualizarAdministradorResponse" />
+  </message>
+  <portType name="Administradores">
+    <operation name="iniciarSesion">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/iniciarSesionRequest" message="tns:iniciarSesion" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/iniciarSesionResponse" message="tns:iniciarSesionResponse" />
+    </operation>
+    <operation name="registrarAdministrador">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorRequest" message="tns:registrarAdministrador" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorResponse" message="tns:registrarAdministradorResponse" />
+    </operation>
+    <operation name="actualizarEstadoConexion">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarEstadoConexionRequest" message="tns:actualizarEstadoConexion" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarEstadoConexionResponse" message="tns:actualizarEstadoConexionResponse" />
+    </operation>
+    <operation name="eliminarAdministrador">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/eliminarAdministradorRequest" message="tns:eliminarAdministrador" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/eliminarAdministradorResponse" message="tns:eliminarAdministradorResponse" />
+    </operation>
+    <operation name="obtenerAdministradorPorId">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorIdRequest" message="tns:obtenerAdministradorPorId" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorIdResponse" message="tns:obtenerAdministradorPorIdResponse" />
+    </operation>
+    <operation name="actualizarAdministrador">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorRequest" message="tns:actualizarAdministrador" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorResponse" message="tns:actualizarAdministradorResponse" />
+    </operation>
+  </portType>
+  <binding name="AdministradoresPortBinding" type="tns:Administradores">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="iniciarSesion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarEstadoConexion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerAdministradorPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarAdministrador">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Administradores">
+    <port name="AdministradoresPort" binding="tns:AdministradoresPortBinding">
+      <soap:address location="http://localhost:8080/techShopperWS/Administradores" />
+    </port>
+  </service>
+</definitions>

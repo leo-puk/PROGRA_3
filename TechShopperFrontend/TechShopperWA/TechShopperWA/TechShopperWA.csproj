@@ -69,129 +69,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\AdministradoresWS\Administradores.wsdl" />
-    <None Include="Connected Services\AdministradoresWS\Administradores.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\AdministradoresWS\TechShopperWA.AdministradoresWS.actualizarAdministradorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\AdministradoresWS\TechShopperWA.AdministradoresWS.actualizarEstadoConexionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\AdministradoresWS\TechShopperWA.AdministradoresWS.administradorDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\AdministradoresWS\TechShopperWA.AdministradoresWS.eliminarAdministradorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\AdministradoresWS\TechShopperWA.AdministradoresWS.iniciarSesionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\AdministradoresWS\TechShopperWA.AdministradoresWS.obtenerAdministradorPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\AdministradoresWS\TechShopperWA.AdministradoresWS.registrarAdministradorResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\AdministradoresWS\TechShopperWA.AdministradoresWS.usuarioDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\CarritoItemsWS\CarritoItems.wsdl" />
-    <None Include="Connected Services\CarritoItemsWS\CarritoItems.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.actualizarCantidadProductoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.agregarProductoAlCarritoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.calcularTotalCarritoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.carritoItemsDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.eliminarProductoDelCarritoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.eliminarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.insertarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.listarPorCarritoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.listarTodosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.modificarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.obtenerPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritoItemsWS\TechShopperWA.CarritoItemsWS.vaciarCarritoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\CarritosWS\Carritos.wsdl" />
-    <None Include="Connected Services\CarritosWS\Carritos.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\CarritoItemsWS\configuration91.svcinfo" />
-    <None Include="Connected Services\CarritoItemsWS\configuration.svcinfo" />
-    <None Include="Connected Services\CarritoItemsWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <Content Include="Connected Services\CarritosWS\TechShopperWA.CarritosWS.actualizarPrecioCarritoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritosWS\TechShopperWA.CarritosWS.carritoDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritosWS\TechShopperWA.CarritosWS.crearCarritoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritosWS\TechShopperWA.CarritosWS.eliminarCarritoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritosWS\TechShopperWA.CarritosWS.listarTodosLosCarritosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritosWS\TechShopperWA.CarritosWS.montoAPagarResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\CarritosWS\TechShopperWA.CarritosWS.obtenerCarritoPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\ProductosWS\configuration91.svcinfo" />
-    <None Include="Connected Services\ProductosWS\configuration.svcinfo" />
-    <None Include="Connected Services\ProductosWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\AdministradoresWS\configuration91.svcinfo" />
-    <None Include="Connected Services\AdministradoresWS\configuration.svcinfo" />
-    <None Include="Connected Services\AdministradoresWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\ReferenciaCliente\configuration91.svcinfo" />
-    <None Include="Connected Services\ReferenciaCliente\configuration.svcinfo" />
-    <None Include="Connected Services\ReferenciaCliente\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-    <None Include="Connected Services\CarritosWS\configuration91.svcinfo" />
-    <None Include="Connected Services\CarritosWS\configuration.svcinfo" />
-    <None Include="Connected Services\CarritosWS\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -215,6 +92,8 @@
     <Content Include="Empresa.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="InicionSesion\IniciarSesion.aspx" />
+    <Content Include="InicionSesion\OlvideContra.aspx" />
+    <Content Include="InicionSesion\RegistroCliente.aspx" />
     <Content Include="InicionSesion\Registro.aspx" />
     <Content Include="PaginasCliente\Carrito.aspx" />
     <Content Include="PaginasCliente\DetalleProducto.aspx" />
@@ -222,7 +101,7 @@
     <Content Include="Productos\AgregarProductos.aspx" />
     <Content Include="Productos\Productos.aspx" />
     <Content Include="Productos\VerProducto.aspx" />
-    <Content Include="ReporteVentas.aspx" />
+    <Content Include="HistorialProductos\Historial.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -231,56 +110,6 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="InicionSesion\InicioSesion.Master" />
     <Content Include="PaginasCliente\MasterCliente.Master" />
-    <None Include="Connected Services\ProductosWS\Productos.wsdl" />
-    <None Include="Connected Services\ProductosWS\Productos.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\ProductosWS\TechShopperWA.ProductosWS.actualizarProductoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ProductosWS\TechShopperWA.ProductosWS.eliminarProductoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ProductosWS\TechShopperWA.ProductosWS.listarPor3criteriosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ProductosWS\TechShopperWA.ProductosWS.listarTodosProductosResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ProductosWS\TechShopperWA.ProductosWS.obtenerProductoPorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ProductosWS\TechShopperWA.ProductosWS.productoDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ProductosWS\TechShopperWA.ProductosWS.registrarProductosssssResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <None Include="Connected Services\ReferenciaCliente\Clientes.wsdl" />
-    <None Include="Connected Services\ReferenciaCliente\Clientes.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="Connected Services\ReferenciaCliente\TechShopperWA.ReferenciaCliente.actualizarBalanceClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ReferenciaCliente\TechShopperWA.ReferenciaCliente.actualizarClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ReferenciaCliente\TechShopperWA.ReferenciaCliente.actualizarEstadoConexionClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ReferenciaCliente\TechShopperWA.ReferenciaCliente.clienteDTO.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ReferenciaCliente\TechShopperWA.ReferenciaCliente.eliminarClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ReferenciaCliente\TechShopperWA.ReferenciaCliente.obtenerClientePorIdResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ReferenciaCliente\TechShopperWA.ReferenciaCliente.registrarClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.1.js" />
     <Content Include="Scripts\jquery-3.7.1.min.js" />
@@ -289,31 +118,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\AdministradoresWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\CarritoItemsWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\CarritosWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\ProductosWS\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
-    <Compile Include="Connected Services\ReferenciaCliente\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Compile>
     <Compile Include="Empresa.aspx.cs">
       <DependentUpon>Empresa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -341,6 +145,20 @@
     </Compile>
     <Compile Include="InicionSesion\InicioSesion.Master.designer.cs">
       <DependentUpon>InicioSesion.Master</DependentUpon>
+    </Compile>
+    <Compile Include="InicionSesion\OlvideContra.aspx.cs">
+      <DependentUpon>OlvideContra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicionSesion\OlvideContra.aspx.designer.cs">
+      <DependentUpon>OlvideContra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InicionSesion\RegistroCliente.aspx.cs">
+      <DependentUpon>RegistroCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="InicionSesion\RegistroCliente.aspx.designer.cs">
+      <DependentUpon>RegistroCliente.aspx</DependentUpon>
     </Compile>
     <Compile Include="InicionSesion\Registro.aspx.cs">
       <DependentUpon>Registro.aspx</DependentUpon>
@@ -377,7 +195,6 @@
     <Compile Include="PaginasCliente\MasterCliente.Master.designer.cs">
       <DependentUpon>MasterCliente.Master</DependentUpon>
     </Compile>
-    <Compile Include="ProductoClient.cs" />
     <Compile Include="Productos\AgregarProductos.aspx.cs">
       <DependentUpon>AgregarProductos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -400,12 +217,12 @@
       <DependentUpon>VerProducto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReporteVentas.aspx.cs">
-      <DependentUpon>ReporteVentas.aspx</DependentUpon>
+    <Compile Include="HistorialProductos\Historial.aspx.cs">
+      <DependentUpon>Historial.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ReporteVentas.aspx.designer.cs">
-      <DependentUpon>ReporteVentas.aspx</DependentUpon>
+    <Compile Include="HistorialProductos\Historial.aspx.designer.cs">
+      <DependentUpon>Historial.aspx</DependentUpon>
     </Compile>
     <Compile Include="TechShopperAdmin.Master.cs">
       <DependentUpon>TechShopperAdmin.Master</DependentUpon>
@@ -453,11 +270,10 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\AdministradoresWS\" />
-    <WCFMetadataStorage Include="Connected Services\CarritoItemsWS\" />
-    <WCFMetadataStorage Include="Connected Services\CarritosWS\" />
-    <WCFMetadataStorage Include="Connected Services\ProductosWS\" />
-    <WCFMetadataStorage Include="Connected Services\ReferenciaCliente\" />
+    <ProjectReference Include="..\TechShopperBO\TechShopperBO.csproj">
+      <Project>{8a1873a4-d528-49e1-bb03-53961a51dcfe}</Project>
+      <Name>TechShopperBO</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

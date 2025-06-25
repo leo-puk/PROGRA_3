@@ -41,6 +41,7 @@
                         
                         <!-- Filtro por marcas -->
                         <div class="mb-3">
+
                             <label class="form-label fw-bold">Marcas</label>
                             <asp:CheckBoxList ID="cblMarcas" runat="server" CssClass="form-check">
                             </asp:CheckBoxList>
@@ -83,21 +84,6 @@
                 <div class="row" id="productosContainer" runat="server">
                     <!-- Los productos se cargarán dinámicamente aquí -->
                 </div>
-                
-                <!-- Paginación -->
-                <nav aria-label="Page navigation" class="mt-4" id="paginacion" runat="server">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item disabled">
-                            <a class="page-link" href="#" tabindex="-1">Anterior</a>
-                        </li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Siguiente</a>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>

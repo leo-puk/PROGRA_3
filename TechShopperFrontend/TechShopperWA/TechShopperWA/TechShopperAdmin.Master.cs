@@ -22,7 +22,7 @@ namespace TechShopperWA
             Session.Abandon();
 
             // Redirige al login o página principal
-            Response.Redirect("InicionSesion/IniciarSesion.aspx");
+            Response.Redirect("/InicionSesion/IniciarSesion.aspx");
         }
     }
 }

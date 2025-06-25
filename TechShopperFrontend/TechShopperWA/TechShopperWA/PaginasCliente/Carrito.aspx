@@ -20,7 +20,7 @@
         <div>
             <h5 class="card-title"><%# Eval("Nombre") %></h5>
             <p class="card-text text-muted mb-2">
-                Precio: $<%# Eval("Precio", "{0:N2}") %>
+                Precio: $<%# Eval("precioUnitario", "{0:N2}") %>
             </p>
 
             <div class="input-group" style="max-width: 160px;">

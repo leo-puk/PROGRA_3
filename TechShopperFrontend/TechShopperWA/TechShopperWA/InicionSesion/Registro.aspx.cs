@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.RegularExpressions;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using TechShopperWA.AdministradoresWS;
+using TechShopperBO;
 
 namespace TechShopperWA.InicionSesion
 {
@@ -28,10 +26,23 @@ namespace TechShopperWA.InicionSesion
             {
                 
                 // Crear cliente del servicio
-                var client = new AdministradoresClient(); // Asumiendo nombre del proxy generado
+                var client = new AdministradorClient(); 
+
+                string dominio = email.Split('@').Length > 1 ? email.Split('@')[1] : "";
+                int resultado = -1;
+
+                if (dominio == "pucp.edu.pe")
+                {
+                    resultado = client.RegistrarAdministrador(contraseña, nombre, email);
+                    
+                }
+                else  
+                {
+                    //Registro clientes
+                    resultado = 1; // Simulación de clientes
+                }
 
                 
-                int resultado = client.registrarAdministrador(contraseña, nombre, email);
 
                 if (resultado >= 0)
                 {
@@ -52,7 +63,7 @@ namespace TechShopperWA.InicionSesion
 
 
             // Expresión regular para validar correo electrónico
-            string patronEmail = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            string patronEmail = @"^[a-zA-Z0-9_-]+@(pucp\.edu\.pe)$";
 
             return Regex.IsMatch(email, patronEmail);
            
@@ -60,9 +71,9 @@ namespace TechShopperWA.InicionSesion
 
         private bool ValidarNombre(string nombre)
         {
-            var client = new AdministradoresClient();
+            var client = new AdministradorClient();
             // Suponiendo que tienes un método en el servicio para buscar por nombre o email
-            var resultado = client.iniciarSesion(nombre, ""); // Intenta iniciar sesión sin contraseña
+            var resultado = client.IniciarSesion(nombre, ""); // Intenta iniciar sesión sin contraseña
             return resultado == null;
            
         }

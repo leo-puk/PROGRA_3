@@ -46,7 +46,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="/Index.aspx"><i class="fas fa-home me-1"></i> Home</a>
+                            <a class="nav-link" href="/Index.aspx"><i class="fas fa-home me-1"></i>Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/Productos/Productos.aspx"><i class="fas fa-box-open me-1"></i> Productos</a>
@@ -55,7 +55,7 @@
                             <a class="nav-link" href="/Empresa.aspx"><i class="fas fa-building me-1"></i> Empresa</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/ReporteVentas.aspx"><i class="fas fa-file-invoice-dollar me-1"></i> Reporte Ventas</a>
+                            <a class="nav-link" href="/HistorialProductos/Historial.aspx"><i class="fas fa-file-invoice-dollar me-1"></i>Historial</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">

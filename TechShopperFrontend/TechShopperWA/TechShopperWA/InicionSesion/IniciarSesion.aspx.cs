@@ -1,89 +1,101 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
-using TechShopperWA.AdministradoresWS;
-using TechShopperWA.CarritosWS;
-using TechShopperWA.ProductosWS;
+using TechShopperBO;
+using TechShopperBO.AdministradoresWS;
+using TechShopperBO.ClientesWS;
+
 
 namespace TechShopperWA.InicionSesion
 {
 	public partial class IniciarSesion1 : System.Web.UI.Page
 	{
-		//valores que se necesitan para la modificación de un usuario (inactivo a activo)
+
 		private string usuario;
 		private string contraseña;
-        private carritoDTO carrito;
-        private string ip;
-
-
-		//si se olvidó la contraseña se le debe mandar un correo a su correo de un número aleatoreo que deberá ingresar 
-		//de ahí podrá modificar su contraseña
-
-		//si quiero registrarme es otra página.
+        private TechShopperBO.AdministradoresWS.usuarioDTO usuarioAdmin;
+        private TechShopperBO.ClientesWS.usuarioDTO usuarioCliente;
+        private TechShopperBO.ClientesWS.carritoDTO carrito; //Cada usuario tendra un carrito
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            usuarioAdmin = null;
+            usuarioCliente = null;
+        }
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			//valido si está conectado
+			
 
 		}
 
-        //al clickearel boton de iniciar se debe validar los datos y modificar el estado del usuario 
+        //Se validan los datos y modifican el estado del usuario 
         protected void btnIngresar_Click(object sender, EventArgs e)
         {
+            
             usuario = txtUsuario.Text.Trim();
             contraseña = txtContraseña.Text.Trim();
 
-            try
+            
+            iniciarSesionUsuario(usuario, contraseña);
+            
+        }
+
+        private void iniciarSesionUsuario(string usuario, string contraseña)
+        {
+
+            //primero se intenta iniciar sesión con admin
+            var clienteAdmin = new AdministradorClient();
+            var usuarioAdmin_ = clienteAdmin.IniciarSesion(usuario, contraseña);
+
+            if (usuarioAdmin_ == null)
             {
-                AdministradoresWS.AdministradoresClient cliente = new AdministradoresWS.AdministradoresClient();
-                var usuarioDTO = cliente.iniciarSesion(usuario, contraseña);
-
-                if (usuarioDTO != null && usuarioDTO.idUsuario > 0)
+                //se intenta iniciar sesion con cliente
+                var clienteCliente = new ClienteClient();
+                var usuarioCliente_ = clienteCliente.iniciarSesion(usuario, contraseña);
+                
+                if (usuarioCliente_ == null)
                 {
-                    // Usuario válido
-                    Session["Acceso"] = true;
-                    Session["Usuario"] = usuarioDTO;
-                    Session["IdUsuario"] = usuarioDTO.idUsuario;
-                    var clientCarrito = new CarritosClient();
-                    var carrito = clientCarrito.obtenerCarritoPorId(1);//falta agregar otro método
-                    if(carrito == null)
-                    {
-                        Response.Redirect("P");
-                    }
-                    Session["Carrito"] = (carritoDTO)carrito;
-
-                    Response.Redirect("../Index.aspx");
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alerta",
+                    "alert('no se pudo conectar ni con cliente ni admin');", true);
+                    return;
                 }
                 else
                 {
                     ScriptManager.RegisterStartupScript(this, this.GetType(), "alerta",
-                        "alert('Usuario o contraseña incorrectos.');", true);
+                    "alert('se pudo conectar con cliente');", true);
+                    usuarioCliente = usuarioCliente_ as TechShopperBO.ClientesWS.usuarioDTO;
+                    iniciarSesionCliente();
                 }
             }
-            catch (Exception ex)
+            else
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "alerta",
-                    "alert('Error en la conexión con el servidor.');", true);
+                usuarioAdmin = usuarioAdmin_ as TechShopperBO.AdministradoresWS.usuarioDTO;
+                //si se encontró como admin
+                iniciarSesionAdmin();
             }
         }
-        
-        
-        public void iniciarSesion()
+
+        private void iniciarSesionAdmin()
         {
-            Response.Redirect("");
+            Session["Acceso"] = true;
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alerta",
+                    "alert('inciaste con admin", true);
+            Session["Usuario"] = usuarioAdmin;
+            Session["IdUsuario"] = usuarioAdmin.idUsuario;
+            Response.Redirect("../Index.aspx");
         }
 
-        private bool esUsuarioValido(string usuario, string contraseña)
+        private void iniciarSesionCliente()
         {
-            //se tiene que verificar que el estado esté en desconectado y que los datos sean correctos 
-            //si ya esta conectado no se valida
 
-            //ACA IRÍA LA VALIDACIÓN CON EL BO
-            return true;
+            
+            var clienteCliente = new ClienteClient();
+            Session["Usuario"] = usuarioCliente;
+            Session["IdUsuario"] = usuarioCliente.idUsuario;
+            Session["Carrito"] = clienteCliente.MostrarCarritoDeCliente(usuarioCliente.idUsuario); 
+            Response.Redirect("../PaginasCliente/VistaProductosCliente.aspx");
         }
     }
 }
+
+
+

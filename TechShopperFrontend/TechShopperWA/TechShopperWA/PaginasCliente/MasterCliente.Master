@@ -65,13 +65,6 @@
                         </li>
                     </ul>
                     
-                    <!-- Barra de búsqueda -->
-                    <div class="d-flex me-3">
-                        <div class="input-group">
-                            <asp:TextBox ID="txtBusqueda" runat="server" CssClass="form-control" placeholder="Buscar productos..." />
-                            <asp:Button ID="btnBuscar" runat="server" CssClass="btn btn-light" Text="Buscar" OnClick="btnBuscar_Click" />
-                        </div>
-                    </div>
                     
                     <!-- Menú usuario -->
                     <ul class="navbar-nav">

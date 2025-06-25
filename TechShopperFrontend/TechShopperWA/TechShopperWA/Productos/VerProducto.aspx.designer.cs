@@ -96,6 +96,15 @@ namespace TechShopperWA
         protected global::System.Web.UI.WebControls.Label lblIdAdmin;
 
         /// <summary>
+        /// Control phImagen.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder phImagen;
+
+        /// <summary>
         /// Control btnRegresar.
         /// </summary>
         /// <remarks>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.techshopper.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="MovimientosStock" targetNamespace="http://services.techshopper.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/techShopperWS/MovimientosStock?xsd=1" namespace="http://services.techshopper.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="eliminarMovimiento">
+    <part name="parameters" element="tns:eliminarMovimiento" />
+  </message>
+  <message name="eliminarMovimientoResponse">
+    <part name="parameters" element="tns:eliminarMovimientoResponse" />
+  </message>
+  <message name="registrarMovimiento">
+    <part name="parameters" element="tns:registrarMovimiento" />
+  </message>
+  <message name="registrarMovimientoResponse">
+    <part name="parameters" element="tns:registrarMovimientoResponse" />
+  </message>
+  <message name="obtenerMovimientoPorId">
+    <part name="parameters" element="tns:obtenerMovimientoPorId" />
+  </message>
+  <message name="obtenerMovimientoPorIdResponse">
+    <part name="parameters" element="tns:obtenerMovimientoPorIdResponse" />
+  </message>
+  <message name="listarTodosLosMovimientos">
+    <part name="parameters" element="tns:listarTodosLosMovimientos" />
+  </message>
+  <message name="listarTodosLosMovimientosResponse">
+    <part name="parameters" element="tns:listarTodosLosMovimientosResponse" />
+  </message>
+  <message name="registrarEntradaStock">
+    <part name="parameters" element="tns:registrarEntradaStock" />
+  </message>
+  <message name="registrarEntradaStockResponse">
+    <part name="parameters" element="tns:registrarEntradaStockResponse" />
+  </message>
+  <message name="registrarSalidaStock">
+    <part name="parameters" element="tns:registrarSalidaStock" />
+  </message>
+  <message name="registrarSalidaStockResponse">
+    <part name="parameters" element="tns:registrarSalidaStockResponse" />
+  </message>
+  <message name="modificarMovimiento">
+    <part name="parameters" element="tns:modificarMovimiento" />
+  </message>
+  <message name="modificarMovimientoResponse">
+    <part name="parameters" element="tns:modificarMovimientoResponse" />
+  </message>
+  <message name="listarMovimientosPorProducto">
+    <part name="parameters" element="tns:listarMovimientosPorProducto" />
+  </message>
+  <message name="listarMovimientosPorProductoResponse">
+    <part name="parameters" element="tns:listarMovimientosPorProductoResponse" />
+  </message>
+  <portType name="MovimientosStock">
+    <operation name="eliminarMovimiento">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/eliminarMovimientoRequest" message="tns:eliminarMovimiento" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/eliminarMovimientoResponse" message="tns:eliminarMovimientoResponse" />
+    </operation>
+    <operation name="registrarMovimiento">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoRequest" message="tns:registrarMovimiento" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoResponse" message="tns:registrarMovimientoResponse" />
+    </operation>
+    <operation name="obtenerMovimientoPorId">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdRequest" message="tns:obtenerMovimientoPorId" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdResponse" message="tns:obtenerMovimientoPorIdResponse" />
+    </operation>
+    <operation name="listarTodosLosMovimientos">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimientosRequest" message="tns:listarTodosLosMovimientos" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimientosResponse" message="tns:listarTodosLosMovimientosResponse" />
+    </operation>
+    <operation name="registrarEntradaStock">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarEntradaStockRequest" message="tns:registrarEntradaStock" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarEntradaStockResponse" message="tns:registrarEntradaStockResponse" />
+    </operation>
+    <operation name="registrarSalidaStock">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarSalidaStockRequest" message="tns:registrarSalidaStock" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarSalidaStockResponse" message="tns:registrarSalidaStockResponse" />
+    </operation>
+    <operation name="modificarMovimiento">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/modificarMovimientoRequest" message="tns:modificarMovimiento" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/modificarMovimientoResponse" message="tns:modificarMovimientoResponse" />
+    </operation>
+    <operation name="listarMovimientosPorProducto">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarMovimientosPorProductoRequest" message="tns:listarMovimientosPorProducto" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarMovimientosPorProductoResponse" message="tns:listarMovimientosPorProductoResponse" />
+    </operation>
+  </portType>
+  <binding name="MovimientosStockPortBinding" type="tns:MovimientosStock">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarMovimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarMovimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerMovimientoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosLosMovimientos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarEntradaStock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarSalidaStock">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarMovimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarMovimientosPorProducto">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="MovimientosStock">
+    <port name="MovimientosStockPort" binding="tns:MovimientosStockPortBinding">
+      <soap:address location="http://localhost:8080/techShopperWS/MovimientosStock" />
+    </port>
+  </service>
+</definitions>

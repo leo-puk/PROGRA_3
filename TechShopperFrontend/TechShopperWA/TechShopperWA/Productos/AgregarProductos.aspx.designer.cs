@@ -177,6 +177,33 @@ namespace TechShopperWA
         protected global::System.Web.UI.WebControls.TextBox txtIdAdmin;
 
         /// <summary>
+        /// Control lblImg.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblImg;
+
+        /// <summary>
+        /// Control txtImg.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtImg;
+
+        /// <summary>
+        /// Control imgVistaPrevia.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgVistaPrevia;
+
+        /// <summary>
         /// Control btnRegresar.
         /// </summary>
         /// <remarks>

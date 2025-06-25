@@ -70,6 +70,13 @@
                 <asp:Label ID="lblIdAdmin" runat="server" CssClass="form-control-plaintext"></asp:Label>
             </div>
         </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 fw-bold">Imagen:</label>
+            <div class="col-sm-4">
+                <asp:PlaceHolder ID="phImagen" runat="server" />
+            </div>
+        </div>
+
     </div>
 
     <div class="card-footer">

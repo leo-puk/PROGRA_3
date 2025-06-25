@@ -9,9 +9,9 @@ namespace TechShopperWA
 {
 	public partial class Home : System.Web.UI.Page
 	{
-		protected void Page_Load(object sender, EventArgs e)
+		protected void Page_Init(object sender, EventArgs e)
 		{
-            if (Session["Acceso"] == null)
+            if (Session["Usuario"] == null)
             {
                 Response.Redirect("/InicionSesion/IniciarSesion.aspx");
                 return;

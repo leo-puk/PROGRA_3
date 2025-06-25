@@ -67,6 +67,14 @@
                         <asp:TextBox ID="txtIdAdmin" runat="server" Enabled="false" CssClass="form-control"></asp:TextBox>
                     </div>
                 </div>
+                <div class="mb-3 row">
+                    <asp:Label ID="lblImg" runat="server" Text="Imagen URL: " CssClass="col-sm-2 col-form-label fw-bold"></asp:Label>
+                    <div class="col-sm-3">
+                        <asp:TextBox ID="txtImg" runat="server" Enabled="true" CssClass="form-control"></asp:TextBox>
+                    </div>
+                    <asp:Image ID="imgVistaPrevia" runat="server" CssClass="img-thumbnail mt-2" Width="200px" Height="200px" />
+                </div>
+
 
             </div>
 

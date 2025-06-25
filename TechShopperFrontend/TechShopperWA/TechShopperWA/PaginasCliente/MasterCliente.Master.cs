@@ -6,15 +6,17 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
-using TechShopperWA.CarritosWS;
-using TechShopperWA.ReferenciaCliente;
+using TechShopperBO.CarritosWS;
+using TechShopperBO.ClientesWS;
+
+//using TechShopperWA.ReferenciaCliente;
 
 namespace TechShopperWA.PaginasCliente
 {
 	public partial class MasterCliente : System.Web.UI.MasterPage
 	{
-        private clienteDTO cliente;
-        private carritoDTO carrito;
+        //private clienteDTO cliente;
+        private List<carritoItemsDTO> carrito;
 
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -22,7 +24,7 @@ namespace TechShopperWA.PaginasCliente
             if (Session["Usuario"] != null)
             {
                 var _carrito = Session["Carrito"];
-                carrito = (carritoDTO)_carrito;
+                carrito = (List<carritoItemsDTO>)_carrito;
                 //se ha iniciado sesión
                 mostrarItemsCarrito();
             }
@@ -52,7 +54,14 @@ namespace TechShopperWA.PaginasCliente
         }
         private string obtenerCantidadItemsCarrito()
         {
-            return "100";
+            if(carrito == null)
+            {
+                return "0";
+            } else
+            {
+                return carrito.Count().ToString();
+
+            }
         }
 
         protected void btnBuscar_Click(object sender, EventArgs e)

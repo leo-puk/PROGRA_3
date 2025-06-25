@@ -4,18 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using TechShopperWA.CarritoItemsWS;
-using TechShopperWA.ReferenciaCliente;
-using TechShopperWA.ProductosWS;
-using TechShopperWA.CarritosWS;
+
+using TechShopperBO;
+using TechShopperBO.ClientesWS;
 
 namespace TechShopperWA.PaginasCliente
 {
     public partial class DetalleProducto : System.Web.UI.Page
     {
-        private ProductosWS.productoDTO producto;
-        private CarritosWS.carritoDTO carrito;
-        private clienteDTO cliente;
+        private TechShopperBO.ClientesWS.usuarioDTO usuario;
+        private TechShopperBO.ProductosWS.productoDTO producto;
+        private List<carritoItemsDTO> carrito;
+        //private clienteDTO cliente;
         private int cantidad;
         protected void Page_Init(object sender, EventArgs e)
         {
@@ -41,11 +41,10 @@ namespace TechShopperWA.PaginasCliente
                 Response.Redirect("~/Error.aspx?msg=Producto no especificado");
             }
             //valida la session y carga el carrito 
-            if (Session["Acceso"] != null)
+            if (Session["Usuario"] != null)
             {
-                var _carrito = Session["Carrito"];
-                carrito = (CarritosWS.carritoDTO)_carrito;
-                Response.Write(carrito.idCarrito.ToString());
+                //estoy conectado con usuario nomas :D
+                usuario = (usuarioDTO)Session["Usuario"];
             }
             
         }
@@ -66,13 +65,13 @@ namespace TechShopperWA.PaginasCliente
         {
             //leer la cantidad
             leerCantidad();
-            if (Session["Acceso"]!=null)
+            if (Session["Usuario"]!=null)
             {
                 aniadirProdCarrito();
                 Response.Redirect("Carrito.aspx");
             } else
             {
-                //añadir una alerta bacán
+                //mostrar popup de qe tienes que iniciar sesión.
                 Response.Redirect("../InicionSesion/IniciarSesion.aspx");
             }
                 
@@ -81,12 +80,10 @@ namespace TechShopperWA.PaginasCliente
 
         private void aniadirProdCarrito()
         {
-            //Intercambiar por lógica de añadir producto desde el cliente
-            var clientCarritoItems = new CarritoItemsClient();
-            if(carrito!=null)
-                clientCarritoItems.agregarProductoAlCarrito(carrito.idCarrito, producto.idProducto, cantidad, producto.precio);
             
-            
+            var cliente = new ClienteClient();
+            cliente.InsertarCarrito(usuario.idUsuario, producto.idProducto, cantidad);
+            Session["Carrito"] = cliente.MostrarCarritoDeCliente((int)Session["IdUsuario"]);
             
         }
 

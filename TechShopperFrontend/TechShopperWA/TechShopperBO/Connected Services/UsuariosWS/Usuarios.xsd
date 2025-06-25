@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.techshopper.pucp.edu.pe/" targetNamespace="http://services.techshopper.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarUsuario" type="tns:actualizarUsuario" />
+  <xs:element name="actualizarUsuarioResponse" type="tns:actualizarUsuarioResponse" />
+  <xs:element name="obtenerUsuarioPorCorreo" type="tns:obtenerUsuarioPorCorreo" />
+  <xs:element name="obtenerUsuarioPorCorreoResponse" type="tns:obtenerUsuarioPorCorreoResponse" />
+  <xs:complexType name="obtenerUsuarioPorCorreo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerUsuarioPorCorreoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:usuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuarioDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoConexion" type="tns:estadoConexionDTO" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="tns:localDateTime" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rol" type="tns:rolUsuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="localDateTime" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="actualizarUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarUsuarioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="estadoConexionDTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CONECTADO" />
+      <xs:enumeration value="DESCONECTADO" />
+      <xs:enumeration value="EN_eSPERA" />
+      <xs:enumeration value="RECONECTADO" />
+      <xs:enumeration value="ERROR" />
+      <xs:enumeration value="LIMITADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="rolUsuarioDTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CLIENTE" />
+      <xs:enumeration value="ADMINISTRADOR" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

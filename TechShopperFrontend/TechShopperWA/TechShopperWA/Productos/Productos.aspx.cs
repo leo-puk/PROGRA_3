@@ -4,31 +4,38 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using TechShopperWA.ProductosWS;
+using TechShopperBO.ProductosWS;
+using TechShopperBO;
 
 namespace TechShopperWA
 {
     public partial class Productos : System.Web.UI.Page
     {
 
-        
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Acceso"] == null)
+            if (Session["Usuario"] == null)
             {
                 Response.Redirect("/InicionSesion/IniciarSesion.aspx");
                 return;
             }
 
+           
+
             if (!IsPostBack)
             {
-                ddlCategoria.DataSource = Enum.GetNames(typeof(categoriaDTO));
-                ddlCategoria.DataBind();
-                ddlCategoria.Items.Insert(0, new ListItem("-- Todas las Categorías --", ""));
-
+                CargarCategorias();
                 CargarProductos();
             }
+        }
+
+        private void CargarCategorias()
+        {
+            ddlCategoria.DataSource = Enum.GetNames(typeof(categoriaDTO));
+            ddlCategoria.DataBind();
+            ddlCategoria.Items.Insert(0, new ListItem("-- Todas las categoría --", ""));
         }
 
 

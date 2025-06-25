@@ -42,7 +42,7 @@
                                     
                                 </div>
                                 <div class="text-end mt-2">
-                                    <a href="#" class="text-decoration-none small" style="color: #835da2;">¿Olvidaste tu contraseña?</a>
+                                    <a href="/InicionSesion/OlvideContra.aspx" class="text-decoration-none small" style="color: #835da2;">¿Olvidaste tu contraseña?</a>
                                 </div>
                             </div>
 
@@ -68,7 +68,10 @@
                         <div class="text-center">
                             <p class="mb-2" style="color: #835da2;">¿No estás registrado?</p>
                             <a href="Registro.aspx" class="btn btn-lg fw-bold"
-                                style="background-color: #cfbdd8; color: #835da2; border-radius: 50px; border: 1px solid #835da2;">REGÍSTRATE <i class="fas fa-user-plus ms-2"></i>
+                                style="background-color: #cfbdd8; color: #835da2; border-radius: 50px; border: 1px solid #835da2;">Administrador <i class="fas fa-user-plus ms-2"></i>
+                            </a>
+                            <a href="RegistroCliente.aspx" class="btn btn-lg fw-bold"
+                                style="background-color: #cfbdd8; color: #835da2; border-radius: 50px; border: 1px solid #835da2;">Cliente <i class="fas fa-user-plus ms-2"></i>
                             </a>
                         </div>
                     </div>
