@@ -1,58 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\",
+  "WorkspaceRootPath": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\downloads\\versionests\\3\\prog3-ta\\techshopperwa2\\techshopperwa\\techshopperwa\\paginascliente\\detalleproducto.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\paginascliente\\detalleproducto.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A1873A4-D528-49E1-BB03-53961A51DCFE}|TechShopperBO\\TechShopperBO.csproj|c:\\programacion 3\\ta\\nueva version\\techshopperwa2\\frontend\\techshopperwa\\techshopperbo\\emailutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A1873A4-D528-49E1-BB03-53961A51DCFE}|TechShopperBO\\TechShopperBO.csproj|solutionrelative:techshopperbo\\emailutil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\downloads\\versionests\\3\\prog3-ta\\techshopperwa2\\techshopperwa\\techshopperwa\\techshopperadmin.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\techshopperadmin.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\downloads\\versionests\\3\\prog3-ta\\techshopperwa2\\techshopperwa\\techshopperwa\\techshopperadmin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\techshopperadmin.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\downloads\\versionests\\3\\prog3-ta\\techshopperwa2\\techshopperwa\\techshopperwa\\inicionsesion\\iniciosesion.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\inicionsesion\\iniciosesion.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\techshopperwa\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\downloads\\versionests\\3\\prog3-ta\\techshopperwa2\\techshopperwa\\techshopperwa\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\downloads\\versionests\\3\\prog3-ta\\techshopperwa2\\techshopperwa\\techshopperwa\\inicionsesion\\iniciarsesion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\inicionsesion\\iniciarsesion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\downloads\\versionests\\3\\prog3-ta\\techshopperwa2\\techshopperwa\\techshopperwa\\inicionsesion\\iniciarsesion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\inicionsesion\\iniciarsesion.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\downloads\\versionests\\3\\prog3-ta\\techshopperwa2\\techshopperwa\\techshopperwa\\paginascliente\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\paginascliente\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\downloads\\versionests\\3\\prog3-ta\\techshopperwa2\\techshopperwa\\techshopperwa\\paginascliente\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\paginascliente\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\techshopperwa\\paginascliente\\mastercliente.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\programacion 3\\ta\\nueva version\\techshopperwa2\\frontend\\techshopperwa\\techshopperwa\\paginascliente\\mastercliente.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\paginascliente\\mastercliente.master.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\techshopperwa\\productos\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\productos\\productos.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\techshopperwa\\paginascliente\\vistaproductoscliente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\paginascliente\\vistaproductoscliente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|c:\\users\\usuario\\downloads\\versionests\\3\\prog3-ta\\techshopperwa2\\techshopperwa\\techshopperwa\\paginascliente\\vistaproductoscliente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\paginascliente\\vistaproductoscliente.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\techshopperwa\\paginascliente\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\paginascliente\\carrito.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\techshopperwa\\paginascliente\\resumenpedido.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\paginascliente\\resumenpedido.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\techshopperwa\\inicionsesion\\iniciarsesion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\inicionsesion\\iniciarsesion.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\techshopperwa\\paginascliente\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\paginascliente\\carrito.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\techshopperwa\\paginascliente\\resumenpedido.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{FCC7641F-F8AF-4146-8473-3F816BB980B2}|TechShopperWA\\TechShopperWA.csproj|solutionrelative:techshopperwa\\paginascliente\\resumenpedido.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,177 +42,105 @@
       "DocumentGroups": [
         {
           "DockedWidth": 185,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Carrito.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\PaginasCliente\\Carrito.aspx.cs",
-              "RelativeDocumentMoniker": "TechShopperWA\\PaginasCliente\\Carrito.aspx.cs",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\PaginasCliente\\Carrito.aspx.cs",
-              "RelativeToolTip": "TechShopperWA\\PaginasCliente\\Carrito.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "EmailUtil.cs",
+              "DocumentMoniker": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperBO\\EmailUtil.cs",
+              "RelativeDocumentMoniker": "TechShopperBO\\EmailUtil.cs",
+              "ToolTip": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperBO\\EmailUtil.cs",
+              "RelativeToolTip": "TechShopperBO\\EmailUtil.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T10:46:23.269Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-06-30T06:25:46.881Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TechShopperAdmin.Master.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\TechShopperAdmin.Master.cs",
-              "RelativeDocumentMoniker": "TechShopperWA\\TechShopperAdmin.Master.cs",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\TechShopperAdmin.Master.cs",
-              "RelativeToolTip": "TechShopperWA\\TechShopperAdmin.Master.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAgAAAAAAAAAA==",
+              "Title": "MasterCliente.Master.cs",
+              "DocumentMoniker": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\MasterCliente.Master.cs",
+              "RelativeDocumentMoniker": "TechShopperWA\\PaginasCliente\\MasterCliente.Master.cs",
+              "ToolTip": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\MasterCliente.Master.cs",
+              "RelativeToolTip": "TechShopperWA\\PaginasCliente\\MasterCliente.Master.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwE4AAABFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T11:55:49.348Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InicioSesion.Master",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\InicionSesion\\InicioSesion.Master",
-              "RelativeDocumentMoniker": "TechShopperWA\\InicionSesion\\InicioSesion.Master",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\InicionSesion\\InicioSesion.Master",
-              "RelativeToolTip": "TechShopperWA\\InicionSesion\\InicioSesion.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T11:55:32.576Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.aspx",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\Index.aspx",
-              "RelativeDocumentMoniker": "TechShopperWA\\Index.aspx",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\Index.aspx",
-              "RelativeToolTip": "TechShopperWA\\Index.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T11:53:57.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Carrito.aspx",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\PaginasCliente\\Carrito.aspx",
-              "RelativeDocumentMoniker": "TechShopperWA\\PaginasCliente\\Carrito.aspx",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\PaginasCliente\\Carrito.aspx",
-              "RelativeToolTip": "TechShopperWA\\PaginasCliente\\Carrito.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T10:46:19.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "DetalleProducto.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\PaginasCliente\\DetalleProducto.aspx.cs",
-              "RelativeDocumentMoniker": "TechShopperWA\\PaginasCliente\\DetalleProducto.aspx.cs",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\PaginasCliente\\DetalleProducto.aspx.cs",
-              "RelativeToolTip": "TechShopperWA\\PaginasCliente\\DetalleProducto.aspx.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAAwFUAAABcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T10:07:07.265Z",
+              "WhenOpened": "2025-06-30T05:32:22.031Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TechShopperAdmin.Master",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\TechShopperAdmin.Master",
-              "RelativeDocumentMoniker": "TechShopperWA\\TechShopperAdmin.Master",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\TechShopperAdmin.Master",
-              "RelativeToolTip": "TechShopperWA\\TechShopperAdmin.Master",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T11:55:40.469Z",
-              "EditorCaption": ""
+              "Title": "VistaProductosCliente.aspx.cs",
+              "DocumentMoniker": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\VistaProductosCliente.aspx.cs",
+              "RelativeDocumentMoniker": "TechShopperWA\\PaginasCliente\\VistaProductosCliente.aspx.cs",
+              "ToolTip": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\VistaProductosCliente.aspx.cs",
+              "RelativeToolTip": "TechShopperWA\\PaginasCliente\\VistaProductosCliente.aspx.cs",
+              "ViewState": "AgIAAOYAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T05:31:29.294Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "VistaProductosCliente.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\PaginasCliente\\VistaProductosCliente.aspx.cs",
-              "RelativeDocumentMoniker": "TechShopperWA\\PaginasCliente\\VistaProductosCliente.aspx.cs",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\PaginasCliente\\VistaProductosCliente.aspx.cs",
-              "RelativeToolTip": "TechShopperWA\\PaginasCliente\\VistaProductosCliente.aspx.cs",
-              "ViewState": "AgIAAEsAAAAAAAAAAAAmwCAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Carrito.aspx.cs",
+              "DocumentMoniker": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\Carrito.aspx.cs",
+              "RelativeDocumentMoniker": "TechShopperWA\\PaginasCliente\\Carrito.aspx.cs",
+              "ToolTip": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\Carrito.aspx.cs",
+              "RelativeToolTip": "TechShopperWA\\PaginasCliente\\Carrito.aspx.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwDkAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T09:54:24.006Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T05:15:25.453Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Carrito.aspx",
+              "DocumentMoniker": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\Carrito.aspx",
+              "RelativeDocumentMoniker": "TechShopperWA\\PaginasCliente\\Carrito.aspx",
+              "ToolTip": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\Carrito.aspx",
+              "RelativeToolTip": "TechShopperWA\\PaginasCliente\\Carrito.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-30T05:12:46.338Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "IniciarSesion.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\InicionSesion\\IniciarSesion.aspx.cs",
+              "DocumentMoniker": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\InicionSesion\\IniciarSesion.aspx.cs",
               "RelativeDocumentMoniker": "TechShopperWA\\InicionSesion\\IniciarSesion.aspx.cs",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\InicionSesion\\IniciarSesion.aspx.cs",
+              "ToolTip": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\InicionSesion\\IniciarSesion.aspx.cs",
               "RelativeToolTip": "TechShopperWA\\InicionSesion\\IniciarSesion.aspx.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAQwFoAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwDoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T05:34:35.336Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T05:09:19.112Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Index.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\Index.aspx.cs",
-              "RelativeDocumentMoniker": "TechShopperWA\\Index.aspx.cs",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\Index.aspx.cs",
-              "RelativeToolTip": "TechShopperWA\\Index.aspx.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
+              "Title": "ResumenPedido.aspx.cs",
+              "DocumentMoniker": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\ResumenPedido.aspx.cs",
+              "RelativeDocumentMoniker": "TechShopperWA\\PaginasCliente\\ResumenPedido.aspx.cs",
+              "ToolTip": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\ResumenPedido.aspx.cs",
+              "RelativeToolTip": "TechShopperWA\\PaginasCliente\\ResumenPedido.aspx.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAAAwwMsAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:51:57.108Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T02:27:52.896Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "IniciarSesion.aspx",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\InicionSesion\\IniciarSesion.aspx",
-              "RelativeDocumentMoniker": "TechShopperWA\\InicionSesion\\IniciarSesion.aspx",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\InicionSesion\\IniciarSesion.aspx",
-              "RelativeToolTip": "TechShopperWA\\InicionSesion\\IniciarSesion.aspx",
+              "Title": "ResumenPedido.aspx",
+              "DocumentMoniker": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\ResumenPedido.aspx",
+              "RelativeDocumentMoniker": "TechShopperWA\\PaginasCliente\\ResumenPedido.aspx",
+              "ToolTip": "C:\\programacion 3\\ta\\nueva version\\TechShopperWA2\\frontend\\TechShopperWA\\TechShopperWA\\PaginasCliente\\ResumenPedido.aspx",
+              "RelativeToolTip": "TechShopperWA\\PaginasCliente\\ResumenPedido.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-25T11:47:51.248Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Productos.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\Productos\\Productos.aspx.cs",
-              "RelativeDocumentMoniker": "TechShopperWA\\Productos\\Productos.aspx.cs",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\Productos\\Productos.aspx.cs",
-              "RelativeToolTip": "TechShopperWA\\Productos\\Productos.aspx.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T07:03:29.005Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MasterCliente.Master.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\PaginasCliente\\MasterCliente.Master.cs",
-              "RelativeDocumentMoniker": "TechShopperWA\\PaginasCliente\\MasterCliente.Master.cs",
-              "ToolTip": "C:\\Users\\usuario\\Downloads\\versionesTS\\3\\Prog3-TA\\TechShopperWA2\\TechShopperWA\\TechShopperWA\\PaginasCliente\\MasterCliente.Master.cs",
-              "RelativeToolTip": "TechShopperWA\\PaginasCliente\\MasterCliente.Master.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAlwBkAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T06:58:54.391Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-30T02:27:51.987Z"
             }
           ]
         }

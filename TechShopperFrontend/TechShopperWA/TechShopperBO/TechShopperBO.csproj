@@ -33,6 +33,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Collections.NonGeneric, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.NonGeneric.4.3.0\lib\net46\System.Collections.NonGeneric.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -49,6 +54,16 @@
     <Compile Include="CarritoItemClient.cs" />
     <Compile Include="ClienteClient.cs" />
     <Compile Include="Connected Services\ClientesWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\EnviosWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Connected Services\LocalizacionesWS\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -84,6 +99,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="EnvioClient.cs" />
+    <Compile Include="LocalizacionClient.cs" />
     <Compile Include="MovimientoStockClient.cs" />
     <Compile Include="ProductoClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,7 +217,7 @@
     <None Include="Connected Services\ClientesWS\TechShopperBO.ClientesWS.actualizarEstadoConexionClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ClientesWS\TechShopperBO.ClientesWS.carritoItemsDTO.datasource">
+    <None Include="Connected Services\ClientesWS\TechShopperBO.ClientesWS.carritoItemsDTOSoap.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ClientesWS\TechShopperBO.ClientesWS.clienteDTO.datasource">
@@ -218,6 +235,9 @@
     <None Include="Connected Services\ClientesWS\TechShopperBO.ClientesWS.mostrarCarritoDeClienteResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ClientesWS\TechShopperBO.ClientesWS.obtenerClientePorCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ClientesWS\TechShopperBO.ClientesWS.obtenerClientePorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -228,6 +248,53 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ClientesWS\TechShopperBO.ClientesWS.usuarioDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EnviosWS\Envios.wsdl" />
+    <None Include="Connected Services\EnviosWS\Envios.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\EnviosWS\TechShopperBO.EnviosWS.actualizarEmpresaCourierResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EnviosWS\TechShopperBO.EnviosWS.crearEnvioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EnviosWS\TechShopperBO.EnviosWS.eliminarEnvioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EnviosWS\TechShopperBO.EnviosWS.envioDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EnviosWS\TechShopperBO.EnviosWS.listarTodosLosEnviosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EnviosWS\TechShopperBO.EnviosWS.modificarEnvioResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\EnviosWS\TechShopperBO.EnviosWS.obtenerEnvioPorIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LocalizacionesWS\Localizaciones.wsdl" />
+    <None Include="Connected Services\LocalizacionesWS\Localizaciones.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\LocalizacionesWS\TechShopperBO.LocalizacionesWS.actualizarLocalizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LocalizacionesWS\TechShopperBO.LocalizacionesWS.eliminarLocalizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LocalizacionesWS\TechShopperBO.LocalizacionesWS.insertarLocalizacionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LocalizacionesWS\TechShopperBO.LocalizacionesWS.listarTodasLasLocalizacionesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LocalizacionesWS\TechShopperBO.LocalizacionesWS.localizacionDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\LocalizacionesWS\TechShopperBO.LocalizacionesWS.obtenerLocalizacionPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MovimientosStockWS\MovimientosStock.wsdl" />
@@ -259,6 +326,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\MovimientosStockWS\TechShopperBO.MovimientosStockWS.registrarSalidaStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\MovimientosStockWS\TechShopperBO.MovimientosStockWS.reporteMovStocksResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ProductosWS\Productos.wsdl" />
@@ -295,7 +365,13 @@
     <None Include="Connected Services\UsuariosWS\TechShopperBO.UsuariosWS.actualizarUsuarioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\UsuariosWS\TechShopperBO.UsuariosWS.clienteDTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\UsuariosWS\TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UsuariosWS\TechShopperBO.UsuariosWS.obtenerUsuarioPorIdResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UsuariosWS\TechShopperBO.UsuariosWS.usuarioDTO.datasource">
@@ -305,12 +381,15 @@
     <None Include="Connected Services\UsuariosWS\Usuarios.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\AdministradoresWS\" />
     <WCFMetadataStorage Include="Connected Services\CarritoItemsWS\" />
     <WCFMetadataStorage Include="Connected Services\CarritosWS\" />
     <WCFMetadataStorage Include="Connected Services\ClientesWS\" />
+    <WCFMetadataStorage Include="Connected Services\EnviosWS\" />
+    <WCFMetadataStorage Include="Connected Services\LocalizacionesWS\" />
     <WCFMetadataStorage Include="Connected Services\MovimientosStockWS\" />
     <WCFMetadataStorage Include="Connected Services\ProductosWS\" />
     <WCFMetadataStorage Include="Connected Services\UsuariosWS\" />
@@ -364,6 +443,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Connected Services\ClientesWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClientesWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ClientesWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Connected Services\MovimientosStockWS\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
@@ -388,13 +479,25 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ClientesWS\configuration91.svcinfo" />
+    <None Include="Connected Services\EnviosWS\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ClientesWS\configuration.svcinfo" />
+    <None Include="Connected Services\EnviosWS\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\ClientesWS\Reference.svcmap">
+    <None Include="Connected Services\EnviosWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LocalizacionesWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LocalizacionesWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\LocalizacionesWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

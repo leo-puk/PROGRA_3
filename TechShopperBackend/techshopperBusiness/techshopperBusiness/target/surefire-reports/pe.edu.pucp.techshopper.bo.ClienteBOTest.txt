@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: pe.edu.pucp.techshopper.bo.ClienteBOTest
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.103 s -- in pe.edu.pucp.techshopper.bo.ClienteBOTest

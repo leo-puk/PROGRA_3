@@ -4,15 +4,16 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Web.UI;
 using TechShopperBO;
+using TechShopperBO.ClientesWS;
 
 namespace TechShopperWA.InicionSesion
 {
-	public partial class Registro : System.Web.UI.Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
+    public partial class Registro : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
-		}
+        }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -20,29 +21,24 @@ namespace TechShopperWA.InicionSesion
             string email = txtEmail.Text.Trim();
             string contraseña = txtContraseña.Text.Trim();
 
-            
+
 
             if (ValidarPassword(contraseña) && ValidarNombre(nombre) && ValidarEmail(email))
             {
-                
-                // Crear cliente del servicio
-                var client = new AdministradorClient(); 
 
+                // Crear cliente del servicio
+                var clientAdmin = new AdministradorClient();
+                var clientCli = new ClienteClient();
                 string dominio = email.Split('@').Length > 1 ? email.Split('@')[1] : "";
                 int resultado = -1;
 
                 if (dominio == "pucp.edu.pe")
                 {
-                    resultado = client.RegistrarAdministrador(contraseña, nombre, email);
-                    
-                }
-                else  
-                {
-                    //Registro clientes
-                    resultado = 1; // Simulación de clientes
+                    resultado = clientAdmin.RegistrarAdministrador(contraseña, nombre, email);
+
                 }
 
-                
+
 
                 if (resultado >= 0)
                 {
@@ -66,7 +62,7 @@ namespace TechShopperWA.InicionSesion
             string patronEmail = @"^[a-zA-Z0-9_-]+@(pucp\.edu\.pe)$";
 
             return Regex.IsMatch(email, patronEmail);
-           
+
         }
 
         private bool ValidarNombre(string nombre)
@@ -75,12 +71,12 @@ namespace TechShopperWA.InicionSesion
             // Suponiendo que tienes un método en el servicio para buscar por nombre o email
             var resultado = client.IniciarSesion(nombre, ""); // Intenta iniciar sesión sin contraseña
             return resultado == null;
-           
+
         }
 
         private bool ValidarPassword(string password)
         {
-            
+
             List<string> errores = new List<string>();
 
             if (password.Length < 4)
@@ -103,10 +99,10 @@ namespace TechShopperWA.InicionSesion
                 return false;
             }
             return true;
-            
+
         }
     }
-        
 
-    
+
+
 }

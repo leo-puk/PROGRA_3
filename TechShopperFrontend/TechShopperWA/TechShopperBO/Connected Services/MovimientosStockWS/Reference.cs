@@ -29,43 +29,15 @@ namespace TechShopperBO.MovimientosStockWS {
         System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.eliminarMovimientoResponse> eliminarMovimientoAsync(TechShopperBO.MovimientosStockWS.eliminarMovimientoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoReque" +
-            "st", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoRespo" +
-            "nse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/reporteMovStocksRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/reporteMovStocksResponse" +
+            "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.MovimientosStockWS.registrarMovimientoResponse registrarMovimiento(TechShopperBO.MovimientosStockWS.registrarMovimientoRequest request);
+        TechShopperBO.MovimientosStockWS.reporteMovStocksResponse reporteMovStocks(TechShopperBO.MovimientosStockWS.reporteMovStocksRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoReque" +
-            "st", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.registrarMovimientoResponse> registrarMovimientoAsync(TechShopperBO.MovimientosStockWS.registrarMovimientoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdRe" +
-            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdRe" +
-            "sponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse obtenerMovimientoPorId(TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdRe" +
-            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse> obtenerMovimientoPorIdAsync(TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimiento" +
-            "sRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimiento" +
-            "sResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse listarTodosLosMovimientos(TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimiento" +
-            "sRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimiento" +
-            "sResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse> listarTodosLosMovimientosAsync(TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/reporteMovStocksRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/reporteMovStocksResponse" +
+            "")]
+        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.reporteMovStocksResponse> reporteMovStocksAsync(TechShopperBO.MovimientosStockWS.reporteMovStocksRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarEntradaStockReq" +
@@ -105,6 +77,45 @@ namespace TechShopperBO.MovimientosStockWS {
             "st", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/modificarMovimientoRespo" +
             "nse")]
         System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.modificarMovimientoResponse> modificarMovimientoAsync(TechShopperBO.MovimientosStockWS.modificarMovimientoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdRe" +
+            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse obtenerMovimientoPorId(TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdRe" +
+            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse> obtenerMovimientoPorIdAsync(TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimiento" +
+            "sRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimiento" +
+            "sResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse listarTodosLosMovimientos(TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimiento" +
+            "sRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimiento" +
+            "sResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse> listarTodosLosMovimientosAsync(TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoReque" +
+            "st", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoRespo" +
+            "nse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.MovimientosStockWS.registrarMovimientoResponse registrarMovimiento(TechShopperBO.MovimientosStockWS.registrarMovimientoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoReque" +
+            "st", ReplyAction="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.registrarMovimientoResponse> registrarMovimientoAsync(TechShopperBO.MovimientosStockWS.registrarMovimientoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarMovimientosPorProd" +
@@ -152,6 +163,126 @@ namespace TechShopperBO.MovimientosStockWS {
         }
         
         public eliminarMovimientoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteMovStocks", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class reporteMovStocksRequest {
+        
+        public reporteMovStocksRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="reporteMovStocksResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class reporteMovStocksResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", IsNullable=true)]
+        public byte[] @return;
+        
+        public reporteMovStocksResponse() {
+        }
+        
+        public reporteMovStocksResponse(byte[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarEntradaStock", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarEntradaStockRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProducto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int cantidad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public registrarEntradaStockRequest() {
+        }
+        
+        public registrarEntradaStockRequest(int idProducto, int cantidad, int idUsuario) {
+            this.idProducto = idProducto;
+            this.cantidad = cantidad;
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarEntradaStockResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarEntradaStockResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public registrarEntradaStockResponse() {
+        }
+        
+        public registrarEntradaStockResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarSalidaStock", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarSalidaStockRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProducto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int cantidad;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public registrarSalidaStockRequest() {
+        }
+        
+        public registrarSalidaStockRequest(int idProducto, int cantidad, int idUsuario) {
+            this.idProducto = idProducto;
+            this.cantidad = cantidad;
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarSalidaStockResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarSalidaStockResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public registrarSalidaStockResponse() {
+        }
+        
+        public registrarSalidaStockResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -820,33 +951,38 @@ namespace TechShopperBO.MovimientosStockWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarMovimiento", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class registrarMovimientoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarMovimiento", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarMovimientoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
+        public int idMovimiento;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string tipo;
+        public int idProducto;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int cantidad;
+        public string tipo;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TechShopperBO.MovimientosStockWS.localDateTime fecha;
+        public int cantidad;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=4)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TechShopperBO.MovimientosStockWS.localDateTime fecha;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idUsuario;
         
-        public registrarMovimientoRequest() {
+        public modificarMovimientoRequest() {
         }
         
-        public registrarMovimientoRequest(int idProducto, string tipo, int cantidad, TechShopperBO.MovimientosStockWS.localDateTime fecha, int idUsuario) {
+        public modificarMovimientoRequest(int idMovimiento, int idProducto, string tipo, int cantidad, TechShopperBO.MovimientosStockWS.localDateTime fecha, int idUsuario) {
+            this.idMovimiento = idMovimiento;
             this.idProducto = idProducto;
             this.tipo = tipo;
             this.cantidad = cantidad;
@@ -858,17 +994,17 @@ namespace TechShopperBO.MovimientosStockWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarMovimientoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class registrarMovimientoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarMovimientoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class modificarMovimientoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public registrarMovimientoResponse() {
+        public modificarMovimientoResponse() {
         }
         
-        public registrarMovimientoResponse(int @return) {
+        public modificarMovimientoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -940,134 +1076,32 @@ namespace TechShopperBO.MovimientosStockWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarEntradaStock", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class registrarEntradaStockRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarMovimiento", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarMovimientoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idProducto;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int cantidad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuario;
-        
-        public registrarEntradaStockRequest() {
-        }
-        
-        public registrarEntradaStockRequest(int idProducto, int cantidad, int idUsuario) {
-            this.idProducto = idProducto;
-            this.cantidad = cantidad;
-            this.idUsuario = idUsuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarEntradaStockResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class registrarEntradaStockResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public registrarEntradaStockResponse() {
-        }
-        
-        public registrarEntradaStockResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarSalidaStock", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class registrarSalidaStockRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int cantidad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuario;
-        
-        public registrarSalidaStockRequest() {
-        }
-        
-        public registrarSalidaStockRequest(int idProducto, int cantidad, int idUsuario) {
-            this.idProducto = idProducto;
-            this.cantidad = cantidad;
-            this.idUsuario = idUsuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarSalidaStockResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class registrarSalidaStockResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public registrarSalidaStockResponse() {
-        }
-        
-        public registrarSalidaStockResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarMovimiento", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarMovimientoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idMovimiento;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string tipo;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=3)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int cantidad;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TechShopperBO.MovimientosStockWS.localDateTime fecha;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=5)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=3)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idUsuario;
         
-        public modificarMovimientoRequest() {
+        public registrarMovimientoRequest() {
         }
         
-        public modificarMovimientoRequest(int idMovimiento, int idProducto, string tipo, int cantidad, TechShopperBO.MovimientosStockWS.localDateTime fecha, int idUsuario) {
-            this.idMovimiento = idMovimiento;
+        public registrarMovimientoRequest(int idProducto, string tipo, int cantidad, int idUsuario) {
             this.idProducto = idProducto;
             this.tipo = tipo;
             this.cantidad = cantidad;
-            this.fecha = fecha;
             this.idUsuario = idUsuario;
         }
     }
@@ -1075,17 +1109,17 @@ namespace TechShopperBO.MovimientosStockWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modificarMovimientoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class modificarMovimientoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarMovimientoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarMovimientoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public modificarMovimientoResponse() {
+        public registrarMovimientoResponse() {
         }
         
-        public modificarMovimientoResponse(int @return) {
+        public registrarMovimientoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1177,78 +1211,24 @@ namespace TechShopperBO.MovimientosStockWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.MovimientosStockWS.registrarMovimientoResponse TechShopperBO.MovimientosStockWS.MovimientosStock.registrarMovimiento(TechShopperBO.MovimientosStockWS.registrarMovimientoRequest request) {
-            return base.Channel.registrarMovimiento(request);
+        TechShopperBO.MovimientosStockWS.reporteMovStocksResponse TechShopperBO.MovimientosStockWS.MovimientosStock.reporteMovStocks(TechShopperBO.MovimientosStockWS.reporteMovStocksRequest request) {
+            return base.Channel.reporteMovStocks(request);
         }
         
-        public int registrarMovimiento(int idProducto, string tipo, int cantidad, TechShopperBO.MovimientosStockWS.localDateTime fecha, int idUsuario) {
-            TechShopperBO.MovimientosStockWS.registrarMovimientoRequest inValue = new TechShopperBO.MovimientosStockWS.registrarMovimientoRequest();
-            inValue.idProducto = idProducto;
-            inValue.tipo = tipo;
-            inValue.cantidad = cantidad;
-            inValue.fecha = fecha;
-            inValue.idUsuario = idUsuario;
-            TechShopperBO.MovimientosStockWS.registrarMovimientoResponse retVal = ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).registrarMovimiento(inValue);
+        public byte[] reporteMovStocks() {
+            TechShopperBO.MovimientosStockWS.reporteMovStocksRequest inValue = new TechShopperBO.MovimientosStockWS.reporteMovStocksRequest();
+            TechShopperBO.MovimientosStockWS.reporteMovStocksResponse retVal = ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).reporteMovStocks(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.registrarMovimientoResponse> TechShopperBO.MovimientosStockWS.MovimientosStock.registrarMovimientoAsync(TechShopperBO.MovimientosStockWS.registrarMovimientoRequest request) {
-            return base.Channel.registrarMovimientoAsync(request);
+        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.reporteMovStocksResponse> TechShopperBO.MovimientosStockWS.MovimientosStock.reporteMovStocksAsync(TechShopperBO.MovimientosStockWS.reporteMovStocksRequest request) {
+            return base.Channel.reporteMovStocksAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.registrarMovimientoResponse> registrarMovimientoAsync(int idProducto, string tipo, int cantidad, TechShopperBO.MovimientosStockWS.localDateTime fecha, int idUsuario) {
-            TechShopperBO.MovimientosStockWS.registrarMovimientoRequest inValue = new TechShopperBO.MovimientosStockWS.registrarMovimientoRequest();
-            inValue.idProducto = idProducto;
-            inValue.tipo = tipo;
-            inValue.cantidad = cantidad;
-            inValue.fecha = fecha;
-            inValue.idUsuario = idUsuario;
-            return ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).registrarMovimientoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse TechShopperBO.MovimientosStockWS.MovimientosStock.obtenerMovimientoPorId(TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest request) {
-            return base.Channel.obtenerMovimientoPorId(request);
-        }
-        
-        public TechShopperBO.MovimientosStockWS.movimientoStockDTO obtenerMovimientoPorId(int idMovimiento) {
-            TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest inValue = new TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest();
-            inValue.idMovimiento = idMovimiento;
-            TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse retVal = ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).obtenerMovimientoPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse> TechShopperBO.MovimientosStockWS.MovimientosStock.obtenerMovimientoPorIdAsync(TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest request) {
-            return base.Channel.obtenerMovimientoPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse> obtenerMovimientoPorIdAsync(int idMovimiento) {
-            TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest inValue = new TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest();
-            inValue.idMovimiento = idMovimiento;
-            return ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).obtenerMovimientoPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse TechShopperBO.MovimientosStockWS.MovimientosStock.listarTodosLosMovimientos(TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest request) {
-            return base.Channel.listarTodosLosMovimientos(request);
-        }
-        
-        public TechShopperBO.MovimientosStockWS.movimientoStockDTO[] listarTodosLosMovimientos() {
-            TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest inValue = new TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest();
-            TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse retVal = ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).listarTodosLosMovimientos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse> TechShopperBO.MovimientosStockWS.MovimientosStock.listarTodosLosMovimientosAsync(TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest request) {
-            return base.Channel.listarTodosLosMovimientosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse> listarTodosLosMovimientosAsync() {
-            TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest inValue = new TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest();
-            return ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).listarTodosLosMovimientosAsync(inValue);
+        public System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.reporteMovStocksResponse> reporteMovStocksAsync() {
+            TechShopperBO.MovimientosStockWS.reporteMovStocksRequest inValue = new TechShopperBO.MovimientosStockWS.reporteMovStocksRequest();
+            return ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).reporteMovStocksAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1336,6 +1316,79 @@ namespace TechShopperBO.MovimientosStockWS {
             inValue.fecha = fecha;
             inValue.idUsuario = idUsuario;
             return ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).modificarMovimientoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse TechShopperBO.MovimientosStockWS.MovimientosStock.obtenerMovimientoPorId(TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest request) {
+            return base.Channel.obtenerMovimientoPorId(request);
+        }
+        
+        public TechShopperBO.MovimientosStockWS.movimientoStockDTO obtenerMovimientoPorId(int idMovimiento) {
+            TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest inValue = new TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest();
+            inValue.idMovimiento = idMovimiento;
+            TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse retVal = ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).obtenerMovimientoPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse> TechShopperBO.MovimientosStockWS.MovimientosStock.obtenerMovimientoPorIdAsync(TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest request) {
+            return base.Channel.obtenerMovimientoPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdResponse> obtenerMovimientoPorIdAsync(int idMovimiento) {
+            TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest inValue = new TechShopperBO.MovimientosStockWS.obtenerMovimientoPorIdRequest();
+            inValue.idMovimiento = idMovimiento;
+            return ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).obtenerMovimientoPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse TechShopperBO.MovimientosStockWS.MovimientosStock.listarTodosLosMovimientos(TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest request) {
+            return base.Channel.listarTodosLosMovimientos(request);
+        }
+        
+        public TechShopperBO.MovimientosStockWS.movimientoStockDTO[] listarTodosLosMovimientos() {
+            TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest inValue = new TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest();
+            TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse retVal = ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).listarTodosLosMovimientos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse> TechShopperBO.MovimientosStockWS.MovimientosStock.listarTodosLosMovimientosAsync(TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest request) {
+            return base.Channel.listarTodosLosMovimientosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosResponse> listarTodosLosMovimientosAsync() {
+            TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest inValue = new TechShopperBO.MovimientosStockWS.listarTodosLosMovimientosRequest();
+            return ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).listarTodosLosMovimientosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.MovimientosStockWS.registrarMovimientoResponse TechShopperBO.MovimientosStockWS.MovimientosStock.registrarMovimiento(TechShopperBO.MovimientosStockWS.registrarMovimientoRequest request) {
+            return base.Channel.registrarMovimiento(request);
+        }
+        
+        public int registrarMovimiento(int idProducto, string tipo, int cantidad, int idUsuario) {
+            TechShopperBO.MovimientosStockWS.registrarMovimientoRequest inValue = new TechShopperBO.MovimientosStockWS.registrarMovimientoRequest();
+            inValue.idProducto = idProducto;
+            inValue.tipo = tipo;
+            inValue.cantidad = cantidad;
+            inValue.idUsuario = idUsuario;
+            TechShopperBO.MovimientosStockWS.registrarMovimientoResponse retVal = ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).registrarMovimiento(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.registrarMovimientoResponse> TechShopperBO.MovimientosStockWS.MovimientosStock.registrarMovimientoAsync(TechShopperBO.MovimientosStockWS.registrarMovimientoRequest request) {
+            return base.Channel.registrarMovimientoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.MovimientosStockWS.registrarMovimientoResponse> registrarMovimientoAsync(int idProducto, string tipo, int cantidad, int idUsuario) {
+            TechShopperBO.MovimientosStockWS.registrarMovimientoRequest inValue = new TechShopperBO.MovimientosStockWS.registrarMovimientoRequest();
+            inValue.idProducto = idProducto;
+            inValue.tipo = tipo;
+            inValue.cantidad = cantidad;
+            inValue.idUsuario = idUsuario;
+            return ((TechShopperBO.MovimientosStockWS.MovimientosStock)(this)).registrarMovimientoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

@@ -21,18 +21,18 @@ namespace TechShopperBO
             var lista = movimientosWSClient.listarTodosLosMovimientos();
             return lista != null ? new List<movimientoStockDTO>(lista) : new List<movimientoStockDTO>();
         }
-        public int RegistrarMovimiento(movimientoStockDTO p, int tipoMov)
+        public int RegistrarMovimiento(int cantidad, int idProd, int idUsuario, int hayVariacion)
         {
-            if (tipoMov > 0)
+            if (hayVariacion > 0)
             {
                 return movimientosWSClient.registrarMovimiento(
-                p.producto.idProducto, "ENTRADA", p.cantidad, p.fechaMovimiento, p.usuario.idUsuario
+                idProd, "ENTRADA", cantidad, idUsuario
                 );
             }
             else
             {
                 return movimientosWSClient.registrarMovimiento(
-                p.producto.idProducto, "SALIDA", p.cantidad, p.fechaMovimiento, p.usuario.idUsuario
+                idProd, "SALIDA", cantidad, idUsuario
                 );
             }
         }

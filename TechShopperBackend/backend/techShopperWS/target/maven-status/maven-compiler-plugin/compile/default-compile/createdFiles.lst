@@ -1,0 +1,13 @@
+pe\edu\pucp\techshopper\services\Envios.class
+pe\edu\pucp\techshopper\services\JakartaRestConfiguration.class
+pe\edu\pucp\techshopper\services\Clientes.class
+pe\edu\pucp\techshopper\services\Localizaciones.class
+pe\edu\pucp\techshopper\services\resources\JakartaEE10Resource.class
+pe\edu\pucp\techshopper\services\Usuarios.class
+pe\edu\pucp\techshopper\servicesUtils\CarritoItemsDTOSoap.class
+pe\edu\pucp\techshopper\services\Productos.class
+pe\edu\pucp\techshopper\services\MovimientosStock.class
+pe\edu\pucp\techshopper\services\CarritoItems.class
+pe\edu\pucp\techshopper\reportes\ReporteUtil.class
+pe\edu\pucp\techshopper\services\Carritos.class
+pe\edu\pucp\techshopper\services\Administradores.class

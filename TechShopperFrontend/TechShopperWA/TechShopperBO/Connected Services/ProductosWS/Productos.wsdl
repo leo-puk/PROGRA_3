@@ -5,11 +5,11 @@
       <xsd:import schemaLocation="http://localhost:8080/techShopperWS/Productos?xsd=1" namespace="http://services.techshopper.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="verificarCambioStock">
-    <part name="parameters" element="tns:verificarCambioStock" />
+  <message name="registrarProducto">
+    <part name="parameters" element="tns:registrarProducto" />
   </message>
-  <message name="verificarCambioStockResponse">
-    <part name="parameters" element="tns:verificarCambioStockResponse" />
+  <message name="registrarProductoResponse">
+    <part name="parameters" element="tns:registrarProductoResponse" />
   </message>
   <message name="actualizarProducto">
     <part name="parameters" element="tns:actualizarProducto" />
@@ -23,24 +23,6 @@
   <message name="eliminarProductoResponse">
     <part name="parameters" element="tns:eliminarProductoResponse" />
   </message>
-  <message name="registrarProducto">
-    <part name="parameters" element="tns:registrarProducto" />
-  </message>
-  <message name="registrarProductoResponse">
-    <part name="parameters" element="tns:registrarProductoResponse" />
-  </message>
-  <message name="listarTodosProductos">
-    <part name="parameters" element="tns:listarTodosProductos" />
-  </message>
-  <message name="listarTodosProductosResponse">
-    <part name="parameters" element="tns:listarTodosProductosResponse" />
-  </message>
-  <message name="obtenerProductoPorId">
-    <part name="parameters" element="tns:obtenerProductoPorId" />
-  </message>
-  <message name="obtenerProductoPorIdResponse">
-    <part name="parameters" element="tns:obtenerProductoPorIdResponse" />
-  </message>
   <message name="listarPor3criterios">
     <part name="parameters" element="tns:listarPor3criterios" />
   </message>
@@ -53,10 +35,28 @@
   <message name="actualizarImagenProductoResponse">
     <part name="parameters" element="tns:actualizarImagenProductoResponse" />
   </message>
+  <message name="obtenerProductoPorId">
+    <part name="parameters" element="tns:obtenerProductoPorId" />
+  </message>
+  <message name="obtenerProductoPorIdResponse">
+    <part name="parameters" element="tns:obtenerProductoPorIdResponse" />
+  </message>
+  <message name="listarTodosProductos">
+    <part name="parameters" element="tns:listarTodosProductos" />
+  </message>
+  <message name="listarTodosProductosResponse">
+    <part name="parameters" element="tns:listarTodosProductosResponse" />
+  </message>
+  <message name="verificarCambioStock">
+    <part name="parameters" element="tns:verificarCambioStock" />
+  </message>
+  <message name="verificarCambioStockResponse">
+    <part name="parameters" element="tns:verificarCambioStockResponse" />
+  </message>
   <portType name="Productos">
-    <operation name="verificarCambioStock">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockRequest" message="tns:verificarCambioStock" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockResponse" message="tns:verificarCambioStockResponse" />
+    <operation name="registrarProducto">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoRequest" message="tns:registrarProducto" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoResponse" message="tns:registrarProductoResponse" />
     </operation>
     <operation name="actualizarProducto">
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/actualizarProductoRequest" message="tns:actualizarProducto" />
@@ -66,18 +66,6 @@
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/eliminarProductoRequest" message="tns:eliminarProducto" />
       <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/eliminarProductoResponse" message="tns:eliminarProductoResponse" />
     </operation>
-    <operation name="registrarProducto">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoRequest" message="tns:registrarProducto" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoResponse" message="tns:registrarProductoResponse" />
-    </operation>
-    <operation name="listarTodosProductos">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosRequest" message="tns:listarTodosProductos" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosResponse" message="tns:listarTodosProductosResponse" />
-    </operation>
-    <operation name="obtenerProductoPorId">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdRequest" message="tns:obtenerProductoPorId" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdResponse" message="tns:obtenerProductoPorIdResponse" />
-    </operation>
     <operation name="listarPor3criterios">
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/listarPor3criteriosRequest" message="tns:listarPor3criterios" />
       <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/listarPor3criteriosResponse" message="tns:listarPor3criteriosResponse" />
@@ -86,10 +74,22 @@
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/actualizarImagenProductoRequest" message="tns:actualizarImagenProducto" />
       <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/actualizarImagenProductoResponse" message="tns:actualizarImagenProductoResponse" />
     </operation>
+    <operation name="obtenerProductoPorId">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdRequest" message="tns:obtenerProductoPorId" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdResponse" message="tns:obtenerProductoPorIdResponse" />
+    </operation>
+    <operation name="listarTodosProductos">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosRequest" message="tns:listarTodosProductos" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosResponse" message="tns:listarTodosProductosResponse" />
+    </operation>
+    <operation name="verificarCambioStock">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockRequest" message="tns:verificarCambioStock" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockResponse" message="tns:verificarCambioStockResponse" />
+    </operation>
   </portType>
   <binding name="ProductosPortBinding" type="tns:Productos">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="verificarCambioStock">
+    <operation name="registrarProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -116,7 +116,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="registrarProducto">
+    <operation name="listarPor3criterios">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -125,7 +125,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarTodosProductos">
+    <operation name="actualizarImagenProducto">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -143,7 +143,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="listarPor3criterios">
+    <operation name="listarTodosProductos">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -152,7 +152,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarImagenProducto">
+    <operation name="verificarCambioStock">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

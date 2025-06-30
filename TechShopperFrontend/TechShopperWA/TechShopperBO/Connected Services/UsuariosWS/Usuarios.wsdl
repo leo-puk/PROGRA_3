@@ -5,31 +5,41 @@
       <xsd:import schemaLocation="http://localhost:8080/techShopperWS/Usuarios?xsd=1" namespace="http://services.techshopper.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="obtenerUsuarioPorCorreo">
-    <part name="parameters" element="tns:obtenerUsuarioPorCorreo" />
-  </message>
-  <message name="obtenerUsuarioPorCorreoResponse">
-    <part name="parameters" element="tns:obtenerUsuarioPorCorreoResponse" />
-  </message>
   <message name="actualizarUsuario">
     <part name="parameters" element="tns:actualizarUsuario" />
   </message>
   <message name="actualizarUsuarioResponse">
     <part name="parameters" element="tns:actualizarUsuarioResponse" />
   </message>
+  <message name="obtenerUsuarioPorId">
+    <part name="parameters" element="tns:obtenerUsuarioPorId" />
+  </message>
+  <message name="obtenerUsuarioPorIdResponse">
+    <part name="parameters" element="tns:obtenerUsuarioPorIdResponse" />
+  </message>
+  <message name="obtenerUsuarioPorCorreo">
+    <part name="parameters" element="tns:obtenerUsuarioPorCorreo" />
+  </message>
+  <message name="obtenerUsuarioPorCorreoResponse">
+    <part name="parameters" element="tns:obtenerUsuarioPorCorreoResponse" />
+  </message>
   <portType name="Usuarios">
-    <operation name="obtenerUsuarioPorCorreo">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoRequest" message="tns:obtenerUsuarioPorCorreo" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoResponse" message="tns:obtenerUsuarioPorCorreoResponse" />
-    </operation>
     <operation name="actualizarUsuario">
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/Usuarios/actualizarUsuarioRequest" message="tns:actualizarUsuario" />
       <output wsam:Action="http://services.techshopper.pucp.edu.pe/Usuarios/actualizarUsuarioResponse" message="tns:actualizarUsuarioResponse" />
     </operation>
+    <operation name="obtenerUsuarioPorId">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorIdRequest" message="tns:obtenerUsuarioPorId" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorIdResponse" message="tns:obtenerUsuarioPorIdResponse" />
+    </operation>
+    <operation name="obtenerUsuarioPorCorreo">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoRequest" message="tns:obtenerUsuarioPorCorreo" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoResponse" message="tns:obtenerUsuarioPorCorreoResponse" />
+    </operation>
   </portType>
   <binding name="UsuariosPortBinding" type="tns:Usuarios">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="obtenerUsuarioPorCorreo">
+    <operation name="actualizarUsuario">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -38,7 +48,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="actualizarUsuario">
+    <operation name="obtenerUsuarioPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerUsuarioPorCorreo">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

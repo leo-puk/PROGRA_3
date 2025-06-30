@@ -16,33 +16,6 @@ namespace TechShopperBO.CarritosWS {
     public interface Carritos {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/actualizarPrecioCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/actualizarPrecioCarritoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse actualizarPrecioCarrito(TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/actualizarPrecioCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/actualizarPrecioCarritoResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse> actualizarPrecioCarritoAsync(TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/obtenerCarritoPorIdRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/obtenerCarritoPorIdResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse obtenerCarritoPorId(TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/obtenerCarritoPorIdRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/obtenerCarritoPorIdResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse> obtenerCarritoPorIdAsync(TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/listarTodosLosCarritosRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/listarTodosLosCarritosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritosWS.listarTodosLosCarritosResponse listarTodosLosCarritos(TechShopperBO.CarritosWS.listarTodosLosCarritosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/listarTodosLosCarritosRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/listarTodosLosCarritosResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.listarTodosLosCarritosResponse> listarTodosLosCarritosAsync(TechShopperBO.CarritosWS.listarTodosLosCarritosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/crearCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/crearCarritoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -50,6 +23,15 @@ namespace TechShopperBO.CarritosWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/crearCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/crearCarritoResponse")]
         System.Threading.Tasks.Task<TechShopperBO.CarritosWS.crearCarritoResponse> crearCarritoAsync(TechShopperBO.CarritosWS.crearCarritoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/eliminarCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/eliminarCarritoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.CarritosWS.eliminarCarritoResponse eliminarCarrito(TechShopperBO.CarritosWS.eliminarCarritoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/eliminarCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/eliminarCarritoResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.eliminarCarritoResponse> eliminarCarritoAsync(TechShopperBO.CarritosWS.eliminarCarritoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/montoAPagarRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/montoAPagarResponse")]
@@ -61,52 +43,137 @@ namespace TechShopperBO.CarritosWS {
         System.Threading.Tasks.Task<TechShopperBO.CarritosWS.montoAPagarResponse> montoAPagarAsync(TechShopperBO.CarritosWS.montoAPagarRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/eliminarCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/eliminarCarritoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/listarTodosLosCarritosRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/listarTodosLosCarritosResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritosWS.eliminarCarritoResponse eliminarCarrito(TechShopperBO.CarritosWS.eliminarCarritoRequest request);
+        TechShopperBO.CarritosWS.listarTodosLosCarritosResponse listarTodosLosCarritos(TechShopperBO.CarritosWS.listarTodosLosCarritosRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/eliminarCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/eliminarCarritoResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.eliminarCarritoResponse> eliminarCarritoAsync(TechShopperBO.CarritosWS.eliminarCarritoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/listarTodosLosCarritosRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/listarTodosLosCarritosResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.listarTodosLosCarritosResponse> listarTodosLosCarritosAsync(TechShopperBO.CarritosWS.listarTodosLosCarritosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/obtenerCarritoPorIdRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/obtenerCarritoPorIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse obtenerCarritoPorId(TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/obtenerCarritoPorIdRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/obtenerCarritoPorIdResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse> obtenerCarritoPorIdAsync(TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/actualizarPrecioCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/actualizarPrecioCarritoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse actualizarPrecioCarrito(TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Carritos/actualizarPrecioCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Carritos/actualizarPrecioCarritoResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse> actualizarPrecioCarritoAsync(TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPrecioCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarPrecioCarritoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="crearCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class crearCarritoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCarrito;
+        public int idCliente;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double nuevoPrecio;
-        
-        public actualizarPrecioCarritoRequest() {
+        public crearCarritoRequest() {
         }
         
-        public actualizarPrecioCarritoRequest(int idCarrito, double nuevoPrecio) {
-            this.idCarrito = idCarrito;
-            this.nuevoPrecio = nuevoPrecio;
+        public crearCarritoRequest(int idCliente) {
+            this.idCliente = idCliente;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPrecioCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarPrecioCarritoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="crearCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class crearCarritoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public actualizarPrecioCarritoResponse() {
+        public crearCarritoResponse() {
         }
         
-        public actualizarPrecioCarritoResponse(int @return) {
+        public crearCarritoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCarritoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCarrito;
+        
+        public eliminarCarritoRequest() {
+        }
+        
+        public eliminarCarritoRequest(int idCarrito) {
+            this.idCarrito = idCarrito;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarCarritoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarCarritoResponse() {
+        }
+        
+        public eliminarCarritoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="montoAPagar", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class montoAPagarRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCarrito;
+        
+        public montoAPagarRequest() {
+        }
+        
+        public montoAPagarRequest(int idCarrito) {
+            this.idCarrito = idCarrito;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="montoAPagarResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class montoAPagarResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double @return;
+        
+        public montoAPagarResponse() {
+        }
+        
+        public montoAPagarResponse(double @return) {
             this.@return = @return;
         }
     }
@@ -416,6 +483,34 @@ namespace TechShopperBO.CarritosWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLosCarritos", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosLosCarritosRequest {
+        
+        public listarTodosLosCarritosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLosCarritosResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosLosCarritosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TechShopperBO.CarritosWS.carritoDTO[] @return;
+        
+        public listarTodosLosCarritosResponse() {
+        }
+        
+        public listarTodosLosCarritosResponse(TechShopperBO.CarritosWS.carritoDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCarritoPorId", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
     public partial class obtenerCarritoPorIdRequest {
         
@@ -452,135 +547,40 @@ namespace TechShopperBO.CarritosWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLosCarritos", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosLosCarritosRequest {
-        
-        public listarTodosLosCarritosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLosCarritosResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosLosCarritosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TechShopperBO.CarritosWS.carritoDTO[] @return;
-        
-        public listarTodosLosCarritosResponse() {
-        }
-        
-        public listarTodosLosCarritosResponse(TechShopperBO.CarritosWS.carritoDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="crearCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class crearCarritoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCliente;
-        
-        public crearCarritoRequest() {
-        }
-        
-        public crearCarritoRequest(int idCliente) {
-            this.idCliente = idCliente;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="crearCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class crearCarritoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public crearCarritoResponse() {
-        }
-        
-        public crearCarritoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="montoAPagar", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class montoAPagarRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPrecioCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarPrecioCarritoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idCarrito;
         
-        public montoAPagarRequest() {
-        }
-        
-        public montoAPagarRequest(int idCarrito) {
-            this.idCarrito = idCarrito;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="montoAPagarResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class montoAPagarResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double @return;
+        public double nuevoPrecio;
         
-        public montoAPagarResponse() {
+        public actualizarPrecioCarritoRequest() {
         }
         
-        public montoAPagarResponse(double @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCarritoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCarrito;
-        
-        public eliminarCarritoRequest() {
-        }
-        
-        public eliminarCarritoRequest(int idCarrito) {
+        public actualizarPrecioCarritoRequest(int idCarrito, double nuevoPrecio) {
             this.idCarrito = idCarrito;
+            this.nuevoPrecio = nuevoPrecio;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarCarritoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarPrecioCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarPrecioCarritoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public eliminarCarritoResponse() {
+        public actualizarPrecioCarritoResponse() {
         }
         
-        public eliminarCarritoResponse(int @return) {
+        public actualizarPrecioCarritoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -613,75 +613,6 @@ namespace TechShopperBO.CarritosWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse TechShopperBO.CarritosWS.Carritos.actualizarPrecioCarrito(TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest request) {
-            return base.Channel.actualizarPrecioCarrito(request);
-        }
-        
-        public int actualizarPrecioCarrito(int idCarrito, double nuevoPrecio) {
-            TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest inValue = new TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest();
-            inValue.idCarrito = idCarrito;
-            inValue.nuevoPrecio = nuevoPrecio;
-            TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse retVal = ((TechShopperBO.CarritosWS.Carritos)(this)).actualizarPrecioCarrito(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse> TechShopperBO.CarritosWS.Carritos.actualizarPrecioCarritoAsync(TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest request) {
-            return base.Channel.actualizarPrecioCarritoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse> actualizarPrecioCarritoAsync(int idCarrito, double nuevoPrecio) {
-            TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest inValue = new TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest();
-            inValue.idCarrito = idCarrito;
-            inValue.nuevoPrecio = nuevoPrecio;
-            return ((TechShopperBO.CarritosWS.Carritos)(this)).actualizarPrecioCarritoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse TechShopperBO.CarritosWS.Carritos.obtenerCarritoPorId(TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest request) {
-            return base.Channel.obtenerCarritoPorId(request);
-        }
-        
-        public TechShopperBO.CarritosWS.carritoDTO obtenerCarritoPorId(int idCarrito) {
-            TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest inValue = new TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest();
-            inValue.idCarrito = idCarrito;
-            TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse retVal = ((TechShopperBO.CarritosWS.Carritos)(this)).obtenerCarritoPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse> TechShopperBO.CarritosWS.Carritos.obtenerCarritoPorIdAsync(TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest request) {
-            return base.Channel.obtenerCarritoPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse> obtenerCarritoPorIdAsync(int idCarrito) {
-            TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest inValue = new TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest();
-            inValue.idCarrito = idCarrito;
-            return ((TechShopperBO.CarritosWS.Carritos)(this)).obtenerCarritoPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritosWS.listarTodosLosCarritosResponse TechShopperBO.CarritosWS.Carritos.listarTodosLosCarritos(TechShopperBO.CarritosWS.listarTodosLosCarritosRequest request) {
-            return base.Channel.listarTodosLosCarritos(request);
-        }
-        
-        public TechShopperBO.CarritosWS.carritoDTO[] listarTodosLosCarritos() {
-            TechShopperBO.CarritosWS.listarTodosLosCarritosRequest inValue = new TechShopperBO.CarritosWS.listarTodosLosCarritosRequest();
-            TechShopperBO.CarritosWS.listarTodosLosCarritosResponse retVal = ((TechShopperBO.CarritosWS.Carritos)(this)).listarTodosLosCarritos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.listarTodosLosCarritosResponse> TechShopperBO.CarritosWS.Carritos.listarTodosLosCarritosAsync(TechShopperBO.CarritosWS.listarTodosLosCarritosRequest request) {
-            return base.Channel.listarTodosLosCarritosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.CarritosWS.listarTodosLosCarritosResponse> listarTodosLosCarritosAsync() {
-            TechShopperBO.CarritosWS.listarTodosLosCarritosRequest inValue = new TechShopperBO.CarritosWS.listarTodosLosCarritosRequest();
-            return ((TechShopperBO.CarritosWS.Carritos)(this)).listarTodosLosCarritosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TechShopperBO.CarritosWS.crearCarritoResponse TechShopperBO.CarritosWS.Carritos.crearCarrito(TechShopperBO.CarritosWS.crearCarritoRequest request) {
             return base.Channel.crearCarrito(request);
         }
@@ -702,6 +633,29 @@ namespace TechShopperBO.CarritosWS {
             TechShopperBO.CarritosWS.crearCarritoRequest inValue = new TechShopperBO.CarritosWS.crearCarritoRequest();
             inValue.idCliente = idCliente;
             return ((TechShopperBO.CarritosWS.Carritos)(this)).crearCarritoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.CarritosWS.eliminarCarritoResponse TechShopperBO.CarritosWS.Carritos.eliminarCarrito(TechShopperBO.CarritosWS.eliminarCarritoRequest request) {
+            return base.Channel.eliminarCarrito(request);
+        }
+        
+        public int eliminarCarrito(int idCarrito) {
+            TechShopperBO.CarritosWS.eliminarCarritoRequest inValue = new TechShopperBO.CarritosWS.eliminarCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            TechShopperBO.CarritosWS.eliminarCarritoResponse retVal = ((TechShopperBO.CarritosWS.Carritos)(this)).eliminarCarrito(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.eliminarCarritoResponse> TechShopperBO.CarritosWS.Carritos.eliminarCarritoAsync(TechShopperBO.CarritosWS.eliminarCarritoRequest request) {
+            return base.Channel.eliminarCarritoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.CarritosWS.eliminarCarritoResponse> eliminarCarritoAsync(int idCarrito) {
+            TechShopperBO.CarritosWS.eliminarCarritoRequest inValue = new TechShopperBO.CarritosWS.eliminarCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            return ((TechShopperBO.CarritosWS.Carritos)(this)).eliminarCarritoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -728,26 +682,72 @@ namespace TechShopperBO.CarritosWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritosWS.eliminarCarritoResponse TechShopperBO.CarritosWS.Carritos.eliminarCarrito(TechShopperBO.CarritosWS.eliminarCarritoRequest request) {
-            return base.Channel.eliminarCarrito(request);
+        TechShopperBO.CarritosWS.listarTodosLosCarritosResponse TechShopperBO.CarritosWS.Carritos.listarTodosLosCarritos(TechShopperBO.CarritosWS.listarTodosLosCarritosRequest request) {
+            return base.Channel.listarTodosLosCarritos(request);
         }
         
-        public int eliminarCarrito(int idCarrito) {
-            TechShopperBO.CarritosWS.eliminarCarritoRequest inValue = new TechShopperBO.CarritosWS.eliminarCarritoRequest();
-            inValue.idCarrito = idCarrito;
-            TechShopperBO.CarritosWS.eliminarCarritoResponse retVal = ((TechShopperBO.CarritosWS.Carritos)(this)).eliminarCarrito(inValue);
+        public TechShopperBO.CarritosWS.carritoDTO[] listarTodosLosCarritos() {
+            TechShopperBO.CarritosWS.listarTodosLosCarritosRequest inValue = new TechShopperBO.CarritosWS.listarTodosLosCarritosRequest();
+            TechShopperBO.CarritosWS.listarTodosLosCarritosResponse retVal = ((TechShopperBO.CarritosWS.Carritos)(this)).listarTodosLosCarritos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.eliminarCarritoResponse> TechShopperBO.CarritosWS.Carritos.eliminarCarritoAsync(TechShopperBO.CarritosWS.eliminarCarritoRequest request) {
-            return base.Channel.eliminarCarritoAsync(request);
+        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.listarTodosLosCarritosResponse> TechShopperBO.CarritosWS.Carritos.listarTodosLosCarritosAsync(TechShopperBO.CarritosWS.listarTodosLosCarritosRequest request) {
+            return base.Channel.listarTodosLosCarritosAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TechShopperBO.CarritosWS.eliminarCarritoResponse> eliminarCarritoAsync(int idCarrito) {
-            TechShopperBO.CarritosWS.eliminarCarritoRequest inValue = new TechShopperBO.CarritosWS.eliminarCarritoRequest();
+        public System.Threading.Tasks.Task<TechShopperBO.CarritosWS.listarTodosLosCarritosResponse> listarTodosLosCarritosAsync() {
+            TechShopperBO.CarritosWS.listarTodosLosCarritosRequest inValue = new TechShopperBO.CarritosWS.listarTodosLosCarritosRequest();
+            return ((TechShopperBO.CarritosWS.Carritos)(this)).listarTodosLosCarritosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse TechShopperBO.CarritosWS.Carritos.obtenerCarritoPorId(TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest request) {
+            return base.Channel.obtenerCarritoPorId(request);
+        }
+        
+        public TechShopperBO.CarritosWS.carritoDTO obtenerCarritoPorId(int idCarrito) {
+            TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest inValue = new TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest();
             inValue.idCarrito = idCarrito;
-            return ((TechShopperBO.CarritosWS.Carritos)(this)).eliminarCarritoAsync(inValue);
+            TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse retVal = ((TechShopperBO.CarritosWS.Carritos)(this)).obtenerCarritoPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse> TechShopperBO.CarritosWS.Carritos.obtenerCarritoPorIdAsync(TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest request) {
+            return base.Channel.obtenerCarritoPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.CarritosWS.obtenerCarritoPorIdResponse> obtenerCarritoPorIdAsync(int idCarrito) {
+            TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest inValue = new TechShopperBO.CarritosWS.obtenerCarritoPorIdRequest();
+            inValue.idCarrito = idCarrito;
+            return ((TechShopperBO.CarritosWS.Carritos)(this)).obtenerCarritoPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse TechShopperBO.CarritosWS.Carritos.actualizarPrecioCarrito(TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest request) {
+            return base.Channel.actualizarPrecioCarrito(request);
+        }
+        
+        public int actualizarPrecioCarrito(int idCarrito, double nuevoPrecio) {
+            TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest inValue = new TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            inValue.nuevoPrecio = nuevoPrecio;
+            TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse retVal = ((TechShopperBO.CarritosWS.Carritos)(this)).actualizarPrecioCarrito(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse> TechShopperBO.CarritosWS.Carritos.actualizarPrecioCarritoAsync(TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest request) {
+            return base.Channel.actualizarPrecioCarritoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.CarritosWS.actualizarPrecioCarritoResponse> actualizarPrecioCarritoAsync(int idCarrito, double nuevoPrecio) {
+            TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest inValue = new TechShopperBO.CarritosWS.actualizarPrecioCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            inValue.nuevoPrecio = nuevoPrecio;
+            return ((TechShopperBO.CarritosWS.Carritos)(this)).actualizarPrecioCarritoAsync(inValue);
         }
     }
 }

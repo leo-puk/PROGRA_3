@@ -26,3 +26,45 @@ C:\Users\usuario\Downloads\versionesTS\3\Prog3-TA\TechShopperWA2\TechShopperWA\T
 C:\Users\usuario\Downloads\versionesTS\3\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.CoreCompileInputs.cache
 C:\Users\usuario\Downloads\versionesTS\3\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.dll
 C:\Users\usuario\Downloads\versionesTS\3\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.pdb
+C:\programacion 3\ta\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll.config
+C:\programacion 3\ta\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll
+C:\programacion 3\ta\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.pdb
+C:\programacion 3\ta\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.AssemblyReference.cache
+C:\programacion 3\ta\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.CoreCompileInputs.cache
+C:\programacion 3\ta\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.dll
+C:\programacion 3\ta\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.pdb
+C:\Users\usuario\Downloads\versionesTS\4\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll.config
+C:\Users\usuario\Downloads\versionesTS\4\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll
+C:\Users\usuario\Downloads\versionesTS\4\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.pdb
+C:\Users\usuario\Downloads\versionesTS\4\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.AssemblyReference.cache
+C:\Users\usuario\Downloads\versionesTS\4\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Downloads\versionesTS\4\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.dll
+C:\Users\usuario\Downloads\versionesTS\4\Prog3-TA\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.pdb
+C:\Users\Admin\Documents\PUCP\TechShopperWAFinal\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll.config
+C:\Users\Admin\Documents\PUCP\TechShopperWAFinal\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll
+C:\Users\Admin\Documents\PUCP\TechShopperWAFinal\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.pdb
+C:\Users\Admin\Documents\PUCP\TechShopperWAFinal\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\PUCP\TechShopperWAFinal\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\PUCP\TechShopperWAFinal\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.dll
+C:\Users\Admin\Documents\PUCP\TechShopperWAFinal\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.pdb
+C:\Users\usuario\Downloads\versionesTS\7\TechShopperWAFinal\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll.config
+C:\Users\usuario\Downloads\versionesTS\7\TechShopperWAFinal\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll
+C:\Users\usuario\Downloads\versionesTS\7\TechShopperWAFinal\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.pdb
+C:\Users\usuario\Downloads\versionesTS\7\TechShopperWAFinal\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.AssemblyReference.cache
+C:\Users\usuario\Downloads\versionesTS\7\TechShopperWAFinal\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Downloads\versionesTS\7\TechShopperWAFinal\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.dll
+C:\Users\usuario\Downloads\versionesTS\7\TechShopperWAFinal\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.pdb
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll.config
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.pdb
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.AssemblyReference.cache
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.CoreCompileInputs.cache
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.dll
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.pdb
+C:\programacion 3\ta\nueva version\TechShopperWA2\frontend\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll.config
+C:\programacion 3\ta\nueva version\TechShopperWA2\frontend\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.dll
+C:\programacion 3\ta\nueva version\TechShopperWA2\frontend\TechShopperWA\TechShopperBO\bin\Debug\TechShopperBO.pdb
+C:\programacion 3\ta\nueva version\TechShopperWA2\frontend\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.AssemblyReference.cache
+C:\programacion 3\ta\nueva version\TechShopperWA2\frontend\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.csproj.CoreCompileInputs.cache
+C:\programacion 3\ta\nueva version\TechShopperWA2\frontend\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.dll
+C:\programacion 3\ta\nueva version\TechShopperWA2\frontend\TechShopperWA\TechShopperBO\obj\Debug\TechShopperBO.pdb

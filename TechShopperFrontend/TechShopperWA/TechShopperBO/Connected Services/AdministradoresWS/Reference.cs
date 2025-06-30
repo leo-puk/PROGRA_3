@@ -25,17 +25,30 @@ namespace TechShopperBO.AdministradoresWS {
         System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.iniciarSesionResponse> iniciarSesionAsync(TechShopperBO.AdministradoresWS.iniciarSesionRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorReq" +
-            "uest", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorRes" +
-            "ponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorId" +
+            "Request", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorId" +
+            "Response")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.AdministradoresWS.registrarAdministradorResponse registrarAdministrador(TechShopperBO.AdministradoresWS.registrarAdministradorRequest request);
+        TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse obtenerAdministradorPorId(TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorReq" +
-            "uest", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorRes" +
-            "ponse")]
-        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.registrarAdministradorResponse> registrarAdministradorAsync(TechShopperBO.AdministradoresWS.registrarAdministradorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorId" +
+            "Request", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorId" +
+            "Response")]
+        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse> obtenerAdministradorPorIdAsync(TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorRe" +
+            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorRe" +
+            "sponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.AdministradoresWS.actualizarAdministradorResponse actualizarAdministrador(TechShopperBO.AdministradoresWS.actualizarAdministradorRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorRe" +
+            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.actualizarAdministradorResponse> actualizarAdministradorAsync(TechShopperBO.AdministradoresWS.actualizarAdministradorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarEstadoConexionR" +
@@ -64,30 +77,17 @@ namespace TechShopperBO.AdministradoresWS {
         System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.eliminarAdministradorResponse> eliminarAdministradorAsync(TechShopperBO.AdministradoresWS.eliminarAdministradorRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorId" +
-            "Request", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorId" +
-            "Response")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorReq" +
+            "uest", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorRes" +
+            "ponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse obtenerAdministradorPorId(TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest request);
+        TechShopperBO.AdministradoresWS.registrarAdministradorResponse registrarAdministrador(TechShopperBO.AdministradoresWS.registrarAdministradorRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorId" +
-            "Request", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorId" +
-            "Response")]
-        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse> obtenerAdministradorPorIdAsync(TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorRe" +
-            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorRe" +
-            "sponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.AdministradoresWS.actualizarAdministradorResponse actualizarAdministrador(TechShopperBO.AdministradoresWS.actualizarAdministradorRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorRe" +
-            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.actualizarAdministradorResponse> actualizarAdministradorAsync(TechShopperBO.AdministradoresWS.actualizarAdministradorRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorReq" +
+            "uest", ReplyAction="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorRes" +
+            "ponse")]
+        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.registrarAdministradorResponse> registrarAdministradorAsync(TechShopperBO.AdministradoresWS.registrarAdministradorRequest request);
     }
     
     /// <remarks/>
@@ -419,129 +419,6 @@ namespace TechShopperBO.AdministradoresWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarAdministrador", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class registrarAdministradorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string contraseña;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string email;
-        
-        public registrarAdministradorRequest() {
-        }
-        
-        public registrarAdministradorRequest(string contraseña, string nombre, string email) {
-            this.contraseña = contraseña;
-            this.nombre = nombre;
-            this.email = email;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarAdministradorResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class registrarAdministradorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public registrarAdministradorResponse() {
-        }
-        
-        public registrarAdministradorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEstadoConexion", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarEstadoConexionRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idAdministrador;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nuevoEstado;
-        
-        public actualizarEstadoConexionRequest() {
-        }
-        
-        public actualizarEstadoConexionRequest(int idAdministrador, string nuevoEstado) {
-            this.idAdministrador = idAdministrador;
-            this.nuevoEstado = nuevoEstado;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEstadoConexionResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarEstadoConexionResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarEstadoConexionResponse() {
-        }
-        
-        public actualizarEstadoConexionResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministrador", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarAdministradorRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idAdministrador;
-        
-        public eliminarAdministradorRequest() {
-        }
-        
-        public eliminarAdministradorRequest(int idAdministrador) {
-            this.idAdministrador = idAdministrador;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministradorResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarAdministradorResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarAdministradorResponse() {
-        }
-        
-        public eliminarAdministradorResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerAdministradorPorId", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
     public partial class obtenerAdministradorPorIdRequest {
         
@@ -626,6 +503,129 @@ namespace TechShopperBO.AdministradoresWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEstadoConexion", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarEstadoConexionRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idAdministrador;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nuevoEstado;
+        
+        public actualizarEstadoConexionRequest() {
+        }
+        
+        public actualizarEstadoConexionRequest(int idAdministrador, string nuevoEstado) {
+            this.idAdministrador = idAdministrador;
+            this.nuevoEstado = nuevoEstado;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarEstadoConexionResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarEstadoConexionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarEstadoConexionResponse() {
+        }
+        
+        public actualizarEstadoConexionResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministrador", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarAdministradorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idAdministrador;
+        
+        public eliminarAdministradorRequest() {
+        }
+        
+        public eliminarAdministradorRequest(int idAdministrador) {
+            this.idAdministrador = idAdministrador;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarAdministradorResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarAdministradorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarAdministradorResponse() {
+        }
+        
+        public eliminarAdministradorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarAdministrador", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarAdministradorRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string contraseña;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string email;
+        
+        public registrarAdministradorRequest() {
+        }
+        
+        public registrarAdministradorRequest(string contraseña, string nombre, string email) {
+            this.contraseña = contraseña;
+            this.nombre = nombre;
+            this.email = email;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarAdministradorResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarAdministradorResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public registrarAdministradorResponse() {
+        }
+        
+        public registrarAdministradorResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface AdministradoresChannel : TechShopperBO.AdministradoresWS.Administradores, System.ServiceModel.IClientChannel {
     }
@@ -679,30 +679,55 @@ namespace TechShopperBO.AdministradoresWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.AdministradoresWS.registrarAdministradorResponse TechShopperBO.AdministradoresWS.Administradores.registrarAdministrador(TechShopperBO.AdministradoresWS.registrarAdministradorRequest request) {
-            return base.Channel.registrarAdministrador(request);
+        TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse TechShopperBO.AdministradoresWS.Administradores.obtenerAdministradorPorId(TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest request) {
+            return base.Channel.obtenerAdministradorPorId(request);
         }
         
-        public int registrarAdministrador(string contraseña, string nombre, string email) {
-            TechShopperBO.AdministradoresWS.registrarAdministradorRequest inValue = new TechShopperBO.AdministradoresWS.registrarAdministradorRequest();
-            inValue.contraseña = contraseña;
-            inValue.nombre = nombre;
-            inValue.email = email;
-            TechShopperBO.AdministradoresWS.registrarAdministradorResponse retVal = ((TechShopperBO.AdministradoresWS.Administradores)(this)).registrarAdministrador(inValue);
+        public TechShopperBO.AdministradoresWS.administradorDTO obtenerAdministradorPorId(int idAdministrador) {
+            TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest inValue = new TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest();
+            inValue.idAdministrador = idAdministrador;
+            TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse retVal = ((TechShopperBO.AdministradoresWS.Administradores)(this)).obtenerAdministradorPorId(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.registrarAdministradorResponse> TechShopperBO.AdministradoresWS.Administradores.registrarAdministradorAsync(TechShopperBO.AdministradoresWS.registrarAdministradorRequest request) {
-            return base.Channel.registrarAdministradorAsync(request);
+        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse> TechShopperBO.AdministradoresWS.Administradores.obtenerAdministradorPorIdAsync(TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest request) {
+            return base.Channel.obtenerAdministradorPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.registrarAdministradorResponse> registrarAdministradorAsync(string contraseña, string nombre, string email) {
-            TechShopperBO.AdministradoresWS.registrarAdministradorRequest inValue = new TechShopperBO.AdministradoresWS.registrarAdministradorRequest();
+        public System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse> obtenerAdministradorPorIdAsync(int idAdministrador) {
+            TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest inValue = new TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest();
+            inValue.idAdministrador = idAdministrador;
+            return ((TechShopperBO.AdministradoresWS.Administradores)(this)).obtenerAdministradorPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.AdministradoresWS.actualizarAdministradorResponse TechShopperBO.AdministradoresWS.Administradores.actualizarAdministrador(TechShopperBO.AdministradoresWS.actualizarAdministradorRequest request) {
+            return base.Channel.actualizarAdministrador(request);
+        }
+        
+        public int actualizarAdministrador(int idAdministrador, string contraseña, string nombre, string email) {
+            TechShopperBO.AdministradoresWS.actualizarAdministradorRequest inValue = new TechShopperBO.AdministradoresWS.actualizarAdministradorRequest();
+            inValue.idAdministrador = idAdministrador;
             inValue.contraseña = contraseña;
             inValue.nombre = nombre;
             inValue.email = email;
-            return ((TechShopperBO.AdministradoresWS.Administradores)(this)).registrarAdministradorAsync(inValue);
+            TechShopperBO.AdministradoresWS.actualizarAdministradorResponse retVal = ((TechShopperBO.AdministradoresWS.Administradores)(this)).actualizarAdministrador(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.actualizarAdministradorResponse> TechShopperBO.AdministradoresWS.Administradores.actualizarAdministradorAsync(TechShopperBO.AdministradoresWS.actualizarAdministradorRequest request) {
+            return base.Channel.actualizarAdministradorAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.actualizarAdministradorResponse> actualizarAdministradorAsync(int idAdministrador, string contraseña, string nombre, string email) {
+            TechShopperBO.AdministradoresWS.actualizarAdministradorRequest inValue = new TechShopperBO.AdministradoresWS.actualizarAdministradorRequest();
+            inValue.idAdministrador = idAdministrador;
+            inValue.contraseña = contraseña;
+            inValue.nombre = nombre;
+            inValue.email = email;
+            return ((TechShopperBO.AdministradoresWS.Administradores)(this)).actualizarAdministradorAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -754,55 +779,30 @@ namespace TechShopperBO.AdministradoresWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse TechShopperBO.AdministradoresWS.Administradores.obtenerAdministradorPorId(TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest request) {
-            return base.Channel.obtenerAdministradorPorId(request);
+        TechShopperBO.AdministradoresWS.registrarAdministradorResponse TechShopperBO.AdministradoresWS.Administradores.registrarAdministrador(TechShopperBO.AdministradoresWS.registrarAdministradorRequest request) {
+            return base.Channel.registrarAdministrador(request);
         }
         
-        public TechShopperBO.AdministradoresWS.administradorDTO obtenerAdministradorPorId(int idAdministrador) {
-            TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest inValue = new TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest();
-            inValue.idAdministrador = idAdministrador;
-            TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse retVal = ((TechShopperBO.AdministradoresWS.Administradores)(this)).obtenerAdministradorPorId(inValue);
+        public int registrarAdministrador(string contraseña, string nombre, string email) {
+            TechShopperBO.AdministradoresWS.registrarAdministradorRequest inValue = new TechShopperBO.AdministradoresWS.registrarAdministradorRequest();
+            inValue.contraseña = contraseña;
+            inValue.nombre = nombre;
+            inValue.email = email;
+            TechShopperBO.AdministradoresWS.registrarAdministradorResponse retVal = ((TechShopperBO.AdministradoresWS.Administradores)(this)).registrarAdministrador(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse> TechShopperBO.AdministradoresWS.Administradores.obtenerAdministradorPorIdAsync(TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest request) {
-            return base.Channel.obtenerAdministradorPorIdAsync(request);
+        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.registrarAdministradorResponse> TechShopperBO.AdministradoresWS.Administradores.registrarAdministradorAsync(TechShopperBO.AdministradoresWS.registrarAdministradorRequest request) {
+            return base.Channel.registrarAdministradorAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdResponse> obtenerAdministradorPorIdAsync(int idAdministrador) {
-            TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest inValue = new TechShopperBO.AdministradoresWS.obtenerAdministradorPorIdRequest();
-            inValue.idAdministrador = idAdministrador;
-            return ((TechShopperBO.AdministradoresWS.Administradores)(this)).obtenerAdministradorPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.AdministradoresWS.actualizarAdministradorResponse TechShopperBO.AdministradoresWS.Administradores.actualizarAdministrador(TechShopperBO.AdministradoresWS.actualizarAdministradorRequest request) {
-            return base.Channel.actualizarAdministrador(request);
-        }
-        
-        public int actualizarAdministrador(int idAdministrador, string contraseña, string nombre, string email) {
-            TechShopperBO.AdministradoresWS.actualizarAdministradorRequest inValue = new TechShopperBO.AdministradoresWS.actualizarAdministradorRequest();
-            inValue.idAdministrador = idAdministrador;
+        public System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.registrarAdministradorResponse> registrarAdministradorAsync(string contraseña, string nombre, string email) {
+            TechShopperBO.AdministradoresWS.registrarAdministradorRequest inValue = new TechShopperBO.AdministradoresWS.registrarAdministradorRequest();
             inValue.contraseña = contraseña;
             inValue.nombre = nombre;
             inValue.email = email;
-            TechShopperBO.AdministradoresWS.actualizarAdministradorResponse retVal = ((TechShopperBO.AdministradoresWS.Administradores)(this)).actualizarAdministrador(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.actualizarAdministradorResponse> TechShopperBO.AdministradoresWS.Administradores.actualizarAdministradorAsync(TechShopperBO.AdministradoresWS.actualizarAdministradorRequest request) {
-            return base.Channel.actualizarAdministradorAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.AdministradoresWS.actualizarAdministradorResponse> actualizarAdministradorAsync(int idAdministrador, string contraseña, string nombre, string email) {
-            TechShopperBO.AdministradoresWS.actualizarAdministradorRequest inValue = new TechShopperBO.AdministradoresWS.actualizarAdministradorRequest();
-            inValue.idAdministrador = idAdministrador;
-            inValue.contraseña = contraseña;
-            inValue.nombre = nombre;
-            inValue.email = email;
-            return ((TechShopperBO.AdministradoresWS.Administradores)(this)).actualizarAdministradorAsync(inValue);
+            return ((TechShopperBO.AdministradoresWS.Administradores)(this)).registrarAdministradorAsync(inValue);
         }
     }
 }

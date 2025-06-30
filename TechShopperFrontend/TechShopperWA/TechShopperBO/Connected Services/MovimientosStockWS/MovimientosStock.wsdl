@@ -11,23 +11,11 @@
   <message name="eliminarMovimientoResponse">
     <part name="parameters" element="tns:eliminarMovimientoResponse" />
   </message>
-  <message name="registrarMovimiento">
-    <part name="parameters" element="tns:registrarMovimiento" />
+  <message name="reporteMovStocks">
+    <part name="parameters" element="tns:reporteMovStocks" />
   </message>
-  <message name="registrarMovimientoResponse">
-    <part name="parameters" element="tns:registrarMovimientoResponse" />
-  </message>
-  <message name="obtenerMovimientoPorId">
-    <part name="parameters" element="tns:obtenerMovimientoPorId" />
-  </message>
-  <message name="obtenerMovimientoPorIdResponse">
-    <part name="parameters" element="tns:obtenerMovimientoPorIdResponse" />
-  </message>
-  <message name="listarTodosLosMovimientos">
-    <part name="parameters" element="tns:listarTodosLosMovimientos" />
-  </message>
-  <message name="listarTodosLosMovimientosResponse">
-    <part name="parameters" element="tns:listarTodosLosMovimientosResponse" />
+  <message name="reporteMovStocksResponse">
+    <part name="parameters" element="tns:reporteMovStocksResponse" />
   </message>
   <message name="registrarEntradaStock">
     <part name="parameters" element="tns:registrarEntradaStock" />
@@ -47,6 +35,24 @@
   <message name="modificarMovimientoResponse">
     <part name="parameters" element="tns:modificarMovimientoResponse" />
   </message>
+  <message name="obtenerMovimientoPorId">
+    <part name="parameters" element="tns:obtenerMovimientoPorId" />
+  </message>
+  <message name="obtenerMovimientoPorIdResponse">
+    <part name="parameters" element="tns:obtenerMovimientoPorIdResponse" />
+  </message>
+  <message name="listarTodosLosMovimientos">
+    <part name="parameters" element="tns:listarTodosLosMovimientos" />
+  </message>
+  <message name="listarTodosLosMovimientosResponse">
+    <part name="parameters" element="tns:listarTodosLosMovimientosResponse" />
+  </message>
+  <message name="registrarMovimiento">
+    <part name="parameters" element="tns:registrarMovimiento" />
+  </message>
+  <message name="registrarMovimientoResponse">
+    <part name="parameters" element="tns:registrarMovimientoResponse" />
+  </message>
   <message name="listarMovimientosPorProducto">
     <part name="parameters" element="tns:listarMovimientosPorProducto" />
   </message>
@@ -58,17 +64,9 @@
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/eliminarMovimientoRequest" message="tns:eliminarMovimiento" />
       <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/eliminarMovimientoResponse" message="tns:eliminarMovimientoResponse" />
     </operation>
-    <operation name="registrarMovimiento">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoRequest" message="tns:registrarMovimiento" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoResponse" message="tns:registrarMovimientoResponse" />
-    </operation>
-    <operation name="obtenerMovimientoPorId">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdRequest" message="tns:obtenerMovimientoPorId" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdResponse" message="tns:obtenerMovimientoPorIdResponse" />
-    </operation>
-    <operation name="listarTodosLosMovimientos">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimientosRequest" message="tns:listarTodosLosMovimientos" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimientosResponse" message="tns:listarTodosLosMovimientosResponse" />
+    <operation name="reporteMovStocks">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/reporteMovStocksRequest" message="tns:reporteMovStocks" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/reporteMovStocksResponse" message="tns:reporteMovStocksResponse" />
     </operation>
     <operation name="registrarEntradaStock">
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarEntradaStockRequest" message="tns:registrarEntradaStock" />
@@ -81,6 +79,18 @@
     <operation name="modificarMovimiento">
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/modificarMovimientoRequest" message="tns:modificarMovimiento" />
       <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/modificarMovimientoResponse" message="tns:modificarMovimientoResponse" />
+    </operation>
+    <operation name="obtenerMovimientoPorId">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdRequest" message="tns:obtenerMovimientoPorId" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/obtenerMovimientoPorIdResponse" message="tns:obtenerMovimientoPorIdResponse" />
+    </operation>
+    <operation name="listarTodosLosMovimientos">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimientosRequest" message="tns:listarTodosLosMovimientos" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarTodosLosMovimientosResponse" message="tns:listarTodosLosMovimientosResponse" />
+    </operation>
+    <operation name="registrarMovimiento">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoRequest" message="tns:registrarMovimiento" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/registrarMovimientoResponse" message="tns:registrarMovimientoResponse" />
     </operation>
     <operation name="listarMovimientosPorProducto">
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/MovimientosStock/listarMovimientosPorProductoRequest" message="tns:listarMovimientosPorProducto" />
@@ -98,25 +108,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="registrarMovimiento">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerMovimientoPorId">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="listarTodosLosMovimientos">
+    <operation name="reporteMovStocks">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -144,6 +136,33 @@
       </output>
     </operation>
     <operation name="modificarMovimiento">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerMovimientoPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosLosMovimientos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="registrarMovimiento">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

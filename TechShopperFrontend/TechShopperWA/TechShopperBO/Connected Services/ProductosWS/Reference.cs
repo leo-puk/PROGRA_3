@@ -16,13 +16,13 @@ namespace TechShopperBO.ProductosWS {
     public interface Productos {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.ProductosWS.verificarCambioStockResponse verificarCambioStock(TechShopperBO.ProductosWS.verificarCambioStockRequest request);
+        TechShopperBO.ProductosWS.registrarProductoResponse registrarProducto(TechShopperBO.ProductosWS.registrarProductoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.verificarCambioStockResponse> verificarCambioStockAsync(TechShopperBO.ProductosWS.verificarCambioStockRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.registrarProductoResponse> registrarProductoAsync(TechShopperBO.ProductosWS.registrarProductoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/actualizarProductoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/actualizarProductoResponse")]
@@ -41,33 +41,6 @@ namespace TechShopperBO.ProductosWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/eliminarProductoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/eliminarProductoResponse")]
         System.Threading.Tasks.Task<TechShopperBO.ProductosWS.eliminarProductoResponse> eliminarProductoAsync(TechShopperBO.ProductosWS.eliminarProductoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.ProductosWS.registrarProductoResponse registrarProducto(TechShopperBO.ProductosWS.registrarProductoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/registrarProductoResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.registrarProductoResponse> registrarProductoAsync(TechShopperBO.ProductosWS.registrarProductoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.ProductosWS.listarTodosProductosResponse listarTodosProductos(TechShopperBO.ProductosWS.listarTodosProductosRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.listarTodosProductosResponse> listarTodosProductosAsync(TechShopperBO.ProductosWS.listarTodosProductosRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.ProductosWS.obtenerProductoPorIdResponse obtenerProductoPorId(TechShopperBO.ProductosWS.obtenerProductoPorIdRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.obtenerProductoPorIdResponse> obtenerProductoPorIdAsync(TechShopperBO.ProductosWS.obtenerProductoPorIdRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/listarPor3criteriosRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/listarPor3criteriosResponse")]
@@ -90,45 +63,107 @@ namespace TechShopperBO.ProductosWS {
             "", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/actualizarImagenProductoRespons" +
             "e")]
         System.Threading.Tasks.Task<TechShopperBO.ProductosWS.actualizarImagenProductoResponse> actualizarImagenProductoAsync(TechShopperBO.ProductosWS.actualizarImagenProductoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.ProductosWS.obtenerProductoPorIdResponse obtenerProductoPorId(TechShopperBO.ProductosWS.obtenerProductoPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/obtenerProductoPorIdResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.obtenerProductoPorIdResponse> obtenerProductoPorIdAsync(TechShopperBO.ProductosWS.obtenerProductoPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.ProductosWS.listarTodosProductosResponse listarTodosProductos(TechShopperBO.ProductosWS.listarTodosProductosRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/listarTodosProductosResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.listarTodosProductosResponse> listarTodosProductosAsync(TechShopperBO.ProductosWS.listarTodosProductosRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.ProductosWS.verificarCambioStockResponse verificarCambioStock(TechShopperBO.ProductosWS.verificarCambioStockRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Productos/verificarCambioStockResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.verificarCambioStockResponse> verificarCambioStockAsync(TechShopperBO.ProductosWS.verificarCambioStockRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarCambioStock", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class verificarCambioStockRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarProducto", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarProductoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
+        public double precio;
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nuevoStock;
+        public int stockDisponible;
         
-        public verificarCambioStockRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int stockMinimo;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string marca;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=5)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string categoria;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=6)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string descripcion;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=7)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string imagenURL;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=8)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public registrarProductoRequest() {
         }
         
-        public verificarCambioStockRequest(int idProducto, int nuevoStock) {
-            this.idProducto = idProducto;
-            this.nuevoStock = nuevoStock;
+        public registrarProductoRequest(double precio, int stockDisponible, int stockMinimo, string nombre, string marca, string categoria, string descripcion, string imagenURL, int idUsuario) {
+            this.precio = precio;
+            this.stockDisponible = stockDisponible;
+            this.stockMinimo = stockMinimo;
+            this.nombre = nombre;
+            this.marca = marca;
+            this.categoria = categoria;
+            this.descripcion = descripcion;
+            this.imagenURL = imagenURL;
+            this.idUsuario = idUsuario;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarCambioStockResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class verificarCambioStockResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarProductoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class registrarProductoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public verificarCambioStockResponse() {
+        public registrarProductoResponse() {
         }
         
-        public verificarCambioStockResponse(int @return) {
+        public registrarProductoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -241,82 +276,6 @@ namespace TechShopperBO.ProductosWS {
         }
         
         public eliminarProductoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarProducto", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class registrarProductoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double precio;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int stockDisponible;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int stockMinimo;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string marca;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=5)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string categoria;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=6)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string descripcion;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=7)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string imagenURL;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=8)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuario;
-        
-        public registrarProductoRequest() {
-        }
-        
-        public registrarProductoRequest(double precio, int stockDisponible, int stockMinimo, string nombre, string marca, string categoria, string descripcion, string imagenURL, int idUsuario) {
-            this.precio = precio;
-            this.stockDisponible = stockDisponible;
-            this.stockMinimo = stockMinimo;
-            this.nombre = nombre;
-            this.marca = marca;
-            this.categoria = categoria;
-            this.descripcion = descripcion;
-            this.imagenURL = imagenURL;
-            this.idUsuario = idUsuario;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registrarProductoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class registrarProductoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public registrarProductoResponse() {
-        }
-        
-        public registrarProductoResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -828,70 +787,6 @@ namespace TechShopperBO.ProductosWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosProductos", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosProductosRequest {
-        
-        public listarTodosProductosRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosProductosResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosProductosResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TechShopperBO.ProductosWS.productoDTO[] @return;
-        
-        public listarTodosProductosResponse() {
-        }
-        
-        public listarTodosProductosResponse(TechShopperBO.ProductosWS.productoDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerProductoPorId", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerProductoPorIdRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
-        
-        public obtenerProductoPorIdRequest() {
-        }
-        
-        public obtenerProductoPorIdRequest(int idProducto) {
-            this.idProducto = idProducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerProductoPorIdResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerProductoPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TechShopperBO.ProductosWS.productoDTO @return;
-        
-        public obtenerProductoPorIdResponse() {
-        }
-        
-        public obtenerProductoPorIdResponse(TechShopperBO.ProductosWS.productoDTO @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="listarPor3criterios", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
     public partial class listarPor3criteriosRequest {
         
@@ -976,6 +871,111 @@ namespace TechShopperBO.ProductosWS {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerProductoPorId", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerProductoPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProducto;
+        
+        public obtenerProductoPorIdRequest() {
+        }
+        
+        public obtenerProductoPorIdRequest(int idProducto) {
+            this.idProducto = idProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerProductoPorIdResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerProductoPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TechShopperBO.ProductosWS.productoDTO @return;
+        
+        public obtenerProductoPorIdResponse() {
+        }
+        
+        public obtenerProductoPorIdResponse(TechShopperBO.ProductosWS.productoDTO @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosProductos", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosProductosRequest {
+        
+        public listarTodosProductosRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosProductosResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosProductosResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TechShopperBO.ProductosWS.productoDTO[] @return;
+        
+        public listarTodosProductosResponse() {
+        }
+        
+        public listarTodosProductosResponse(TechShopperBO.ProductosWS.productoDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarCambioStock", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class verificarCambioStockRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProducto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nuevoStock;
+        
+        public verificarCambioStockRequest() {
+        }
+        
+        public verificarCambioStockRequest(int idProducto, int nuevoStock) {
+            this.idProducto = idProducto;
+            this.nuevoStock = nuevoStock;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="verificarCambioStockResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class verificarCambioStockResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public verificarCambioStockResponse() {
+        }
+        
+        public verificarCambioStockResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface ProductosChannel : TechShopperBO.ProductosWS.Productos, System.ServiceModel.IClientChannel {
     }
@@ -1004,28 +1004,42 @@ namespace TechShopperBO.ProductosWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.ProductosWS.verificarCambioStockResponse TechShopperBO.ProductosWS.Productos.verificarCambioStock(TechShopperBO.ProductosWS.verificarCambioStockRequest request) {
-            return base.Channel.verificarCambioStock(request);
+        TechShopperBO.ProductosWS.registrarProductoResponse TechShopperBO.ProductosWS.Productos.registrarProducto(TechShopperBO.ProductosWS.registrarProductoRequest request) {
+            return base.Channel.registrarProducto(request);
         }
         
-        public int verificarCambioStock(int idProducto, int nuevoStock) {
-            TechShopperBO.ProductosWS.verificarCambioStockRequest inValue = new TechShopperBO.ProductosWS.verificarCambioStockRequest();
-            inValue.idProducto = idProducto;
-            inValue.nuevoStock = nuevoStock;
-            TechShopperBO.ProductosWS.verificarCambioStockResponse retVal = ((TechShopperBO.ProductosWS.Productos)(this)).verificarCambioStock(inValue);
+        public int registrarProducto(double precio, int stockDisponible, int stockMinimo, string nombre, string marca, string categoria, string descripcion, string imagenURL, int idUsuario) {
+            TechShopperBO.ProductosWS.registrarProductoRequest inValue = new TechShopperBO.ProductosWS.registrarProductoRequest();
+            inValue.precio = precio;
+            inValue.stockDisponible = stockDisponible;
+            inValue.stockMinimo = stockMinimo;
+            inValue.nombre = nombre;
+            inValue.marca = marca;
+            inValue.categoria = categoria;
+            inValue.descripcion = descripcion;
+            inValue.imagenURL = imagenURL;
+            inValue.idUsuario = idUsuario;
+            TechShopperBO.ProductosWS.registrarProductoResponse retVal = ((TechShopperBO.ProductosWS.Productos)(this)).registrarProducto(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.verificarCambioStockResponse> TechShopperBO.ProductosWS.Productos.verificarCambioStockAsync(TechShopperBO.ProductosWS.verificarCambioStockRequest request) {
-            return base.Channel.verificarCambioStockAsync(request);
+        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.registrarProductoResponse> TechShopperBO.ProductosWS.Productos.registrarProductoAsync(TechShopperBO.ProductosWS.registrarProductoRequest request) {
+            return base.Channel.registrarProductoAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TechShopperBO.ProductosWS.verificarCambioStockResponse> verificarCambioStockAsync(int idProducto, int nuevoStock) {
-            TechShopperBO.ProductosWS.verificarCambioStockRequest inValue = new TechShopperBO.ProductosWS.verificarCambioStockRequest();
-            inValue.idProducto = idProducto;
-            inValue.nuevoStock = nuevoStock;
-            return ((TechShopperBO.ProductosWS.Productos)(this)).verificarCambioStockAsync(inValue);
+        public System.Threading.Tasks.Task<TechShopperBO.ProductosWS.registrarProductoResponse> registrarProductoAsync(double precio, int stockDisponible, int stockMinimo, string nombre, string marca, string categoria, string descripcion, string imagenURL, int idUsuario) {
+            TechShopperBO.ProductosWS.registrarProductoRequest inValue = new TechShopperBO.ProductosWS.registrarProductoRequest();
+            inValue.precio = precio;
+            inValue.stockDisponible = stockDisponible;
+            inValue.stockMinimo = stockMinimo;
+            inValue.nombre = nombre;
+            inValue.marca = marca;
+            inValue.categoria = categoria;
+            inValue.descripcion = descripcion;
+            inValue.imagenURL = imagenURL;
+            inValue.idUsuario = idUsuario;
+            return ((TechShopperBO.ProductosWS.Productos)(this)).registrarProductoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1091,89 +1105,6 @@ namespace TechShopperBO.ProductosWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.ProductosWS.registrarProductoResponse TechShopperBO.ProductosWS.Productos.registrarProducto(TechShopperBO.ProductosWS.registrarProductoRequest request) {
-            return base.Channel.registrarProducto(request);
-        }
-        
-        public int registrarProducto(double precio, int stockDisponible, int stockMinimo, string nombre, string marca, string categoria, string descripcion, string imagenURL, int idUsuario) {
-            TechShopperBO.ProductosWS.registrarProductoRequest inValue = new TechShopperBO.ProductosWS.registrarProductoRequest();
-            inValue.precio = precio;
-            inValue.stockDisponible = stockDisponible;
-            inValue.stockMinimo = stockMinimo;
-            inValue.nombre = nombre;
-            inValue.marca = marca;
-            inValue.categoria = categoria;
-            inValue.descripcion = descripcion;
-            inValue.imagenURL = imagenURL;
-            inValue.idUsuario = idUsuario;
-            TechShopperBO.ProductosWS.registrarProductoResponse retVal = ((TechShopperBO.ProductosWS.Productos)(this)).registrarProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.registrarProductoResponse> TechShopperBO.ProductosWS.Productos.registrarProductoAsync(TechShopperBO.ProductosWS.registrarProductoRequest request) {
-            return base.Channel.registrarProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.ProductosWS.registrarProductoResponse> registrarProductoAsync(double precio, int stockDisponible, int stockMinimo, string nombre, string marca, string categoria, string descripcion, string imagenURL, int idUsuario) {
-            TechShopperBO.ProductosWS.registrarProductoRequest inValue = new TechShopperBO.ProductosWS.registrarProductoRequest();
-            inValue.precio = precio;
-            inValue.stockDisponible = stockDisponible;
-            inValue.stockMinimo = stockMinimo;
-            inValue.nombre = nombre;
-            inValue.marca = marca;
-            inValue.categoria = categoria;
-            inValue.descripcion = descripcion;
-            inValue.imagenURL = imagenURL;
-            inValue.idUsuario = idUsuario;
-            return ((TechShopperBO.ProductosWS.Productos)(this)).registrarProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.ProductosWS.listarTodosProductosResponse TechShopperBO.ProductosWS.Productos.listarTodosProductos(TechShopperBO.ProductosWS.listarTodosProductosRequest request) {
-            return base.Channel.listarTodosProductos(request);
-        }
-        
-        public TechShopperBO.ProductosWS.productoDTO[] listarTodosProductos() {
-            TechShopperBO.ProductosWS.listarTodosProductosRequest inValue = new TechShopperBO.ProductosWS.listarTodosProductosRequest();
-            TechShopperBO.ProductosWS.listarTodosProductosResponse retVal = ((TechShopperBO.ProductosWS.Productos)(this)).listarTodosProductos(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.listarTodosProductosResponse> TechShopperBO.ProductosWS.Productos.listarTodosProductosAsync(TechShopperBO.ProductosWS.listarTodosProductosRequest request) {
-            return base.Channel.listarTodosProductosAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.ProductosWS.listarTodosProductosResponse> listarTodosProductosAsync() {
-            TechShopperBO.ProductosWS.listarTodosProductosRequest inValue = new TechShopperBO.ProductosWS.listarTodosProductosRequest();
-            return ((TechShopperBO.ProductosWS.Productos)(this)).listarTodosProductosAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.ProductosWS.obtenerProductoPorIdResponse TechShopperBO.ProductosWS.Productos.obtenerProductoPorId(TechShopperBO.ProductosWS.obtenerProductoPorIdRequest request) {
-            return base.Channel.obtenerProductoPorId(request);
-        }
-        
-        public TechShopperBO.ProductosWS.productoDTO obtenerProductoPorId(int idProducto) {
-            TechShopperBO.ProductosWS.obtenerProductoPorIdRequest inValue = new TechShopperBO.ProductosWS.obtenerProductoPorIdRequest();
-            inValue.idProducto = idProducto;
-            TechShopperBO.ProductosWS.obtenerProductoPorIdResponse retVal = ((TechShopperBO.ProductosWS.Productos)(this)).obtenerProductoPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.obtenerProductoPorIdResponse> TechShopperBO.ProductosWS.Productos.obtenerProductoPorIdAsync(TechShopperBO.ProductosWS.obtenerProductoPorIdRequest request) {
-            return base.Channel.obtenerProductoPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.ProductosWS.obtenerProductoPorIdResponse> obtenerProductoPorIdAsync(int idProducto) {
-            TechShopperBO.ProductosWS.obtenerProductoPorIdRequest inValue = new TechShopperBO.ProductosWS.obtenerProductoPorIdRequest();
-            inValue.idProducto = idProducto;
-            return ((TechShopperBO.ProductosWS.Productos)(this)).obtenerProductoPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TechShopperBO.ProductosWS.listarPor3criteriosResponse TechShopperBO.ProductosWS.Productos.listarPor3criterios(TechShopperBO.ProductosWS.listarPor3criteriosRequest request) {
             return base.Channel.listarPor3criterios(request);
         }
@@ -1223,6 +1154,75 @@ namespace TechShopperBO.ProductosWS {
             inValue.idProducto = idProducto;
             inValue.imagenURL = imagenURL;
             return ((TechShopperBO.ProductosWS.Productos)(this)).actualizarImagenProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.ProductosWS.obtenerProductoPorIdResponse TechShopperBO.ProductosWS.Productos.obtenerProductoPorId(TechShopperBO.ProductosWS.obtenerProductoPorIdRequest request) {
+            return base.Channel.obtenerProductoPorId(request);
+        }
+        
+        public TechShopperBO.ProductosWS.productoDTO obtenerProductoPorId(int idProducto) {
+            TechShopperBO.ProductosWS.obtenerProductoPorIdRequest inValue = new TechShopperBO.ProductosWS.obtenerProductoPorIdRequest();
+            inValue.idProducto = idProducto;
+            TechShopperBO.ProductosWS.obtenerProductoPorIdResponse retVal = ((TechShopperBO.ProductosWS.Productos)(this)).obtenerProductoPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.obtenerProductoPorIdResponse> TechShopperBO.ProductosWS.Productos.obtenerProductoPorIdAsync(TechShopperBO.ProductosWS.obtenerProductoPorIdRequest request) {
+            return base.Channel.obtenerProductoPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.ProductosWS.obtenerProductoPorIdResponse> obtenerProductoPorIdAsync(int idProducto) {
+            TechShopperBO.ProductosWS.obtenerProductoPorIdRequest inValue = new TechShopperBO.ProductosWS.obtenerProductoPorIdRequest();
+            inValue.idProducto = idProducto;
+            return ((TechShopperBO.ProductosWS.Productos)(this)).obtenerProductoPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.ProductosWS.listarTodosProductosResponse TechShopperBO.ProductosWS.Productos.listarTodosProductos(TechShopperBO.ProductosWS.listarTodosProductosRequest request) {
+            return base.Channel.listarTodosProductos(request);
+        }
+        
+        public TechShopperBO.ProductosWS.productoDTO[] listarTodosProductos() {
+            TechShopperBO.ProductosWS.listarTodosProductosRequest inValue = new TechShopperBO.ProductosWS.listarTodosProductosRequest();
+            TechShopperBO.ProductosWS.listarTodosProductosResponse retVal = ((TechShopperBO.ProductosWS.Productos)(this)).listarTodosProductos(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.listarTodosProductosResponse> TechShopperBO.ProductosWS.Productos.listarTodosProductosAsync(TechShopperBO.ProductosWS.listarTodosProductosRequest request) {
+            return base.Channel.listarTodosProductosAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.ProductosWS.listarTodosProductosResponse> listarTodosProductosAsync() {
+            TechShopperBO.ProductosWS.listarTodosProductosRequest inValue = new TechShopperBO.ProductosWS.listarTodosProductosRequest();
+            return ((TechShopperBO.ProductosWS.Productos)(this)).listarTodosProductosAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.ProductosWS.verificarCambioStockResponse TechShopperBO.ProductosWS.Productos.verificarCambioStock(TechShopperBO.ProductosWS.verificarCambioStockRequest request) {
+            return base.Channel.verificarCambioStock(request);
+        }
+        
+        public int verificarCambioStock(int idProducto, int nuevoStock) {
+            TechShopperBO.ProductosWS.verificarCambioStockRequest inValue = new TechShopperBO.ProductosWS.verificarCambioStockRequest();
+            inValue.idProducto = idProducto;
+            inValue.nuevoStock = nuevoStock;
+            TechShopperBO.ProductosWS.verificarCambioStockResponse retVal = ((TechShopperBO.ProductosWS.Productos)(this)).verificarCambioStock(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.ProductosWS.verificarCambioStockResponse> TechShopperBO.ProductosWS.Productos.verificarCambioStockAsync(TechShopperBO.ProductosWS.verificarCambioStockRequest request) {
+            return base.Channel.verificarCambioStockAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.ProductosWS.verificarCambioStockResponse> verificarCambioStockAsync(int idProducto, int nuevoStock) {
+            TechShopperBO.ProductosWS.verificarCambioStockRequest inValue = new TechShopperBO.ProductosWS.verificarCambioStockRequest();
+            inValue.idProducto = idProducto;
+            inValue.nuevoStock = nuevoStock;
+            return ((TechShopperBO.ProductosWS.Productos)(this)).verificarCambioStockAsync(inValue);
         }
     }
 }

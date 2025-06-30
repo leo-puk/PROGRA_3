@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.techshopper.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Localizaciones" targetNamespace="http://services.techshopper.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/techShopperWS/Localizaciones?xsd=1" namespace="http://services.techshopper.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="insertarLocalizacion">
+    <part name="parameters" element="tns:insertarLocalizacion" />
+  </message>
+  <message name="insertarLocalizacionResponse">
+    <part name="parameters" element="tns:insertarLocalizacionResponse" />
+  </message>
+  <message name="obtenerLocalizacionPorId">
+    <part name="parameters" element="tns:obtenerLocalizacionPorId" />
+  </message>
+  <message name="obtenerLocalizacionPorIdResponse">
+    <part name="parameters" element="tns:obtenerLocalizacionPorIdResponse" />
+  </message>
+  <message name="actualizarLocalizacion">
+    <part name="parameters" element="tns:actualizarLocalizacion" />
+  </message>
+  <message name="actualizarLocalizacionResponse">
+    <part name="parameters" element="tns:actualizarLocalizacionResponse" />
+  </message>
+  <message name="eliminarLocalizacion">
+    <part name="parameters" element="tns:eliminarLocalizacion" />
+  </message>
+  <message name="eliminarLocalizacionResponse">
+    <part name="parameters" element="tns:eliminarLocalizacionResponse" />
+  </message>
+  <message name="listarTodasLasLocalizaciones">
+    <part name="parameters" element="tns:listarTodasLasLocalizaciones" />
+  </message>
+  <message name="listarTodasLasLocalizacionesResponse">
+    <part name="parameters" element="tns:listarTodasLasLocalizacionesResponse" />
+  </message>
+  <portType name="Localizaciones">
+    <operation name="insertarLocalizacion">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Localizaciones/insertarLocalizacionRequest" message="tns:insertarLocalizacion" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Localizaciones/insertarLocalizacionResponse" message="tns:insertarLocalizacionResponse" />
+    </operation>
+    <operation name="obtenerLocalizacionPorId">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Localizaciones/obtenerLocalizacionPorIdRequest" message="tns:obtenerLocalizacionPorId" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Localizaciones/obtenerLocalizacionPorIdResponse" message="tns:obtenerLocalizacionPorIdResponse" />
+    </operation>
+    <operation name="actualizarLocalizacion">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Localizaciones/actualizarLocalizacionRequest" message="tns:actualizarLocalizacion" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Localizaciones/actualizarLocalizacionResponse" message="tns:actualizarLocalizacionResponse" />
+    </operation>
+    <operation name="eliminarLocalizacion">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Localizaciones/eliminarLocalizacionRequest" message="tns:eliminarLocalizacion" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Localizaciones/eliminarLocalizacionResponse" message="tns:eliminarLocalizacionResponse" />
+    </operation>
+    <operation name="listarTodasLasLocalizaciones">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Localizaciones/listarTodasLasLocalizacionesRequest" message="tns:listarTodasLasLocalizaciones" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Localizaciones/listarTodasLasLocalizacionesResponse" message="tns:listarTodasLasLocalizacionesResponse" />
+    </operation>
+  </portType>
+  <binding name="LocalizacionesPortBinding" type="tns:Localizaciones">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="insertarLocalizacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerLocalizacionPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarLocalizacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="eliminarLocalizacion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodasLasLocalizaciones">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Localizaciones">
+    <port name="LocalizacionesPort" binding="tns:LocalizacionesPortBinding">
+      <soap:address location="http://localhost:8080/techShopperWS/Localizaciones" />
+    </port>
+  </service>
+</definitions>

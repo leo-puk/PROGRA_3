@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services.techshopper.pucp.edu.pe/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="Envios" targetNamespace="http://services.techshopper.pucp.edu.pe/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/techShopperWS/Envios?xsd=1" namespace="http://services.techshopper.pucp.edu.pe/" />
+    </xsd:schema>
+  </types>
+  <message name="eliminarEnvio">
+    <part name="parameters" element="tns:eliminarEnvio" />
+  </message>
+  <message name="eliminarEnvioResponse">
+    <part name="parameters" element="tns:eliminarEnvioResponse" />
+  </message>
+  <message name="modificarEnvio">
+    <part name="parameters" element="tns:modificarEnvio" />
+  </message>
+  <message name="modificarEnvioResponse">
+    <part name="parameters" element="tns:modificarEnvioResponse" />
+  </message>
+  <message name="obtenerEnvioPorId">
+    <part name="parameters" element="tns:obtenerEnvioPorId" />
+  </message>
+  <message name="obtenerEnvioPorIdResponse">
+    <part name="parameters" element="tns:obtenerEnvioPorIdResponse" />
+  </message>
+  <message name="crearEnvio">
+    <part name="parameters" element="tns:crearEnvio" />
+  </message>
+  <message name="crearEnvioResponse">
+    <part name="parameters" element="tns:crearEnvioResponse" />
+  </message>
+  <message name="listarTodosLosEnvios">
+    <part name="parameters" element="tns:listarTodosLosEnvios" />
+  </message>
+  <message name="listarTodosLosEnviosResponse">
+    <part name="parameters" element="tns:listarTodosLosEnviosResponse" />
+  </message>
+  <message name="actualizarEmpresaCourier">
+    <part name="parameters" element="tns:actualizarEmpresaCourier" />
+  </message>
+  <message name="actualizarEmpresaCourierResponse">
+    <part name="parameters" element="tns:actualizarEmpresaCourierResponse" />
+  </message>
+  <portType name="Envios">
+    <operation name="eliminarEnvio">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/eliminarEnvioRequest" message="tns:eliminarEnvio" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/eliminarEnvioResponse" message="tns:eliminarEnvioResponse" />
+    </operation>
+    <operation name="modificarEnvio">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/modificarEnvioRequest" message="tns:modificarEnvio" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/modificarEnvioResponse" message="tns:modificarEnvioResponse" />
+    </operation>
+    <operation name="obtenerEnvioPorId">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/obtenerEnvioPorIdRequest" message="tns:obtenerEnvioPorId" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/obtenerEnvioPorIdResponse" message="tns:obtenerEnvioPorIdResponse" />
+    </operation>
+    <operation name="crearEnvio">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/crearEnvioRequest" message="tns:crearEnvio" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/crearEnvioResponse" message="tns:crearEnvioResponse" />
+    </operation>
+    <operation name="listarTodosLosEnvios">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/listarTodosLosEnviosRequest" message="tns:listarTodosLosEnvios" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/listarTodosLosEnviosResponse" message="tns:listarTodosLosEnviosResponse" />
+    </operation>
+    <operation name="actualizarEmpresaCourier">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/actualizarEmpresaCourierRequest" message="tns:actualizarEmpresaCourier" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Envios/actualizarEmpresaCourierResponse" message="tns:actualizarEmpresaCourierResponse" />
+    </operation>
+  </portType>
+  <binding name="EnviosPortBinding" type="tns:Envios">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="eliminarEnvio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="modificarEnvio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerEnvioPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="crearEnvio">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="listarTodosLosEnvios">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarEmpresaCourier">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Envios">
+    <port name="EnviosPort" binding="tns:EnviosPortBinding">
+      <soap:address location="http://localhost:8080/techShopperWS/Envios" />
+    </port>
+  </service>
+</definitions>

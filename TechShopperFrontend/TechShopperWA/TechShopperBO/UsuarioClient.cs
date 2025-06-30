@@ -16,7 +16,7 @@ namespace TechShopperBO
             usuariossWSClient = new UsuariosClient();
         }
 
-        public usuarioDTO ObtenerAdministradorPorEmail(string email)
+        public usuarioDTO ObtenerUsuarioPorEmail(string email)
         {
             return usuariossWSClient.obtenerUsuarioPorCorreo(email);
         }

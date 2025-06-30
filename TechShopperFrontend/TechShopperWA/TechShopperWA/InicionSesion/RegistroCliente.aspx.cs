@@ -8,12 +8,12 @@ using TechShopperBO.ClientesWS;
 
 namespace TechShopperWA.InicionSesion
 {
-	public partial class RegistroCliente : System.Web.UI.Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
+    public partial class RegistroCliente : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
-		}
+        }
 
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -26,13 +26,13 @@ namespace TechShopperWA.InicionSesion
 
             if (ValidarPassword(contraseña) && ValidarNombre(nombre) && ValidarEmail(email))
             {
-                
+
                 // Crear cliente del servicio
                 var clientAdmin = new AdministradorClient();
                 var clientCli = new ClienteClient();
                 string dominio = email.Split('@').Length > 1 ? email.Split('@')[1] : "";
 
-                
+
                 if (!Regex.IsMatch(telefono, @"^\d{7,15}$"))
                 {
                     ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Teléfono inválido. Solo números y entre 7 y 15 dígitos.');", true);
@@ -53,7 +53,7 @@ namespace TechShopperWA.InicionSesion
                     cli.telefono = telefono;
                     cli.contraseña = contraseña;
                     cli.balanceCuenta = 0; // Asignar un balance inicial
-                    cli.infoTarjetaCredito= ""; // Asignar un valor por defecto o vacío
+                    cli.infoTarjetaCredito = ""; // Asignar un valor por defecto o vacío
                     resultado = clientCli.RegistrarCliente(cli);
                 }
 
@@ -85,7 +85,7 @@ namespace TechShopperWA.InicionSesion
             string patronEmail = @"^[a-zA-Z0-9_-]+@(gmail\.com)$";
 
             return Regex.IsMatch(email, patronEmail);
-           
+
         }
 
         private bool ValidarNombre(string nombre)
@@ -94,12 +94,12 @@ namespace TechShopperWA.InicionSesion
             // Suponiendo que tienes un método en el servicio para buscar por nombre o email
             var resultado = client.IniciarSesion(nombre, ""); // Intenta iniciar sesión sin contraseña
             return resultado == null;
-           
+
         }
 
         private bool ValidarPassword(string password)
         {
-            
+
             List<string> errores = new List<string>();
 
             if (password.Length < 4)
@@ -122,10 +122,10 @@ namespace TechShopperWA.InicionSesion
                 return false;
             }
             return true;
-            
+
         }
     }
-        
 
-    
+
+
 }

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://services.techshopper.pucp.edu.pe/" targetNamespace="http://services.techshopper.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="actualizarEmpresaCourier" type="tns:actualizarEmpresaCourier" />
+  <xs:element name="actualizarEmpresaCourierResponse" type="tns:actualizarEmpresaCourierResponse" />
+  <xs:element name="crearEnvio" type="tns:crearEnvio" />
+  <xs:element name="crearEnvioResponse" type="tns:crearEnvioResponse" />
+  <xs:element name="eliminarEnvio" type="tns:eliminarEnvio" />
+  <xs:element name="eliminarEnvioResponse" type="tns:eliminarEnvioResponse" />
+  <xs:element name="listarTodosLosEnvios" type="tns:listarTodosLosEnvios" />
+  <xs:element name="listarTodosLosEnviosResponse" type="tns:listarTodosLosEnviosResponse" />
+  <xs:element name="modificarEnvio" type="tns:modificarEnvio" />
+  <xs:element name="modificarEnvioResponse" type="tns:modificarEnvioResponse" />
+  <xs:element name="obtenerEnvioPorId" type="tns:obtenerEnvioPorId" />
+  <xs:element name="obtenerEnvioPorIdResponse" type="tns:obtenerEnvioPorIdResponse" />
+  <xs:complexType name="obtenerEnvioPorId">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEnvio" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerEnvioPorIdResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:envioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="envioDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="destino" type="tns:localizacionDTO" />
+      <xs:element minOccurs="0" name="empresaCourier" type="xs:string" />
+      <xs:element minOccurs="0" name="fechaEntrega" type="tns:localDateTime" />
+      <xs:element minOccurs="0" name="fechaEntregaStr" type="xs:string" />
+      <xs:element minOccurs="0" name="idEnvio" type="xs:int" />
+      <xs:element minOccurs="0" name="precio" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="localizacionDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="direccion" type="xs:string" />
+      <xs:element minOccurs="0" name="idLocalizacion" type="xs:int" />
+      <xs:element minOccurs="0" name="latitud" type="xs:double" />
+      <xs:element minOccurs="0" name="longitud" type="xs:double" />
+      <xs:element minOccurs="0" name="usuario" type="tns:usuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="usuarioDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contraseña" type="xs:string" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="estadoConexion" type="tns:estadoConexionDTO" />
+      <xs:element minOccurs="0" name="fechaRegistro" type="tns:localDateTime" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+      <xs:element minOccurs="0" name="rol" type="tns:rolUsuarioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="localDateTime" final="extension restriction">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="modificarEnvio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="envio" type="tns:envioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarEnvioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:envioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="crearEnvio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fechaEntrega" type="xs:string" />
+      <xs:element minOccurs="0" name="empresaCourier" type="xs:string" />
+      <xs:element minOccurs="0" name="precio" type="xs:double" />
+      <xs:element minOccurs="0" name="idLocalizacion" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="crearEnvioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:envioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarEmpresaCourier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEnvio" type="xs:int" />
+      <xs:element minOccurs="0" name="nuevaEmpresaCourier" type="xs:string" />
+      <xs:element minOccurs="0" name="idAdminEditor" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="actualizarEmpresaCourierResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:envioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEnvio">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idEnvio" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="eliminarEnvioResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosLosEnvios">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosLosEnviosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:envioDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="estadoConexionDTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CONECTADO" />
+      <xs:enumeration value="DESCONECTADO" />
+      <xs:enumeration value="EN_eSPERA" />
+      <xs:enumeration value="RECONECTADO" />
+      <xs:enumeration value="ERROR" />
+      <xs:enumeration value="LIMITADO" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="rolUsuarioDTO">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CLIENTE" />
+      <xs:enumeration value="ADMINISTRADOR" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

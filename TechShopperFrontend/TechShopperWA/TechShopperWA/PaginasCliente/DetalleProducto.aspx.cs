@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,7 +15,7 @@ namespace TechShopperWA.PaginasCliente
     {
         private TechShopperBO.ClientesWS.usuarioDTO usuario;
         private TechShopperBO.ProductosWS.productoDTO producto;
-        private List<carritoItemsDTO> carrito;
+        private List<carritoItemsDTOSoap> carrito;
         //private clienteDTO cliente;
         private int cantidad;
         protected void Page_Init(object sender, EventArgs e)
@@ -40,51 +41,56 @@ namespace TechShopperWA.PaginasCliente
                 // No hay ID en la URL
                 Response.Redirect("~/Error.aspx?msg=Producto no especificado");
             }
+
+
             //valida la session y carga el carrito 
             if (Session["Usuario"] != null)
             {
                 //estoy conectado con usuario nomas :D
                 usuario = (usuarioDTO)Session["Usuario"];
             }
-            
+
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
         protected void mostrarDatos()
         {
             lblNombre.InnerText = producto.nombre;
-            lblPrecio.InnerText = "$" + producto.precio.ToString() ;
+            lblPrecio.InnerText = "S/" + producto.precio.ToString();
             lblDescripcion.InnerText = producto.descripcion;
+            mainImage.Src = producto.imagenURL;
+
             lblMarca.InnerText = producto.marca;
-            
+
         }
 
         protected void btnComprarAhora_Click(object sender, EventArgs e)
         {
             //leer la cantidad
             leerCantidad();
-            if (Session["Usuario"]!=null)
+            if (Session["Usuario"] != null)
             {
                 aniadirProdCarrito();
                 Response.Redirect("Carrito.aspx");
-            } else
+            }
+            else
             {
                 //mostrar popup de qe tienes que iniciar sesión.
                 Response.Redirect("../InicionSesion/IniciarSesion.aspx");
             }
-                
-            
+
+
         }
 
         private void aniadirProdCarrito()
         {
-            
+
             var cliente = new ClienteClient();
             cliente.InsertarCarrito(usuario.idUsuario, producto.idProducto, cantidad);
             Session["Carrito"] = cliente.MostrarCarritoDeCliente((int)Session["IdUsuario"]);
-            
+
         }
 
         private void leerCantidad()
@@ -97,7 +103,11 @@ namespace TechShopperWA.PaginasCliente
         {
             leerCantidad();
             aniadirProdCarrito();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alerta",
+                    "alert('Se agrego el rpoducto al carrito');", true);
+            Response.Redirect(Request.RawUrl);
+
+
         }
     }
 }
-        

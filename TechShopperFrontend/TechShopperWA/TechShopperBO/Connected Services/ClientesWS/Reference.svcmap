@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="eb6d4697-c554-49ed-beae-719b86bd67e4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="059e73cd-b58f-453f-bfd6-c19e517d2f68" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/techShopperWS/Clientes?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Clientes.xsd" MetadataType="Schema" ID="c8ea27aa-8e13-4642-8072-2c08e3ea0876" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/Clientes?xsd=1" />
-    <MetadataFile FileName="Clientes.wsdl" MetadataType="Wsdl" ID="fb294a0e-4eae-4fd3-94a5-32268a156cc7" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/Clientes?WSDL" />
+    <MetadataFile FileName="Clientes.xsd" MetadataType="Schema" ID="3cf0927e-38b7-49b3-8f1c-1af016f43ce9" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/Clientes?xsd=1" />
+    <MetadataFile FileName="Clientes.wsdl" MetadataType="Wsdl" ID="a11383b8-25cd-4c2c-86dc-06a49008868b" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/Clientes?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

@@ -89,7 +89,8 @@
     <Content Include="Content\Style.css" />
     <Content Include="Content\Style2.css" />
     <Content Include="Content\Style3.css" />
-    <Content Include="Empresa.aspx" />
+    <Content Include="Content\Style4.css" />
+    <Content Include="HistorialEnvios\Envios.aspx" />
     <Content Include="Index.aspx" />
     <Content Include="InicionSesion\IniciarSesion.aspx" />
     <Content Include="InicionSesion\OlvideContra.aspx" />
@@ -97,6 +98,7 @@
     <Content Include="InicionSesion\Registro.aspx" />
     <Content Include="PaginasCliente\Carrito.aspx" />
     <Content Include="PaginasCliente\DetalleProducto.aspx" />
+    <Content Include="PaginasCliente\ResumenPedido.aspx" />
     <Content Include="PaginasCliente\VistaProductosCliente.aspx" />
     <Content Include="Productos\AgregarProductos.aspx" />
     <Content Include="Productos\Productos.aspx" />
@@ -118,12 +120,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Empresa.aspx.cs">
-      <DependentUpon>Empresa.aspx</DependentUpon>
+    <Compile Include="HistorialEnvios\Envios.aspx.cs">
+      <DependentUpon>Envios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Empresa.aspx.designer.cs">
-      <DependentUpon>Empresa.aspx</DependentUpon>
+    <Compile Include="HistorialEnvios\Envios.aspx.designer.cs">
+      <DependentUpon>Envios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -180,6 +182,13 @@
     </Compile>
     <Compile Include="PaginasCliente\DetalleProducto.aspx.designer.cs">
       <DependentUpon>DetalleProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasCliente\ResumenPedido.aspx.cs">
+      <DependentUpon>ResumenPedido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasCliente\ResumenPedido.aspx.designer.cs">
+      <DependentUpon>ResumenPedido.aspx</DependentUpon>
     </Compile>
     <Compile Include="PaginasCliente\VistaProductosCliente.aspx.cs">
       <DependentUpon>VistaProductosCliente.aspx</DependentUpon>

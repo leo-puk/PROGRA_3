@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="f5255424-8e0a-4de1-9327-7b154d566ff5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="1717e865-d468-4805-bb3d-a4a816f6dfe7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/techShopperWS/Usuarios?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Usuarios.wsdl" MetadataType="Wsdl" ID="22b71c37-850f-4529-b0a1-159392db3cc3" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/Usuarios?wsdl" />
-    <MetadataFile FileName="Usuarios.xsd" MetadataType="Schema" ID="69b23be4-2ea2-420d-be16-dfdd2241e7f6" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/Usuarios?xsd=1" />
+    <MetadataFile FileName="Usuarios.wsdl" MetadataType="Wsdl" ID="b6875e21-73e9-4a89-ba1c-8a6996518a7b" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/Usuarios?wsdl" />
+    <MetadataFile FileName="Usuarios.xsd" MetadataType="Schema" ID="2aed2222-916d-4f78-83fd-969e181bdc0c" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/Usuarios?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

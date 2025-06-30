@@ -9,15 +9,15 @@ using TechShopperBO.MovimientosStockWS;
 
 namespace TechShopperWA
 {
-	public partial class ReporteVentas : System.Web.UI.Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
-			if (Session["Acceso"] == null)
-			{
-				Response.Redirect("/InicionSesion/IniciarSesion.aspx");
-				return;
-			}
+    public partial class ReporteVentas : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (Session["Acceso"] == null)
+            {
+                Response.Redirect("/InicionSesion/IniciarSesion.aspx");
+                return;
+            }
 
             if (!IsPostBack)
             {
@@ -40,7 +40,7 @@ namespace TechShopperWA
             {
                 gvMovimientos.DataSource = null;
                 gvMovimientos.DataBind();
-                
+
             }
         }
 

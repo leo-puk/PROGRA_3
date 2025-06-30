@@ -16,15 +16,6 @@ namespace TechShopperBO.UsuariosWS {
     public interface Usuarios {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse obtenerUsuarioPorCorreo(TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse> obtenerUsuarioPorCorreoAsync(TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Usuarios/actualizarUsuarioRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Usuarios/actualizarUsuarioResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -32,9 +23,79 @@ namespace TechShopperBO.UsuariosWS {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Usuarios/actualizarUsuarioRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Usuarios/actualizarUsuarioResponse")]
         System.Threading.Tasks.Task<TechShopperBO.UsuariosWS.actualizarUsuarioResponse> actualizarUsuarioAsync(TechShopperBO.UsuariosWS.actualizarUsuarioRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorIdRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorIdResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.UsuariosWS.obtenerUsuarioPorIdResponse obtenerUsuarioPorId(TechShopperBO.UsuariosWS.obtenerUsuarioPorIdRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorIdRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorIdResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.UsuariosWS.obtenerUsuarioPorIdResponse> obtenerUsuarioPorIdAsync(TechShopperBO.UsuariosWS.obtenerUsuarioPorIdRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse obtenerUsuarioPorCorreo(TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/Usuarios/obtenerUsuarioPorCorreoResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse> obtenerUsuarioPorCorreoAsync(TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest request);
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuario", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarUsuarioRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string contraseña;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string nombre;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string email;
+        
+        public actualizarUsuarioRequest() {
+        }
+        
+        public actualizarUsuarioRequest(int idUsuario, string contraseña, string nombre, string email) {
+            this.idUsuario = idUsuario;
+            this.contraseña = contraseña;
+            this.nombre = nombre;
+            this.email = email;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuarioResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarUsuarioResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarUsuarioResponse() {
+        }
+        
+        public actualizarUsuarioResponse(int @return) {
+            this.@return = @return;
+        }
     }
     
     /// <remarks/>
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(clienteDTO))]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -248,6 +309,135 @@ namespace TechShopperBO.UsuariosWS {
         ADMINISTRADOR,
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.techshopper.pucp.edu.pe/")]
+    public partial class clienteDTO : usuarioDTO {
+        
+        private double balanceCuentaField;
+        
+        private bool balanceCuentaFieldSpecified;
+        
+        private string direccionField;
+        
+        private string infoCompraField;
+        
+        private string infoTarjetaCreditoField;
+        
+        private string telefonoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public double balanceCuenta {
+            get {
+                return this.balanceCuentaField;
+            }
+            set {
+                this.balanceCuentaField = value;
+                this.RaisePropertyChanged("balanceCuenta");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool balanceCuentaSpecified {
+            get {
+                return this.balanceCuentaFieldSpecified;
+            }
+            set {
+                this.balanceCuentaFieldSpecified = value;
+                this.RaisePropertyChanged("balanceCuentaSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string direccion {
+            get {
+                return this.direccionField;
+            }
+            set {
+                this.direccionField = value;
+                this.RaisePropertyChanged("direccion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string infoCompra {
+            get {
+                return this.infoCompraField;
+            }
+            set {
+                this.infoCompraField = value;
+                this.RaisePropertyChanged("infoCompra");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string infoTarjetaCredito {
+            get {
+                return this.infoTarjetaCreditoField;
+            }
+            set {
+                this.infoTarjetaCreditoField = value;
+                this.RaisePropertyChanged("infoTarjetaCredito");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string telefono {
+            get {
+                return this.telefonoField;
+            }
+            set {
+                this.telefonoField = value;
+                this.RaisePropertyChanged("telefono");
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerUsuarioPorId", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerUsuarioPorIdRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idUsuario;
+        
+        public obtenerUsuarioPorIdRequest() {
+        }
+        
+        public obtenerUsuarioPorIdRequest(int idUsuario) {
+            this.idUsuario = idUsuario;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerUsuarioPorIdResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerUsuarioPorIdResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TechShopperBO.UsuariosWS.usuarioDTO @return;
+        
+        public obtenerUsuarioPorIdResponse() {
+        }
+        
+        public obtenerUsuarioPorIdResponse(TechShopperBO.UsuariosWS.usuarioDTO @return) {
+            this.@return = @return;
+        }
+    }
+    
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -274,63 +464,12 @@ namespace TechShopperBO.UsuariosWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TechShopperBO.UsuariosWS.usuarioDTO @return;
+        public TechShopperBO.UsuariosWS.clienteDTO @return;
         
         public obtenerUsuarioPorCorreoResponse() {
         }
         
-        public obtenerUsuarioPorCorreoResponse(TechShopperBO.UsuariosWS.usuarioDTO @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuario", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarUsuarioRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idUsuario;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string contraseña;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string nombre;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string email;
-        
-        public actualizarUsuarioRequest() {
-        }
-        
-        public actualizarUsuarioRequest(int idUsuario, string contraseña, string nombre, string email) {
-            this.idUsuario = idUsuario;
-            this.contraseña = contraseña;
-            this.nombre = nombre;
-            this.email = email;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarUsuarioResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarUsuarioResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public actualizarUsuarioResponse() {
-        }
-        
-        public actualizarUsuarioResponse(int @return) {
+        public obtenerUsuarioPorCorreoResponse(TechShopperBO.UsuariosWS.clienteDTO @return) {
             this.@return = @return;
         }
     }
@@ -363,29 +502,6 @@ namespace TechShopperBO.UsuariosWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse TechShopperBO.UsuariosWS.Usuarios.obtenerUsuarioPorCorreo(TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest request) {
-            return base.Channel.obtenerUsuarioPorCorreo(request);
-        }
-        
-        public TechShopperBO.UsuariosWS.usuarioDTO obtenerUsuarioPorCorreo(string email) {
-            TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest inValue = new TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest();
-            inValue.email = email;
-            TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse retVal = ((TechShopperBO.UsuariosWS.Usuarios)(this)).obtenerUsuarioPorCorreo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse> TechShopperBO.UsuariosWS.Usuarios.obtenerUsuarioPorCorreoAsync(TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest request) {
-            return base.Channel.obtenerUsuarioPorCorreoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse> obtenerUsuarioPorCorreoAsync(string email) {
-            TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest inValue = new TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest();
-            inValue.email = email;
-            return ((TechShopperBO.UsuariosWS.Usuarios)(this)).obtenerUsuarioPorCorreoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         TechShopperBO.UsuariosWS.actualizarUsuarioResponse TechShopperBO.UsuariosWS.Usuarios.actualizarUsuario(TechShopperBO.UsuariosWS.actualizarUsuarioRequest request) {
             return base.Channel.actualizarUsuario(request);
         }
@@ -412,6 +528,52 @@ namespace TechShopperBO.UsuariosWS {
             inValue.nombre = nombre;
             inValue.email = email;
             return ((TechShopperBO.UsuariosWS.Usuarios)(this)).actualizarUsuarioAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.UsuariosWS.obtenerUsuarioPorIdResponse TechShopperBO.UsuariosWS.Usuarios.obtenerUsuarioPorId(TechShopperBO.UsuariosWS.obtenerUsuarioPorIdRequest request) {
+            return base.Channel.obtenerUsuarioPorId(request);
+        }
+        
+        public TechShopperBO.UsuariosWS.usuarioDTO obtenerUsuarioPorId(int idUsuario) {
+            TechShopperBO.UsuariosWS.obtenerUsuarioPorIdRequest inValue = new TechShopperBO.UsuariosWS.obtenerUsuarioPorIdRequest();
+            inValue.idUsuario = idUsuario;
+            TechShopperBO.UsuariosWS.obtenerUsuarioPorIdResponse retVal = ((TechShopperBO.UsuariosWS.Usuarios)(this)).obtenerUsuarioPorId(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.UsuariosWS.obtenerUsuarioPorIdResponse> TechShopperBO.UsuariosWS.Usuarios.obtenerUsuarioPorIdAsync(TechShopperBO.UsuariosWS.obtenerUsuarioPorIdRequest request) {
+            return base.Channel.obtenerUsuarioPorIdAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.UsuariosWS.obtenerUsuarioPorIdResponse> obtenerUsuarioPorIdAsync(int idUsuario) {
+            TechShopperBO.UsuariosWS.obtenerUsuarioPorIdRequest inValue = new TechShopperBO.UsuariosWS.obtenerUsuarioPorIdRequest();
+            inValue.idUsuario = idUsuario;
+            return ((TechShopperBO.UsuariosWS.Usuarios)(this)).obtenerUsuarioPorIdAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse TechShopperBO.UsuariosWS.Usuarios.obtenerUsuarioPorCorreo(TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest request) {
+            return base.Channel.obtenerUsuarioPorCorreo(request);
+        }
+        
+        public TechShopperBO.UsuariosWS.clienteDTO obtenerUsuarioPorCorreo(string email) {
+            TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest inValue = new TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest();
+            inValue.email = email;
+            TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse retVal = ((TechShopperBO.UsuariosWS.Usuarios)(this)).obtenerUsuarioPorCorreo(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse> TechShopperBO.UsuariosWS.Usuarios.obtenerUsuarioPorCorreoAsync(TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest request) {
+            return base.Channel.obtenerUsuarioPorCorreoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoResponse> obtenerUsuarioPorCorreoAsync(string email) {
+            TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest inValue = new TechShopperBO.UsuariosWS.obtenerUsuarioPorCorreoRequest();
+            inValue.email = email;
+            return ((TechShopperBO.UsuariosWS.Usuarios)(this)).obtenerUsuarioPorCorreoAsync(inValue);
         }
     }
 }

@@ -16,43 +16,33 @@ namespace TechShopperBO.CarritoItemsWS {
     public interface CarritoItems {
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/agregarProductoAlCarritoRequ" +
-            "est", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/agregarProductoAlCarritoResp" +
-            "onse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/vaciarCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/vaciarCarritoResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse agregarProductoAlCarrito(TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest request);
+        TechShopperBO.CarritoItemsWS.vaciarCarritoResponse vaciarCarrito(TechShopperBO.CarritoItemsWS.vaciarCarritoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/agregarProductoAlCarritoRequ" +
-            "est", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/agregarProductoAlCarritoResp" +
-            "onse")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse> agregarProductoAlCarritoAsync(TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/vaciarCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/vaciarCarritoResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.vaciarCarritoResponse> vaciarCarritoAsync(TechShopperBO.CarritoItemsWS.vaciarCarritoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/obtenerCarritoItemPorIdReque" +
-            "st", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/obtenerCarritoItemPorIdRespo" +
-            "nse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/insertarCarritoItemRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/insertarCarritoItemResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse obtenerCarritoItemPorId(TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest request);
+        TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse insertarCarritoItem(TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/obtenerCarritoItemPorIdReque" +
-            "st", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/obtenerCarritoItemPorIdRespo" +
-            "nse")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse> obtenerCarritoItemPorIdAsync(TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/insertarCarritoItemRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/insertarCarritoItemResponse")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse> insertarCarritoItemAsync(TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarProductoDelCarritoRe" +
-            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarProductoDelCarritoRe" +
-            "sponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/modificarCarritoItemRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/modificarCarritoItemResponse" +
+            "")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse eliminarProductoDelCarrito(TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest request);
+        TechShopperBO.CarritoItemsWS.modificarCarritoItemResponse modificarCarritoItem(TechShopperBO.CarritoItemsWS.modificarCarritoItemRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarProductoDelCarritoRe" +
-            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarProductoDelCarritoRe" +
-            "sponse")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse> eliminarProductoDelCarritoAsync(TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/modificarCarritoItemRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/modificarCarritoItemResponse" +
+            "")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.modificarCarritoItemResponse> modificarCarritoItemAsync(TechShopperBO.CarritoItemsWS.modificarCarritoItemRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/listarTodosLosCarritoItemsRe" +
@@ -68,17 +58,28 @@ namespace TechShopperBO.CarritoItemsWS {
         System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsResponse> listarTodosLosCarritoItemsAsync(TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/listarItemsPorCarritoRequest" +
-            "", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/listarItemsPorCarritoRespons" +
-            "e")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/agregarProductoAlCarritoRequ" +
+            "est", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/agregarProductoAlCarritoResp" +
+            "onse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse listarItemsPorCarrito(TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest request);
+        TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse agregarProductoAlCarrito(TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/listarItemsPorCarritoRequest" +
-            "", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/listarItemsPorCarritoRespons" +
-            "e")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse> listarItemsPorCarritoAsync(TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/agregarProductoAlCarritoRequ" +
+            "est", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/agregarProductoAlCarritoResp" +
+            "onse")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse> agregarProductoAlCarritoAsync(TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest request);
+        
+        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/calcularTotalCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/calcularTotalCarritoResponse" +
+            "")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse calcularTotalCarrito(TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/calcularTotalCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/calcularTotalCarritoResponse" +
+            "")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse> calcularTotalCarritoAsync(TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/actualizarCantidadProductoRe" +
@@ -94,35 +95,30 @@ namespace TechShopperBO.CarritoItemsWS {
         System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.actualizarCantidadProductoResponse> actualizarCantidadProductoAsync(TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/calcularTotalCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/calcularTotalCarritoResponse" +
-            "")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarProductoDelCarritoRe" +
+            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarProductoDelCarritoRe" +
+            "sponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse calcularTotalCarrito(TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest request);
+        TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse eliminarProductoDelCarrito(TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/calcularTotalCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/calcularTotalCarritoResponse" +
-            "")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse> calcularTotalCarritoAsync(TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarProductoDelCarritoRe" +
+            "quest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarProductoDelCarritoRe" +
+            "sponse")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse> eliminarProductoDelCarritoAsync(TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/modificarCarritoItemRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/modificarCarritoItemResponse" +
-            "")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/listarItemsPorCarritoRequest" +
+            "", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/listarItemsPorCarritoRespons" +
+            "e")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritoItemsWS.modificarCarritoItemResponse modificarCarritoItem(TechShopperBO.CarritoItemsWS.modificarCarritoItemRequest request);
+        TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse listarItemsPorCarrito(TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/modificarCarritoItemRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/modificarCarritoItemResponse" +
-            "")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.modificarCarritoItemResponse> modificarCarritoItemAsync(TechShopperBO.CarritoItemsWS.modificarCarritoItemRequest request);
-        
-        // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/insertarCarritoItemRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/insertarCarritoItemResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse insertarCarritoItem(TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/insertarCarritoItemRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/insertarCarritoItemResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse> insertarCarritoItemAsync(TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/listarItemsPorCarritoRequest" +
+            "", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/listarItemsPorCarritoRespons" +
+            "e")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse> listarItemsPorCarritoAsync(TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
         [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarCarritoItemRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/eliminarCarritoItemResponse")]
@@ -134,409 +130,53 @@ namespace TechShopperBO.CarritoItemsWS {
         System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.eliminarCarritoItemResponse> eliminarCarritoItemAsync(TechShopperBO.CarritoItemsWS.eliminarCarritoItemRequest request);
         
         // CODEGEN: El parámetro 'return' requiere información adicional de esquema que no se puede capturar con el modo de parámetros. El atributo específico es 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/vaciarCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/vaciarCarritoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/obtenerCarritoItemPorIdReque" +
+            "st", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/obtenerCarritoItemPorIdRespo" +
+            "nse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        TechShopperBO.CarritoItemsWS.vaciarCarritoResponse vaciarCarrito(TechShopperBO.CarritoItemsWS.vaciarCarritoRequest request);
+        TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse obtenerCarritoItemPorId(TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/vaciarCarritoRequest", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/vaciarCarritoResponse")]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.vaciarCarritoResponse> vaciarCarritoAsync(TechShopperBO.CarritoItemsWS.vaciarCarritoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://services.techshopper.pucp.edu.pe/CarritoItems/obtenerCarritoItemPorIdReque" +
+            "st", ReplyAction="http://services.techshopper.pucp.edu.pe/CarritoItems/obtenerCarritoItemPorIdRespo" +
+            "nse")]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse> obtenerCarritoItemPorIdAsync(TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarProductoAlCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class agregarProductoAlCarritoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="vaciarCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class vaciarCarritoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int idCarrito;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int cantidad;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=3)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double precioUnitario;
-        
-        public agregarProductoAlCarritoRequest() {
+        public vaciarCarritoRequest() {
         }
         
-        public agregarProductoAlCarritoRequest(int idCarrito, int idProducto, int cantidad, double precioUnitario) {
+        public vaciarCarritoRequest(int idCarrito) {
             this.idCarrito = idCarrito;
-            this.idProducto = idProducto;
-            this.cantidad = cantidad;
-            this.precioUnitario = precioUnitario;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarProductoAlCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class agregarProductoAlCarritoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="vaciarCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class vaciarCarritoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public agregarProductoAlCarritoResponse() {
+        public vaciarCarritoResponse() {
         }
         
-        public agregarProductoAlCarritoResponse(int @return) {
+        public vaciarCarritoResponse(int @return) {
             this.@return = @return;
         }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.techshopper.pucp.edu.pe/")]
-    public partial class carritoItemsDTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private carritoDTO carritoField;
-        
-        private localDateTime fechaRegistroField;
-        
-        private double precioUnitarioField;
-        
-        private productoDTO productoField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public carritoDTO carrito {
-            get {
-                return this.carritoField;
-            }
-            set {
-                this.carritoField = value;
-                this.RaisePropertyChanged("carrito");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public localDateTime fechaRegistro {
-            get {
-                return this.fechaRegistroField;
-            }
-            set {
-                this.fechaRegistroField = value;
-                this.RaisePropertyChanged("fechaRegistro");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public double precioUnitario {
-            get {
-                return this.precioUnitarioField;
-            }
-            set {
-                this.precioUnitarioField = value;
-                this.RaisePropertyChanged("precioUnitario");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public productoDTO producto {
-            get {
-                return this.productoField;
-            }
-            set {
-                this.productoField = value;
-                this.RaisePropertyChanged("producto");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.techshopper.pucp.edu.pe/")]
-    public partial class carritoDTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int idCarritoField;
-        
-        private bool idCarritoFieldSpecified;
-        
-        private double precioField;
-        
-        private bool precioFieldSpecified;
-        
-        private usuarioDTO usuarioField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int idCarrito {
-            get {
-                return this.idCarritoField;
-            }
-            set {
-                this.idCarritoField = value;
-                this.RaisePropertyChanged("idCarrito");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idCarritoSpecified {
-            get {
-                return this.idCarritoFieldSpecified;
-            }
-            set {
-                this.idCarritoFieldSpecified = value;
-                this.RaisePropertyChanged("idCarritoSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public double precio {
-            get {
-                return this.precioField;
-            }
-            set {
-                this.precioField = value;
-                this.RaisePropertyChanged("precio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool precioSpecified {
-            get {
-                return this.precioFieldSpecified;
-            }
-            set {
-                this.precioFieldSpecified = value;
-                this.RaisePropertyChanged("precioSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public usuarioDTO usuario {
-            get {
-                return this.usuarioField;
-            }
-            set {
-                this.usuarioField = value;
-                this.RaisePropertyChanged("usuario");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.techshopper.pucp.edu.pe/")]
-    public partial class usuarioDTO : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string contraseñaField;
-        
-        private string emailField;
-        
-        private estadoConexionDTO estadoConexionField;
-        
-        private bool estadoConexionFieldSpecified;
-        
-        private localDateTime fechaRegistroField;
-        
-        private int idUsuarioField;
-        
-        private bool idUsuarioFieldSpecified;
-        
-        private string nombreField;
-        
-        private rolUsuarioDTO rolField;
-        
-        private bool rolFieldSpecified;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string contraseña {
-            get {
-                return this.contraseñaField;
-            }
-            set {
-                this.contraseñaField = value;
-                this.RaisePropertyChanged("contraseña");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string email {
-            get {
-                return this.emailField;
-            }
-            set {
-                this.emailField = value;
-                this.RaisePropertyChanged("email");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public estadoConexionDTO estadoConexion {
-            get {
-                return this.estadoConexionField;
-            }
-            set {
-                this.estadoConexionField = value;
-                this.RaisePropertyChanged("estadoConexion");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool estadoConexionSpecified {
-            get {
-                return this.estadoConexionFieldSpecified;
-            }
-            set {
-                this.estadoConexionFieldSpecified = value;
-                this.RaisePropertyChanged("estadoConexionSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public localDateTime fechaRegistro {
-            get {
-                return this.fechaRegistroField;
-            }
-            set {
-                this.fechaRegistroField = value;
-                this.RaisePropertyChanged("fechaRegistro");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public int idUsuario {
-            get {
-                return this.idUsuarioField;
-            }
-            set {
-                this.idUsuarioField = value;
-                this.RaisePropertyChanged("idUsuario");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool idUsuarioSpecified {
-            get {
-                return this.idUsuarioFieldSpecified;
-            }
-            set {
-                this.idUsuarioFieldSpecified = value;
-                this.RaisePropertyChanged("idUsuarioSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string nombre {
-            get {
-                return this.nombreField;
-            }
-            set {
-                this.nombreField = value;
-                this.RaisePropertyChanged("nombre");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public rolUsuarioDTO rol {
-            get {
-                return this.rolField;
-            }
-            set {
-                this.rolField = value;
-                this.RaisePropertyChanged("rol");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool rolSpecified {
-            get {
-                return this.rolFieldSpecified;
-            }
-            set {
-                this.rolFieldSpecified = value;
-                this.RaisePropertyChanged("rolSpecified");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
-    [System.SerializableAttribute()]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.techshopper.pucp.edu.pe/")]
-    public enum estadoConexionDTO {
-        
-        /// <remarks/>
-        CONECTADO,
-        
-        /// <remarks/>
-        DESCONECTADO,
-        
-        /// <remarks/>
-        EN_eSPERA,
-        
-        /// <remarks/>
-        RECONECTADO,
-        
-        /// <remarks/>
-        ERROR,
-        
-        /// <remarks/>
-        LIMITADO,
     }
     
     /// <remarks/>
@@ -850,6 +490,189 @@ namespace TechShopperBO.CarritoItemsWS {
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
     [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.techshopper.pucp.edu.pe/")]
+    public partial class usuarioDTO : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string contraseñaField;
+        
+        private string emailField;
+        
+        private estadoConexionDTO estadoConexionField;
+        
+        private bool estadoConexionFieldSpecified;
+        
+        private localDateTime fechaRegistroField;
+        
+        private int idUsuarioField;
+        
+        private bool idUsuarioFieldSpecified;
+        
+        private string nombreField;
+        
+        private rolUsuarioDTO rolField;
+        
+        private bool rolFieldSpecified;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public string contraseña {
+            get {
+                return this.contraseñaField;
+            }
+            set {
+                this.contraseñaField = value;
+                this.RaisePropertyChanged("contraseña");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string email {
+            get {
+                return this.emailField;
+            }
+            set {
+                this.emailField = value;
+                this.RaisePropertyChanged("email");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public estadoConexionDTO estadoConexion {
+            get {
+                return this.estadoConexionField;
+            }
+            set {
+                this.estadoConexionField = value;
+                this.RaisePropertyChanged("estadoConexion");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool estadoConexionSpecified {
+            get {
+                return this.estadoConexionFieldSpecified;
+            }
+            set {
+                this.estadoConexionFieldSpecified = value;
+                this.RaisePropertyChanged("estadoConexionSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public localDateTime fechaRegistro {
+            get {
+                return this.fechaRegistroField;
+            }
+            set {
+                this.fechaRegistroField = value;
+                this.RaisePropertyChanged("fechaRegistro");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public int idUsuario {
+            get {
+                return this.idUsuarioField;
+            }
+            set {
+                this.idUsuarioField = value;
+                this.RaisePropertyChanged("idUsuario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idUsuarioSpecified {
+            get {
+                return this.idUsuarioFieldSpecified;
+            }
+            set {
+                this.idUsuarioFieldSpecified = value;
+                this.RaisePropertyChanged("idUsuarioSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string nombre {
+            get {
+                return this.nombreField;
+            }
+            set {
+                this.nombreField = value;
+                this.RaisePropertyChanged("nombre");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public rolUsuarioDTO rol {
+            get {
+                return this.rolField;
+            }
+            set {
+                this.rolField = value;
+                this.RaisePropertyChanged("rol");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool rolSpecified {
+            get {
+                return this.rolFieldSpecified;
+            }
+            set {
+                this.rolFieldSpecified = value;
+                this.RaisePropertyChanged("rolSpecified");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.techshopper.pucp.edu.pe/")]
+    public enum estadoConexionDTO {
+        
+        /// <remarks/>
+        CONECTADO,
+        
+        /// <remarks/>
+        DESCONECTADO,
+        
+        /// <remarks/>
+        EN_eSPERA,
+        
+        /// <remarks/>
+        RECONECTADO,
+        
+        /// <remarks/>
+        ERROR,
+        
+        /// <remarks/>
+        LIMITADO,
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.techshopper.pucp.edu.pe/")]
     public enum rolUsuarioDTO {
         
@@ -860,152 +683,173 @@ namespace TechShopperBO.CarritoItemsWS {
         ADMINISTRADOR,
     }
     
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCarritoItemPorId", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerCarritoItemPorIdRequest {
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.techshopper.pucp.edu.pe/")]
+    public partial class carritoDTO : object, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCarritoItem;
+        private int idCarritoField;
         
-        public obtenerCarritoItemPorIdRequest() {
+        private bool idCarritoFieldSpecified;
+        
+        private double precioField;
+        
+        private bool precioFieldSpecified;
+        
+        private usuarioDTO usuarioField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int idCarrito {
+            get {
+                return this.idCarritoField;
+            }
+            set {
+                this.idCarritoField = value;
+                this.RaisePropertyChanged("idCarrito");
+            }
         }
         
-        public obtenerCarritoItemPorIdRequest(int idCarritoItem) {
-            this.idCarritoItem = idCarritoItem;
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool idCarritoSpecified {
+            get {
+                return this.idCarritoFieldSpecified;
+            }
+            set {
+                this.idCarritoFieldSpecified = value;
+                this.RaisePropertyChanged("idCarritoSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public double precio {
+            get {
+                return this.precioField;
+            }
+            set {
+                this.precioField = value;
+                this.RaisePropertyChanged("precio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool precioSpecified {
+            get {
+                return this.precioFieldSpecified;
+            }
+            set {
+                this.precioFieldSpecified = value;
+                this.RaisePropertyChanged("precioSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public usuarioDTO usuario {
+            get {
+                return this.usuarioField;
+            }
+            set {
+                this.usuarioField = value;
+                this.RaisePropertyChanged("usuario");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9032.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://services.techshopper.pucp.edu.pe/")]
+    public partial class carritoItemsDTO : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private carritoDTO carritoField;
+        
+        private localDateTime fechaRegistroField;
+        
+        private double precioUnitarioField;
+        
+        private productoDTO productoField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public carritoDTO carrito {
+            get {
+                return this.carritoField;
+            }
+            set {
+                this.carritoField = value;
+                this.RaisePropertyChanged("carrito");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public localDateTime fechaRegistro {
+            get {
+                return this.fechaRegistroField;
+            }
+            set {
+                this.fechaRegistroField = value;
+                this.RaisePropertyChanged("fechaRegistro");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public double precioUnitario {
+            get {
+                return this.precioUnitarioField;
+            }
+            set {
+                this.precioUnitarioField = value;
+                this.RaisePropertyChanged("precioUnitario");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public productoDTO producto {
+            get {
+                return this.productoField;
+            }
+            set {
+                this.productoField = value;
+                this.RaisePropertyChanged("producto");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCarritoItemPorIdResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class obtenerCarritoItemPorIdResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TechShopperBO.CarritoItemsWS.carritoItemsDTO @return;
-        
-        public obtenerCarritoItemPorIdResponse() {
-        }
-        
-        public obtenerCarritoItemPorIdResponse(TechShopperBO.CarritoItemsWS.carritoItemsDTO @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProductoDelCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarProductoDelCarritoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCarrito;
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idProducto;
-        
-        public eliminarProductoDelCarritoRequest() {
-        }
-        
-        public eliminarProductoDelCarritoRequest(int idCarrito, int idProducto) {
-            this.idCarrito = idCarrito;
-            this.idProducto = idProducto;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProductoDelCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class eliminarProductoDelCarritoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public eliminarProductoDelCarritoResponse() {
-        }
-        
-        public eliminarProductoDelCarritoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLosCarritoItems", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosLosCarritoItemsRequest {
-        
-        public listarTodosLosCarritoItemsRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLosCarritoItemsResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarTodosLosCarritoItemsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TechShopperBO.CarritoItemsWS.carritoItemsDTO[] @return;
-        
-        public listarTodosLosCarritoItemsResponse() {
-        }
-        
-        public listarTodosLosCarritoItemsResponse(TechShopperBO.CarritoItemsWS.carritoItemsDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarItemsPorCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarItemsPorCarritoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCarrito;
-        
-        public listarItemsPorCarritoRequest() {
-        }
-        
-        public listarItemsPorCarritoRequest(int idCarrito) {
-            this.idCarrito = idCarrito;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listarItemsPorCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class listarItemsPorCarritoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TechShopperBO.CarritoItemsWS.carritoItemsDTO[] @return;
-        
-        public listarItemsPorCarritoResponse() {
-        }
-        
-        public listarItemsPorCarritoResponse(TechShopperBO.CarritoItemsWS.carritoItemsDTO[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCantidadProducto", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarCantidadProductoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCarritoItem", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarCarritoItemRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -1017,68 +861,42 @@ namespace TechShopperBO.CarritoItemsWS {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int nuevaCantidad;
+        public int cantidad;
         
-        public actualizarCantidadProductoRequest() {
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=3)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double precioUnitario;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=4)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TechShopperBO.CarritoItemsWS.localDateTime fechaRegistro;
+        
+        public insertarCarritoItemRequest() {
         }
         
-        public actualizarCantidadProductoRequest(int idCarrito, int idProducto, int nuevaCantidad) {
+        public insertarCarritoItemRequest(int idCarrito, int idProducto, int cantidad, double precioUnitario, TechShopperBO.CarritoItemsWS.localDateTime fechaRegistro) {
             this.idCarrito = idCarrito;
             this.idProducto = idProducto;
-            this.nuevaCantidad = nuevaCantidad;
+            this.cantidad = cantidad;
+            this.precioUnitario = precioUnitario;
+            this.fechaRegistro = fechaRegistro;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCantidadProductoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class actualizarCantidadProductoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCarritoItemResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class insertarCarritoItemResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public actualizarCantidadProductoResponse() {
+        public insertarCarritoItemResponse() {
         }
         
-        public actualizarCantidadProductoResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularTotalCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class calcularTotalCarritoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCarrito;
-        
-        public calcularTotalCarritoRequest() {
-        }
-        
-        public calcularTotalCarritoRequest(int idCarrito) {
-            this.idCarrito = idCarrito;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularTotalCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class calcularTotalCarritoResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public double @return;
-        
-        public calcularTotalCarritoResponse() {
-        }
-        
-        public calcularTotalCarritoResponse(double @return) {
+        public insertarCarritoItemResponse(int @return) {
             this.@return = @return;
         }
     }
@@ -1147,8 +965,36 @@ namespace TechShopperBO.CarritoItemsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCarritoItem", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCarritoItemRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLosCarritoItems", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosLosCarritoItemsRequest {
+        
+        public listarTodosLosCarritoItemsRequest() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarTodosLosCarritoItemsResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarTodosLosCarritoItemsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TechShopperBO.CarritoItemsWS.carritoItemsDTO[] @return;
+        
+        public listarTodosLosCarritoItemsResponse() {
+        }
+        
+        public listarTodosLosCarritoItemsResponse(TechShopperBO.CarritoItemsWS.carritoItemsDTO[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarProductoAlCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class agregarProductoAlCarritoRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
@@ -1166,36 +1012,190 @@ namespace TechShopperBO.CarritoItemsWS {
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public double precioUnitario;
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=4)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public TechShopperBO.CarritoItemsWS.localDateTime fechaRegistro;
-        
-        public insertarCarritoItemRequest() {
+        public agregarProductoAlCarritoRequest() {
         }
         
-        public insertarCarritoItemRequest(int idCarrito, int idProducto, int cantidad, double precioUnitario, TechShopperBO.CarritoItemsWS.localDateTime fechaRegistro) {
+        public agregarProductoAlCarritoRequest(int idCarrito, int idProducto, int cantidad, double precioUnitario) {
             this.idCarrito = idCarrito;
             this.idProducto = idProducto;
             this.cantidad = cantidad;
             this.precioUnitario = precioUnitario;
-            this.fechaRegistro = fechaRegistro;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="insertarCarritoItemResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class insertarCarritoItemResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="agregarProductoAlCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class agregarProductoAlCarritoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int @return;
         
-        public insertarCarritoItemResponse() {
+        public agregarProductoAlCarritoResponse() {
         }
         
-        public insertarCarritoItemResponse(int @return) {
+        public agregarProductoAlCarritoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularTotalCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class calcularTotalCarritoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCarrito;
+        
+        public calcularTotalCarritoRequest() {
+        }
+        
+        public calcularTotalCarritoRequest(int idCarrito) {
+            this.idCarrito = idCarrito;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="calcularTotalCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class calcularTotalCarritoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public double @return;
+        
+        public calcularTotalCarritoResponse() {
+        }
+        
+        public calcularTotalCarritoResponse(double @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCantidadProducto", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarCantidadProductoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCarrito;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProducto;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=2)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int nuevaCantidad;
+        
+        public actualizarCantidadProductoRequest() {
+        }
+        
+        public actualizarCantidadProductoRequest(int idCarrito, int idProducto, int nuevaCantidad) {
+            this.idCarrito = idCarrito;
+            this.idProducto = idProducto;
+            this.nuevaCantidad = nuevaCantidad;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="actualizarCantidadProductoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class actualizarCantidadProductoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public actualizarCantidadProductoResponse() {
+        }
+        
+        public actualizarCantidadProductoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProductoDelCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarProductoDelCarritoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCarrito;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=1)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idProducto;
+        
+        public eliminarProductoDelCarritoRequest() {
+        }
+        
+        public eliminarProductoDelCarritoRequest(int idCarrito, int idProducto) {
+            this.idCarrito = idCarrito;
+            this.idProducto = idProducto;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="eliminarProductoDelCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class eliminarProductoDelCarritoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public eliminarProductoDelCarritoResponse() {
+        }
+        
+        public eliminarProductoDelCarritoResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarItemsPorCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarItemsPorCarritoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int idCarrito;
+        
+        public listarItemsPorCarritoRequest() {
+        }
+        
+        public listarItemsPorCarritoRequest(int idCarrito) {
+            this.idCarrito = idCarrito;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listarItemsPorCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class listarItemsPorCarritoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public TechShopperBO.CarritoItemsWS.carritoItemsDTO[] @return;
+        
+        public listarItemsPorCarritoResponse() {
+        }
+        
+        public listarItemsPorCarritoResponse(TechShopperBO.CarritoItemsWS.carritoItemsDTO[] @return) {
             this.@return = @return;
         }
     }
@@ -1239,35 +1239,35 @@ namespace TechShopperBO.CarritoItemsWS {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="vaciarCarrito", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class vaciarCarritoRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCarritoItemPorId", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerCarritoItemPorIdRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int idCarrito;
+        public int idCarritoItem;
         
-        public vaciarCarritoRequest() {
+        public obtenerCarritoItemPorIdRequest() {
         }
         
-        public vaciarCarritoRequest(int idCarrito) {
-            this.idCarrito = idCarrito;
+        public obtenerCarritoItemPorIdRequest(int idCarritoItem) {
+            this.idCarritoItem = idCarritoItem;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="vaciarCarritoResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
-    public partial class vaciarCarritoResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="obtenerCarritoItemPorIdResponse", WrapperNamespace="http://services.techshopper.pucp.edu.pe/", IsWrapped=true)]
+    public partial class obtenerCarritoItemPorIdResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://services.techshopper.pucp.edu.pe/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
+        public TechShopperBO.CarritoItemsWS.carritoItemsDTO @return;
         
-        public vaciarCarritoResponse() {
+        public obtenerCarritoItemPorIdResponse() {
         }
         
-        public vaciarCarritoResponse(int @return) {
+        public obtenerCarritoItemPorIdResponse(TechShopperBO.CarritoItemsWS.carritoItemsDTO @return) {
             this.@return = @return;
         }
     }
@@ -1300,174 +1300,57 @@ namespace TechShopperBO.CarritoItemsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse TechShopperBO.CarritoItemsWS.CarritoItems.agregarProductoAlCarrito(TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest request) {
-            return base.Channel.agregarProductoAlCarrito(request);
+        TechShopperBO.CarritoItemsWS.vaciarCarritoResponse TechShopperBO.CarritoItemsWS.CarritoItems.vaciarCarrito(TechShopperBO.CarritoItemsWS.vaciarCarritoRequest request) {
+            return base.Channel.vaciarCarrito(request);
         }
         
-        public int agregarProductoAlCarrito(int idCarrito, int idProducto, int cantidad, double precioUnitario) {
-            TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest();
+        public int vaciarCarrito(int idCarrito) {
+            TechShopperBO.CarritoItemsWS.vaciarCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.vaciarCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            TechShopperBO.CarritoItemsWS.vaciarCarritoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).vaciarCarrito(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.vaciarCarritoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.vaciarCarritoAsync(TechShopperBO.CarritoItemsWS.vaciarCarritoRequest request) {
+            return base.Channel.vaciarCarritoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.vaciarCarritoResponse> vaciarCarritoAsync(int idCarrito) {
+            TechShopperBO.CarritoItemsWS.vaciarCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.vaciarCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).vaciarCarritoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse TechShopperBO.CarritoItemsWS.CarritoItems.insertarCarritoItem(TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest request) {
+            return base.Channel.insertarCarritoItem(request);
+        }
+        
+        public int insertarCarritoItem(int idCarrito, int idProducto, int cantidad, double precioUnitario, TechShopperBO.CarritoItemsWS.localDateTime fechaRegistro) {
+            TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest inValue = new TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest();
             inValue.idCarrito = idCarrito;
             inValue.idProducto = idProducto;
             inValue.cantidad = cantidad;
             inValue.precioUnitario = precioUnitario;
-            TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).agregarProductoAlCarrito(inValue);
+            inValue.fechaRegistro = fechaRegistro;
+            TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).insertarCarritoItem(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.agregarProductoAlCarritoAsync(TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest request) {
-            return base.Channel.agregarProductoAlCarritoAsync(request);
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse> TechShopperBO.CarritoItemsWS.CarritoItems.insertarCarritoItemAsync(TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest request) {
+            return base.Channel.insertarCarritoItemAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse> agregarProductoAlCarritoAsync(int idCarrito, int idProducto, int cantidad, double precioUnitario) {
-            TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest();
+        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse> insertarCarritoItemAsync(int idCarrito, int idProducto, int cantidad, double precioUnitario, TechShopperBO.CarritoItemsWS.localDateTime fechaRegistro) {
+            TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest inValue = new TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest();
             inValue.idCarrito = idCarrito;
             inValue.idProducto = idProducto;
             inValue.cantidad = cantidad;
             inValue.precioUnitario = precioUnitario;
-            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).agregarProductoAlCarritoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse TechShopperBO.CarritoItemsWS.CarritoItems.obtenerCarritoItemPorId(TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest request) {
-            return base.Channel.obtenerCarritoItemPorId(request);
-        }
-        
-        public TechShopperBO.CarritoItemsWS.carritoItemsDTO obtenerCarritoItemPorId(int idCarritoItem) {
-            TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest inValue = new TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest();
-            inValue.idCarritoItem = idCarritoItem;
-            TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).obtenerCarritoItemPorId(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse> TechShopperBO.CarritoItemsWS.CarritoItems.obtenerCarritoItemPorIdAsync(TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest request) {
-            return base.Channel.obtenerCarritoItemPorIdAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse> obtenerCarritoItemPorIdAsync(int idCarritoItem) {
-            TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest inValue = new TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest();
-            inValue.idCarritoItem = idCarritoItem;
-            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).obtenerCarritoItemPorIdAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse TechShopperBO.CarritoItemsWS.CarritoItems.eliminarProductoDelCarrito(TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest request) {
-            return base.Channel.eliminarProductoDelCarrito(request);
-        }
-        
-        public int eliminarProductoDelCarrito(int idCarrito, int idProducto) {
-            TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest();
-            inValue.idCarrito = idCarrito;
-            inValue.idProducto = idProducto;
-            TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).eliminarProductoDelCarrito(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.eliminarProductoDelCarritoAsync(TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest request) {
-            return base.Channel.eliminarProductoDelCarritoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse> eliminarProductoDelCarritoAsync(int idCarrito, int idProducto) {
-            TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest();
-            inValue.idCarrito = idCarrito;
-            inValue.idProducto = idProducto;
-            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).eliminarProductoDelCarritoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsResponse TechShopperBO.CarritoItemsWS.CarritoItems.listarTodosLosCarritoItems(TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest request) {
-            return base.Channel.listarTodosLosCarritoItems(request);
-        }
-        
-        public TechShopperBO.CarritoItemsWS.carritoItemsDTO[] listarTodosLosCarritoItems() {
-            TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest inValue = new TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest();
-            TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).listarTodosLosCarritoItems(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsResponse> TechShopperBO.CarritoItemsWS.CarritoItems.listarTodosLosCarritoItemsAsync(TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest request) {
-            return base.Channel.listarTodosLosCarritoItemsAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsResponse> listarTodosLosCarritoItemsAsync() {
-            TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest inValue = new TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest();
-            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).listarTodosLosCarritoItemsAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse TechShopperBO.CarritoItemsWS.CarritoItems.listarItemsPorCarrito(TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest request) {
-            return base.Channel.listarItemsPorCarrito(request);
-        }
-        
-        public TechShopperBO.CarritoItemsWS.carritoItemsDTO[] listarItemsPorCarrito(int idCarrito) {
-            TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest();
-            inValue.idCarrito = idCarrito;
-            TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).listarItemsPorCarrito(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.listarItemsPorCarritoAsync(TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest request) {
-            return base.Channel.listarItemsPorCarritoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse> listarItemsPorCarritoAsync(int idCarrito) {
-            TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest();
-            inValue.idCarrito = idCarrito;
-            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).listarItemsPorCarritoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritoItemsWS.actualizarCantidadProductoResponse TechShopperBO.CarritoItemsWS.CarritoItems.actualizarCantidadProducto(TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest request) {
-            return base.Channel.actualizarCantidadProducto(request);
-        }
-        
-        public int actualizarCantidadProducto(int idCarrito, int idProducto, int nuevaCantidad) {
-            TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest inValue = new TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest();
-            inValue.idCarrito = idCarrito;
-            inValue.idProducto = idProducto;
-            inValue.nuevaCantidad = nuevaCantidad;
-            TechShopperBO.CarritoItemsWS.actualizarCantidadProductoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).actualizarCantidadProducto(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.actualizarCantidadProductoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.actualizarCantidadProductoAsync(TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest request) {
-            return base.Channel.actualizarCantidadProductoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.actualizarCantidadProductoResponse> actualizarCantidadProductoAsync(int idCarrito, int idProducto, int nuevaCantidad) {
-            TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest inValue = new TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest();
-            inValue.idCarrito = idCarrito;
-            inValue.idProducto = idProducto;
-            inValue.nuevaCantidad = nuevaCantidad;
-            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).actualizarCantidadProductoAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse TechShopperBO.CarritoItemsWS.CarritoItems.calcularTotalCarrito(TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest request) {
-            return base.Channel.calcularTotalCarrito(request);
-        }
-        
-        public double calcularTotalCarrito(int idCarrito) {
-            TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest();
-            inValue.idCarrito = idCarrito;
-            TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).calcularTotalCarrito(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.calcularTotalCarritoAsync(TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest request) {
-            return base.Channel.calcularTotalCarritoAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse> calcularTotalCarritoAsync(int idCarrito) {
-            TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest();
-            inValue.idCarrito = idCarrito;
-            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).calcularTotalCarritoAsync(inValue);
+            inValue.fechaRegistro = fechaRegistro;
+            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).insertarCarritoItemAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1504,34 +1387,151 @@ namespace TechShopperBO.CarritoItemsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse TechShopperBO.CarritoItemsWS.CarritoItems.insertarCarritoItem(TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest request) {
-            return base.Channel.insertarCarritoItem(request);
+        TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsResponse TechShopperBO.CarritoItemsWS.CarritoItems.listarTodosLosCarritoItems(TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest request) {
+            return base.Channel.listarTodosLosCarritoItems(request);
         }
         
-        public int insertarCarritoItem(int idCarrito, int idProducto, int cantidad, double precioUnitario, TechShopperBO.CarritoItemsWS.localDateTime fechaRegistro) {
-            TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest inValue = new TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest();
-            inValue.idCarrito = idCarrito;
-            inValue.idProducto = idProducto;
-            inValue.cantidad = cantidad;
-            inValue.precioUnitario = precioUnitario;
-            inValue.fechaRegistro = fechaRegistro;
-            TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).insertarCarritoItem(inValue);
+        public TechShopperBO.CarritoItemsWS.carritoItemsDTO[] listarTodosLosCarritoItems() {
+            TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest inValue = new TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest();
+            TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).listarTodosLosCarritoItems(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse> TechShopperBO.CarritoItemsWS.CarritoItems.insertarCarritoItemAsync(TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest request) {
-            return base.Channel.insertarCarritoItemAsync(request);
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsResponse> TechShopperBO.CarritoItemsWS.CarritoItems.listarTodosLosCarritoItemsAsync(TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest request) {
+            return base.Channel.listarTodosLosCarritoItemsAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.insertarCarritoItemResponse> insertarCarritoItemAsync(int idCarrito, int idProducto, int cantidad, double precioUnitario, TechShopperBO.CarritoItemsWS.localDateTime fechaRegistro) {
-            TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest inValue = new TechShopperBO.CarritoItemsWS.insertarCarritoItemRequest();
+        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsResponse> listarTodosLosCarritoItemsAsync() {
+            TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest inValue = new TechShopperBO.CarritoItemsWS.listarTodosLosCarritoItemsRequest();
+            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).listarTodosLosCarritoItemsAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse TechShopperBO.CarritoItemsWS.CarritoItems.agregarProductoAlCarrito(TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest request) {
+            return base.Channel.agregarProductoAlCarrito(request);
+        }
+        
+        public int agregarProductoAlCarrito(int idCarrito, int idProducto, int cantidad, double precioUnitario) {
+            TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest();
             inValue.idCarrito = idCarrito;
             inValue.idProducto = idProducto;
             inValue.cantidad = cantidad;
             inValue.precioUnitario = precioUnitario;
-            inValue.fechaRegistro = fechaRegistro;
-            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).insertarCarritoItemAsync(inValue);
+            TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).agregarProductoAlCarrito(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.agregarProductoAlCarritoAsync(TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest request) {
+            return base.Channel.agregarProductoAlCarritoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoResponse> agregarProductoAlCarritoAsync(int idCarrito, int idProducto, int cantidad, double precioUnitario) {
+            TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.agregarProductoAlCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            inValue.idProducto = idProducto;
+            inValue.cantidad = cantidad;
+            inValue.precioUnitario = precioUnitario;
+            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).agregarProductoAlCarritoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse TechShopperBO.CarritoItemsWS.CarritoItems.calcularTotalCarrito(TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest request) {
+            return base.Channel.calcularTotalCarrito(request);
+        }
+        
+        public double calcularTotalCarrito(int idCarrito) {
+            TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).calcularTotalCarrito(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.calcularTotalCarritoAsync(TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest request) {
+            return base.Channel.calcularTotalCarritoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.calcularTotalCarritoResponse> calcularTotalCarritoAsync(int idCarrito) {
+            TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.calcularTotalCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).calcularTotalCarritoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.CarritoItemsWS.actualizarCantidadProductoResponse TechShopperBO.CarritoItemsWS.CarritoItems.actualizarCantidadProducto(TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest request) {
+            return base.Channel.actualizarCantidadProducto(request);
+        }
+        
+        public int actualizarCantidadProducto(int idCarrito, int idProducto, int nuevaCantidad) {
+            TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest inValue = new TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest();
+            inValue.idCarrito = idCarrito;
+            inValue.idProducto = idProducto;
+            inValue.nuevaCantidad = nuevaCantidad;
+            TechShopperBO.CarritoItemsWS.actualizarCantidadProductoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).actualizarCantidadProducto(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.actualizarCantidadProductoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.actualizarCantidadProductoAsync(TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest request) {
+            return base.Channel.actualizarCantidadProductoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.actualizarCantidadProductoResponse> actualizarCantidadProductoAsync(int idCarrito, int idProducto, int nuevaCantidad) {
+            TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest inValue = new TechShopperBO.CarritoItemsWS.actualizarCantidadProductoRequest();
+            inValue.idCarrito = idCarrito;
+            inValue.idProducto = idProducto;
+            inValue.nuevaCantidad = nuevaCantidad;
+            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).actualizarCantidadProductoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse TechShopperBO.CarritoItemsWS.CarritoItems.eliminarProductoDelCarrito(TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest request) {
+            return base.Channel.eliminarProductoDelCarrito(request);
+        }
+        
+        public int eliminarProductoDelCarrito(int idCarrito, int idProducto) {
+            TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            inValue.idProducto = idProducto;
+            TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).eliminarProductoDelCarrito(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.eliminarProductoDelCarritoAsync(TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest request) {
+            return base.Channel.eliminarProductoDelCarritoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoResponse> eliminarProductoDelCarritoAsync(int idCarrito, int idProducto) {
+            TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.eliminarProductoDelCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            inValue.idProducto = idProducto;
+            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).eliminarProductoDelCarritoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse TechShopperBO.CarritoItemsWS.CarritoItems.listarItemsPorCarrito(TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest request) {
+            return base.Channel.listarItemsPorCarrito(request);
+        }
+        
+        public TechShopperBO.CarritoItemsWS.carritoItemsDTO[] listarItemsPorCarrito(int idCarrito) {
+            TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).listarItemsPorCarrito(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.listarItemsPorCarritoAsync(TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest request) {
+            return base.Channel.listarItemsPorCarritoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.listarItemsPorCarritoResponse> listarItemsPorCarritoAsync(int idCarrito) {
+            TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.listarItemsPorCarritoRequest();
+            inValue.idCarrito = idCarrito;
+            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).listarItemsPorCarritoAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1558,26 +1558,26 @@ namespace TechShopperBO.CarritoItemsWS {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        TechShopperBO.CarritoItemsWS.vaciarCarritoResponse TechShopperBO.CarritoItemsWS.CarritoItems.vaciarCarrito(TechShopperBO.CarritoItemsWS.vaciarCarritoRequest request) {
-            return base.Channel.vaciarCarrito(request);
+        TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse TechShopperBO.CarritoItemsWS.CarritoItems.obtenerCarritoItemPorId(TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest request) {
+            return base.Channel.obtenerCarritoItemPorId(request);
         }
         
-        public int vaciarCarrito(int idCarrito) {
-            TechShopperBO.CarritoItemsWS.vaciarCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.vaciarCarritoRequest();
-            inValue.idCarrito = idCarrito;
-            TechShopperBO.CarritoItemsWS.vaciarCarritoResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).vaciarCarrito(inValue);
+        public TechShopperBO.CarritoItemsWS.carritoItemsDTO obtenerCarritoItemPorId(int idCarritoItem) {
+            TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest inValue = new TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest();
+            inValue.idCarritoItem = idCarritoItem;
+            TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse retVal = ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).obtenerCarritoItemPorId(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.vaciarCarritoResponse> TechShopperBO.CarritoItemsWS.CarritoItems.vaciarCarritoAsync(TechShopperBO.CarritoItemsWS.vaciarCarritoRequest request) {
-            return base.Channel.vaciarCarritoAsync(request);
+        System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse> TechShopperBO.CarritoItemsWS.CarritoItems.obtenerCarritoItemPorIdAsync(TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest request) {
+            return base.Channel.obtenerCarritoItemPorIdAsync(request);
         }
         
-        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.vaciarCarritoResponse> vaciarCarritoAsync(int idCarrito) {
-            TechShopperBO.CarritoItemsWS.vaciarCarritoRequest inValue = new TechShopperBO.CarritoItemsWS.vaciarCarritoRequest();
-            inValue.idCarrito = idCarrito;
-            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).vaciarCarritoAsync(inValue);
+        public System.Threading.Tasks.Task<TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdResponse> obtenerCarritoItemPorIdAsync(int idCarritoItem) {
+            TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest inValue = new TechShopperBO.CarritoItemsWS.obtenerCarritoItemPorIdRequest();
+            inValue.idCarritoItem = idCarritoItem;
+            return ((TechShopperBO.CarritoItemsWS.CarritoItems)(this)).obtenerCarritoItemPorIdAsync(inValue);
         }
     }
 }

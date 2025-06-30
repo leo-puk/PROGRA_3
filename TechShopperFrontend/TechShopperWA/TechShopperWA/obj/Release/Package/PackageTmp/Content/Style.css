@@ -1,0 +1,36 @@
+﻿
+.custom-button {
+    background-color: #835da2;
+    color: white;
+    border: none;
+}
+
+.custom-button:hover {
+        background-color: #6e4892;
+}
+
+.hero-productos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-agregar-productos {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.edit-button {
+    background-color: #835da2;
+    color: black;
+    border: none;
+}
+
+.erase-button {
+    background-color: #e64c4c;
+    color: white;
+    border: none;
+}
+
+

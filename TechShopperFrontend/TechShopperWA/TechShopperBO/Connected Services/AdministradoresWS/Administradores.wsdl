@@ -11,11 +11,17 @@
   <message name="iniciarSesionResponse">
     <part name="parameters" element="tns:iniciarSesionResponse" />
   </message>
-  <message name="registrarAdministrador">
-    <part name="parameters" element="tns:registrarAdministrador" />
+  <message name="obtenerAdministradorPorId">
+    <part name="parameters" element="tns:obtenerAdministradorPorId" />
   </message>
-  <message name="registrarAdministradorResponse">
-    <part name="parameters" element="tns:registrarAdministradorResponse" />
+  <message name="obtenerAdministradorPorIdResponse">
+    <part name="parameters" element="tns:obtenerAdministradorPorIdResponse" />
+  </message>
+  <message name="actualizarAdministrador">
+    <part name="parameters" element="tns:actualizarAdministrador" />
+  </message>
+  <message name="actualizarAdministradorResponse">
+    <part name="parameters" element="tns:actualizarAdministradorResponse" />
   </message>
   <message name="actualizarEstadoConexion">
     <part name="parameters" element="tns:actualizarEstadoConexion" />
@@ -29,26 +35,24 @@
   <message name="eliminarAdministradorResponse">
     <part name="parameters" element="tns:eliminarAdministradorResponse" />
   </message>
-  <message name="obtenerAdministradorPorId">
-    <part name="parameters" element="tns:obtenerAdministradorPorId" />
+  <message name="registrarAdministrador">
+    <part name="parameters" element="tns:registrarAdministrador" />
   </message>
-  <message name="obtenerAdministradorPorIdResponse">
-    <part name="parameters" element="tns:obtenerAdministradorPorIdResponse" />
-  </message>
-  <message name="actualizarAdministrador">
-    <part name="parameters" element="tns:actualizarAdministrador" />
-  </message>
-  <message name="actualizarAdministradorResponse">
-    <part name="parameters" element="tns:actualizarAdministradorResponse" />
+  <message name="registrarAdministradorResponse">
+    <part name="parameters" element="tns:registrarAdministradorResponse" />
   </message>
   <portType name="Administradores">
     <operation name="iniciarSesion">
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/iniciarSesionRequest" message="tns:iniciarSesion" />
       <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/iniciarSesionResponse" message="tns:iniciarSesionResponse" />
     </operation>
-    <operation name="registrarAdministrador">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorRequest" message="tns:registrarAdministrador" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorResponse" message="tns:registrarAdministradorResponse" />
+    <operation name="obtenerAdministradorPorId">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorIdRequest" message="tns:obtenerAdministradorPorId" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorIdResponse" message="tns:obtenerAdministradorPorIdResponse" />
+    </operation>
+    <operation name="actualizarAdministrador">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorRequest" message="tns:actualizarAdministrador" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorResponse" message="tns:actualizarAdministradorResponse" />
     </operation>
     <operation name="actualizarEstadoConexion">
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarEstadoConexionRequest" message="tns:actualizarEstadoConexion" />
@@ -58,13 +62,9 @@
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/eliminarAdministradorRequest" message="tns:eliminarAdministrador" />
       <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/eliminarAdministradorResponse" message="tns:eliminarAdministradorResponse" />
     </operation>
-    <operation name="obtenerAdministradorPorId">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorIdRequest" message="tns:obtenerAdministradorPorId" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/obtenerAdministradorPorIdResponse" message="tns:obtenerAdministradorPorIdResponse" />
-    </operation>
-    <operation name="actualizarAdministrador">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorRequest" message="tns:actualizarAdministrador" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/actualizarAdministradorResponse" message="tns:actualizarAdministradorResponse" />
+    <operation name="registrarAdministrador">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorRequest" message="tns:registrarAdministrador" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Administradores/registrarAdministradorResponse" message="tns:registrarAdministradorResponse" />
     </operation>
   </portType>
   <binding name="AdministradoresPortBinding" type="tns:Administradores">
@@ -78,7 +78,16 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="registrarAdministrador">
+    <operation name="obtenerAdministradorPorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarAdministrador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -105,16 +114,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="obtenerAdministradorPorId">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarAdministrador">
+    <operation name="registrarAdministrador">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

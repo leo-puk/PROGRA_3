@@ -16,6 +16,8 @@
   <xs:element name="registrarMovimientoResponse" type="tns:registrarMovimientoResponse" />
   <xs:element name="registrarSalidaStock" type="tns:registrarSalidaStock" />
   <xs:element name="registrarSalidaStockResponse" type="tns:registrarSalidaStockResponse" />
+  <xs:element name="reporteMovStocks" type="tns:reporteMovStocks" />
+  <xs:element name="reporteMovStocksResponse" type="tns:reporteMovStocksResponse" />
   <xs:complexType name="listarMovimientosPorProducto">
     <xs:sequence>
       <xs:element minOccurs="0" name="idProducto" type="xs:int" />
@@ -80,26 +82,25 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="registrarMovimiento">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idProducto" type="xs:int" />
-      <xs:element minOccurs="0" name="tipo" type="xs:string" />
-      <xs:element minOccurs="0" name="cantidad" type="xs:int" />
-      <xs:element minOccurs="0" name="fecha" type="tns:localDateTime" />
-      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="registrarMovimientoResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarTodosLosMovimientos">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="listarTodosLosMovimientosResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:movimientoStockDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarMovimiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+      <xs:element minOccurs="0" name="cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="registrarMovimientoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarMovimiento">
@@ -134,6 +135,14 @@
   <xs:complexType name="registrarEntradaStockResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="reporteMovStocks">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="reporteMovStocksResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="obtenerMovimientoPorId">

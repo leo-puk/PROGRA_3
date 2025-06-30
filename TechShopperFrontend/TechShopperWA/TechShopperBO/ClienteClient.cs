@@ -21,7 +21,7 @@ namespace TechShopperBO
         }
         public int RegistrarCliente(clienteDTO c)
         {
-            return clientesWSClient.registrarCliente(
+            int resultado = clientesWSClient.registrarCliente(
                 c.contraseña,
                 c.nombre,
                 c.email,
@@ -30,6 +30,14 @@ namespace TechShopperBO
                 c.infoTarjetaCredito,
                 c.balanceCuenta
             );
+
+            if (resultado > 0)
+            {
+                EmailUtil.EnviarEmailVerificacionCliente(c.email, c.nombre);
+            }
+
+
+            return resultado;
         }
 
         public int ActualizarCliente(clienteDTO c)
@@ -52,6 +60,15 @@ namespace TechShopperBO
             return clientesWSClient.eliminarCliente(idCliente);
         }
 
+        public void EnviarCorreoPedido(int idCliente)
+        {
+
+            clienteDTO c = new clienteDTO();
+            c = clientesWSClient.obtenerClientePorId(idCliente);
+            EmailUtil.EnviarEmailVerificacionPedido(c.email, c.nombre);
+
+        }
+
         public clienteDTO ObtenerClientePorId(int idCliente)
         {
             return clientesWSClient.obtenerClientePorId(idCliente);
@@ -71,30 +88,35 @@ namespace TechShopperBO
         {
             return clientesWSClient.insertarCarrito(idUsuario, idProducto, cantidad);
         }
-        public List<carritoItemsDTO> MostrarCarritoDeCliente(int idUsuario)
+        public List<carritoItemsDTOSoap> MostrarCarritoDeCliente(int idUsuario)
         {
             // Validación inicial del parámetro
             if (idUsuario <= 0)
             {
-                return new List<carritoItemsDTO>();
+                return new List<carritoItemsDTOSoap>();
             }
 
             try
             {
                 var lista = clientesWSClient.mostrarCarritoDeCliente(idUsuario);
-                return lista?.ToList() ?? new List<carritoItemsDTO>();
+                return lista?.ToList() ?? new List<carritoItemsDTOSoap>();
             }
             catch (Exception ex)
             {
                 // Log del error
                 System.Diagnostics.Debug.WriteLine($"Error al obtener carrito: {ex.Message}");
-                return new List<carritoItemsDTO>(); // Retorna lista vacía en caso de error
+                return new List<carritoItemsDTOSoap>(); // Retorna lista vacía en caso de error
             }
         }
 
         public int RealizarCompra(int idUsuario, List<int> idItemSeleccionados)
         {
             return clientesWSClient.realizarCompra(idUsuario, idItemSeleccionados.ToArray());
+        }
+
+        public clienteDTO ObtenerClientePorEmail(string email)
+        {
+            return (clienteDTO)clientesWSClient.obtenerClientePorCorreo(email);
         }
     }
 }

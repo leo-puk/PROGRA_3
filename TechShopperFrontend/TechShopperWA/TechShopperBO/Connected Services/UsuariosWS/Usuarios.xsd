@@ -2,14 +2,18 @@
 <xs:schema xmlns:tns="http://services.techshopper.pucp.edu.pe/" targetNamespace="http://services.techshopper.pucp.edu.pe/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="actualizarUsuario" type="tns:actualizarUsuario" />
   <xs:element name="actualizarUsuarioResponse" type="tns:actualizarUsuarioResponse" />
-  <xs:element name="obtenerUsuarioPorCorreo" type="tns:obtenerUsuarioPorCorreo" />
-  <xs:element name="obtenerUsuarioPorCorreoResponse" type="tns:obtenerUsuarioPorCorreoResponse" />
-  <xs:complexType name="obtenerUsuarioPorCorreo">
+  <xs:element name="obtenerClientePorCorreo" type="tns:obtenerClientePorCorreo" />
+  <xs:element name="obtenerClientePorCorreoResponse" type="tns:obtenerClientePorCorreoResponse" />
+  <xs:element name="obtenerUsuarioPorCorreo" nillable="true" type="tns:obtenerClientePorCorreo" />
+  <xs:element name="obtenerUsuarioPorCorreoResponse" nillable="true" type="tns:obtenerClientePorCorreoResponse" />
+  <xs:element name="obtenerUsuarioPorId" type="tns:obtenerUsuarioPorId" />
+  <xs:element name="obtenerUsuarioPorIdResponse" type="tns:obtenerUsuarioPorIdResponse" />
+  <xs:complexType name="obtenerUsuarioPorId">
     <xs:sequence>
-      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="idUsuario" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="obtenerUsuarioPorCorreoResponse">
+  <xs:complexType name="obtenerUsuarioPorIdResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="tns:usuarioDTO" />
     </xs:sequence>
@@ -40,6 +44,29 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerClientePorCorreo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="obtenerClientePorCorreoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:clienteDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="clienteDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:usuarioDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="balanceCuenta" type="xs:double" />
+          <xs:element minOccurs="0" name="direccion" type="xs:string" />
+          <xs:element minOccurs="0" name="infoCompra" type="xs:string" />
+          <xs:element minOccurs="0" name="infoTarjetaCredito" type="xs:string" />
+          <xs:element minOccurs="0" name="telefono" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
   </xs:complexType>
   <xs:simpleType name="estadoConexionDTO">
     <xs:restriction base="xs:string">

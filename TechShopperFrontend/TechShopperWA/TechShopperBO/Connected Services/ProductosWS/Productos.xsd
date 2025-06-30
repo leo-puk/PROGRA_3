@@ -16,17 +16,6 @@
   <xs:element name="registrarProductoResponse" type="tns:registrarProductoResponse" />
   <xs:element name="verificarCambioStock" type="tns:verificarCambioStock" />
   <xs:element name="verificarCambioStockResponse" type="tns:verificarCambioStockResponse" />
-  <xs:complexType name="verificarCambioStock">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="idProducto" type="xs:int" />
-      <xs:element minOccurs="0" name="nuevoStock" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
-  <xs:complexType name="verificarCambioStockResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" name="return" type="xs:int" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="listarPor3criterios">
     <xs:sequence>
       <xs:element minOccurs="0" name="nombre" type="xs:string" />
@@ -67,6 +56,17 @@
   </xs:complexType>
   <xs:complexType name="localDateTime" final="extension restriction">
     <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="verificarCambioStock">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="idProducto" type="xs:int" />
+      <xs:element minOccurs="0" name="nuevoStock" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificarCambioStockResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
   </xs:complexType>
   <xs:complexType name="registrarProducto">
     <xs:sequence>
@@ -114,14 +114,6 @@
       <xs:element minOccurs="0" name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:complexType name="listarTodosProductos">
-    <xs:sequence />
-  </xs:complexType>
-  <xs:complexType name="listarTodosProductosResponse">
-    <xs:sequence>
-      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:productoDTO" />
-    </xs:sequence>
-  </xs:complexType>
   <xs:complexType name="actualizarImagenProducto">
     <xs:sequence>
       <xs:element minOccurs="0" name="idProducto" type="xs:int" />
@@ -131,6 +123,14 @@
   <xs:complexType name="actualizarImagenProductoResponse">
     <xs:sequence>
       <xs:element minOccurs="0" name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="listarTodosProductos">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="listarTodosProductosResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:productoDTO" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="eliminarProducto">

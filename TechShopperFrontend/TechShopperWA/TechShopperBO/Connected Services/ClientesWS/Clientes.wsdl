@@ -5,47 +5,17 @@
       <xsd:import schemaLocation="http://localhost:8080/techShopperWS/Clientes?xsd=1" namespace="http://services.techshopper.pucp.edu.pe/" />
     </xsd:schema>
   </types>
-  <message name="actualizarEstadoConexionCliente">
-    <part name="parameters" element="tns:actualizarEstadoConexionCliente" />
+  <message name="registrarCliente">
+    <part name="parameters" element="tns:registrarCliente" />
   </message>
-  <message name="actualizarEstadoConexionClienteResponse">
-    <part name="parameters" element="tns:actualizarEstadoConexionClienteResponse" />
-  </message>
-  <message name="mostrarCarritoDeCliente">
-    <part name="parameters" element="tns:mostrarCarritoDeCliente" />
-  </message>
-  <message name="mostrarCarritoDeClienteResponse">
-    <part name="parameters" element="tns:mostrarCarritoDeClienteResponse" />
-  </message>
-  <message name="actualizarBalanceCliente">
-    <part name="parameters" element="tns:actualizarBalanceCliente" />
-  </message>
-  <message name="actualizarBalanceClienteResponse">
-    <part name="parameters" element="tns:actualizarBalanceClienteResponse" />
-  </message>
-  <message name="obtenerClientePorId">
-    <part name="parameters" element="tns:obtenerClientePorId" />
-  </message>
-  <message name="obtenerClientePorIdResponse">
-    <part name="parameters" element="tns:obtenerClientePorIdResponse" />
-  </message>
-  <message name="iniciarSesion">
-    <part name="parameters" element="tns:iniciarSesion" />
-  </message>
-  <message name="iniciarSesionResponse">
-    <part name="parameters" element="tns:iniciarSesionResponse" />
+  <message name="registrarClienteResponse">
+    <part name="parameters" element="tns:registrarClienteResponse" />
   </message>
   <message name="insertarCarrito">
     <part name="parameters" element="tns:insertarCarrito" />
   </message>
   <message name="insertarCarritoResponse">
     <part name="parameters" element="tns:insertarCarritoResponse" />
-  </message>
-  <message name="registrarCliente">
-    <part name="parameters" element="tns:registrarCliente" />
-  </message>
-  <message name="registrarClienteResponse">
-    <part name="parameters" element="tns:registrarClienteResponse" />
   </message>
   <message name="actualizarCliente">
     <part name="parameters" element="tns:actualizarCliente" />
@@ -65,34 +35,50 @@
   <message name="eliminarClienteResponse">
     <part name="parameters" element="tns:eliminarClienteResponse" />
   </message>
+  <message name="iniciarSesion">
+    <part name="parameters" element="tns:iniciarSesion" />
+  </message>
+  <message name="iniciarSesionResponse">
+    <part name="parameters" element="tns:iniciarSesionResponse" />
+  </message>
+  <message name="actualizarBalanceCliente">
+    <part name="parameters" element="tns:actualizarBalanceCliente" />
+  </message>
+  <message name="actualizarBalanceClienteResponse">
+    <part name="parameters" element="tns:actualizarBalanceClienteResponse" />
+  </message>
+  <message name="obtenerClientePorId">
+    <part name="parameters" element="tns:obtenerClientePorId" />
+  </message>
+  <message name="obtenerClientePorIdResponse">
+    <part name="parameters" element="tns:obtenerClientePorIdResponse" />
+  </message>
+  <message name="mostrarCarritoDeCliente">
+    <part name="parameters" element="tns:mostrarCarritoDeCliente" />
+  </message>
+  <message name="mostrarCarritoDeClienteResponse">
+    <part name="parameters" element="tns:mostrarCarritoDeClienteResponse" />
+  </message>
+  <message name="obtenerClientePorCorreo">
+    <part name="parameters" element="tns:obtenerClientePorCorreo" />
+  </message>
+  <message name="obtenerClientePorCorreoResponse">
+    <part name="parameters" element="tns:obtenerClientePorCorreoResponse" />
+  </message>
+  <message name="actualizarEstadoConexionCliente">
+    <part name="parameters" element="tns:actualizarEstadoConexionCliente" />
+  </message>
+  <message name="actualizarEstadoConexionClienteResponse">
+    <part name="parameters" element="tns:actualizarEstadoConexionClienteResponse" />
+  </message>
   <portType name="Clientes">
-    <operation name="actualizarEstadoConexionCliente">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/actualizarEstadoConexionClienteRequest" message="tns:actualizarEstadoConexionCliente" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/actualizarEstadoConexionClienteResponse" message="tns:actualizarEstadoConexionClienteResponse" />
-    </operation>
-    <operation name="mostrarCarritoDeCliente">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/mostrarCarritoDeClienteRequest" message="tns:mostrarCarritoDeCliente" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/mostrarCarritoDeClienteResponse" message="tns:mostrarCarritoDeClienteResponse" />
-    </operation>
-    <operation name="actualizarBalanceCliente">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/actualizarBalanceClienteRequest" message="tns:actualizarBalanceCliente" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/actualizarBalanceClienteResponse" message="tns:actualizarBalanceClienteResponse" />
-    </operation>
-    <operation name="obtenerClientePorId">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/obtenerClientePorIdRequest" message="tns:obtenerClientePorId" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/obtenerClientePorIdResponse" message="tns:obtenerClientePorIdResponse" />
-    </operation>
-    <operation name="iniciarSesion">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/iniciarSesionRequest" message="tns:iniciarSesion" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/iniciarSesionResponse" message="tns:iniciarSesionResponse" />
+    <operation name="registrarCliente">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/registrarClienteRequest" message="tns:registrarCliente" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/registrarClienteResponse" message="tns:registrarClienteResponse" />
     </operation>
     <operation name="insertarCarrito">
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/insertarCarritoRequest" message="tns:insertarCarrito" />
       <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/insertarCarritoResponse" message="tns:insertarCarritoResponse" />
-    </operation>
-    <operation name="registrarCliente">
-      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/registrarClienteRequest" message="tns:registrarCliente" />
-      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/registrarClienteResponse" message="tns:registrarClienteResponse" />
     </operation>
     <operation name="actualizarCliente">
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/actualizarClienteRequest" message="tns:actualizarCliente" />
@@ -106,46 +92,34 @@
       <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/eliminarClienteRequest" message="tns:eliminarCliente" />
       <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/eliminarClienteResponse" message="tns:eliminarClienteResponse" />
     </operation>
+    <operation name="iniciarSesion">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/iniciarSesionRequest" message="tns:iniciarSesion" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/iniciarSesionResponse" message="tns:iniciarSesionResponse" />
+    </operation>
+    <operation name="actualizarBalanceCliente">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/actualizarBalanceClienteRequest" message="tns:actualizarBalanceCliente" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/actualizarBalanceClienteResponse" message="tns:actualizarBalanceClienteResponse" />
+    </operation>
+    <operation name="obtenerClientePorId">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/obtenerClientePorIdRequest" message="tns:obtenerClientePorId" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/obtenerClientePorIdResponse" message="tns:obtenerClientePorIdResponse" />
+    </operation>
+    <operation name="mostrarCarritoDeCliente">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/mostrarCarritoDeClienteRequest" message="tns:mostrarCarritoDeCliente" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/mostrarCarritoDeClienteResponse" message="tns:mostrarCarritoDeClienteResponse" />
+    </operation>
+    <operation name="obtenerClientePorCorreo">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/obtenerClientePorCorreoRequest" message="tns:obtenerClientePorCorreo" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/obtenerClientePorCorreoResponse" message="tns:obtenerClientePorCorreoResponse" />
+    </operation>
+    <operation name="actualizarEstadoConexionCliente">
+      <input wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/actualizarEstadoConexionClienteRequest" message="tns:actualizarEstadoConexionCliente" />
+      <output wsam:Action="http://services.techshopper.pucp.edu.pe/Clientes/actualizarEstadoConexionClienteResponse" message="tns:actualizarEstadoConexionClienteResponse" />
+    </operation>
   </portType>
   <binding name="ClientesPortBinding" type="tns:Clientes">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="actualizarEstadoConexionCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="mostrarCarritoDeCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="actualizarBalanceCliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="obtenerClientePorId">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="iniciarSesion">
+    <operation name="registrarCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -155,15 +129,6 @@
       </output>
     </operation>
     <operation name="insertarCarrito">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="registrarCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -191,6 +156,60 @@
       </output>
     </operation>
     <operation name="eliminarCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="iniciarSesion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarBalanceCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerClientePorId">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="mostrarCarritoDeCliente">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="obtenerClientePorCorreo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="actualizarEstadoConexionCliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

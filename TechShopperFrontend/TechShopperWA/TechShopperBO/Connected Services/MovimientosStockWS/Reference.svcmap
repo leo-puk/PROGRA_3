@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="965a3406-f894-4530-9328-6c58375a10b2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="966a7d98-cfad-4c8e-8376-3106b620f90c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/techShopperWS/MovimientosStock?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="MovimientosStock.wsdl" MetadataType="Wsdl" ID="9cf46f7b-c0b0-4d9a-8a0d-928ef3f5d031" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/MovimientosStock?wsdl" />
-    <MetadataFile FileName="MovimientosStock.xsd" MetadataType="Schema" ID="257d2a24-eacb-44b3-9503-875418cca238" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/MovimientosStock?xsd=1" />
+    <MetadataFile FileName="MovimientosStock.wsdl" MetadataType="Wsdl" ID="cc35d366-67bd-4ce6-ba62-276e8f512f06" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/MovimientosStock?wsdl" />
+    <MetadataFile FileName="MovimientosStock.xsd" MetadataType="Schema" ID="041a10dc-bc19-4cd4-935e-0abe245dd68e" SourceId="1" SourceUrl="http://localhost:8080/techShopperWS/MovimientosStock?xsd=1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

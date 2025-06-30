@@ -87,42 +87,6 @@ namespace TechShopperWA.PaginasCliente
         protected global::System.Web.UI.WebControls.Button btnLimpiarFiltros;
 
         /// <summary>
-        /// Control lnkMenorPrecio.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkMenorPrecio;
-
-        /// <summary>
-        /// Control lnkMayorPrecio.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkMayorPrecio;
-
-        /// <summary>
-        /// Control lnkNombreAZ.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkNombreAZ;
-
-        /// <summary>
-        /// Control lnkNombreZA.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkNombreZA;
-
-        /// <summary>
         /// Control productosContainer.
         /// </summary>
         /// <remarks>

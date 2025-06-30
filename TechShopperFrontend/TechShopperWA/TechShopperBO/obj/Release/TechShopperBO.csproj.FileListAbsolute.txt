@@ -1,0 +1,7 @@
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Release\TechShopperBO.dll.config
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Release\TechShopperBO.dll
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\bin\Release\TechShopperBO.pdb
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Release\TechShopperBO.csproj.AssemblyReference.cache
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Release\TechShopperBO.csproj.CoreCompileInputs.cache
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Release\TechShopperBO.dll
+C:\programacion 3\ta\nueva version\TechShopperWA2\TechShopperWA\TechShopperBO\obj\Release\TechShopperBO.pdb

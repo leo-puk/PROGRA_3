@@ -228,7 +228,7 @@ namespace TechShopperWA.PaginasCliente
                 item.Selected = true; // Seleccionar todas al limpiar
             }
 
-            CargarProductos();
+            Response.Redirect("VistaProductosCliente.aspx");
         }
 
         protected void lnkOrdenar_Click(object sender, EventArgs e)

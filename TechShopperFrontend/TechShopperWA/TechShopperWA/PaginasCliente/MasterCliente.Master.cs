@@ -6,8 +6,10 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
+using TechShopperBO;
 using TechShopperBO.CarritosWS;
 using TechShopperBO.ClientesWS;
+using TechShopperBO.ProductosWS;
 
 //using TechShopperWA.ReferenciaCliente;
 
@@ -16,35 +18,36 @@ namespace TechShopperWA.PaginasCliente
 	public partial class MasterCliente : System.Web.UI.MasterPage
 	{
         //private clienteDTO cliente;
-        private List<carritoItemsDTO> carrito;
+        private List<carritoItemsDTOSoap> carrito;
 
         protected void Page_Init(object sender, EventArgs e)
         {
             //siempre compruebo la sesion
             if (Session["Usuario"] != null)
             {
-                var _carrito = Session["Carrito"];
-                carrito = (List<carritoItemsDTO>)_carrito;
+                // Usuario autenticado
+                divLogueado.Visible = true;
+                divNoLogueado.Visible = false;
+
+                //cada vez que carga la pagina debe poner el valor real del carrito
+                var clienteCarrito = new ClienteClient();
+                carrito = clienteCarrito.MostrarCarritoDeCliente((int)Session["IdUsuario"]);
+                Session["Carrito"] = carrito;
                 //se ha iniciado sesión
                 mostrarItemsCarrito();
+            } else
+            {
+                // Usuario autenticado
+                divLogueado.Visible = false;
+                divNoLogueado.Visible = true;
             }
 
 
         }
 		protected void Page_Load(object sender, EventArgs e)
 		{
-            ////siempre compruebo la sesion
-            //if (Session["Usuario"] != null) 
-            //{ 
             
-            //    //se ha iniciado sesión
-            //    mostrarItemsCarrito();
-            //}
-
-            
-                CargarCategorias();
-            
-		}
+        }
 
         private void mostrarItemsCarrito()
         {
@@ -73,51 +76,10 @@ namespace TechShopperWA.PaginasCliente
         {
             Session["Usuario"] = null;
             Session["Carrito"] = null;
-            Response.Redirect("VistaProductosCliente.aspx");
+            Response.Redirect("../InicionSesion/IniciarSesion.aspx");
         }
 
-        protected void CargarCategorias()
-        {
-            //string connection...
-            //    using (SqlConnection)...
-            //        select ...
-            //        while(read())...
-
-            //CARGO LA LISTA DE CATEGORÍAS DESDE EL BO
-
-            //Creo el elemento para cada categoría
-            // Simulando datos de categorías (deberías obtenerlos de tu BD)
-            var categorias = new List<Categoria>
-    {
-        new Categoria { Id = 1, Nombre = "Electrónicos" },
-        new Categoria { Id = 2, Nombre = "Computación" },
-        new Categoria { Id = 3, Nombre = "Hogar" }
-    };
-
-            foreach (var categoria in categorias)
-            {
-                var li = new HtmlGenericControl("li");
-
-                var linkButton = new LinkButton
-                {
-                    ID = $"btnCat_{categoria.Id}",
-                    Text = categoria.Nombre,
-                    CssClass = "dropdown-item",
-                    CommandArgument = categoria.Id.ToString()
-                };
-                linkButton.Click += Categoria_Click;
-
-                li.Controls.Add(linkButton);
-                menuCategorias.Controls.Add(li);
-            }
-        }
-
-
-
-
-
-
-protected void Categoria_Click(object sender, EventArgs e)
+        protected void Categoria_Click(object sender, EventArgs e)
         {
             var btn = (LinkButton)sender;
             int idCategoria = int.Parse(btn.CommandArgument);

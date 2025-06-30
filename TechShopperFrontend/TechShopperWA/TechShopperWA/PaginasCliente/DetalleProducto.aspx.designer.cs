@@ -42,15 +42,6 @@ namespace TechShopperWA.PaginasCliente
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblNombre;
 
         /// <summary>
-        /// Control lblReviews.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblReviews;
-
-        /// <summary>
         /// Control lblPrecio.
         /// </summary>
         /// <remarks>
@@ -112,14 +103,5 @@ namespace TechShopperWA.PaginasCliente
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAgregarCarrito;
-
-        /// <summary>
-        /// Control rptProductosRelacionados.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptProductosRelacionados;
     }
 }

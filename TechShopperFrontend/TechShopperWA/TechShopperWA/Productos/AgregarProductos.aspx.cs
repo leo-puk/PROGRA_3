@@ -7,7 +7,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using TechShopperBO;
+using TechShopperBO.MovimientosStockWS;
 using TechShopperBO.ProductosWS;
+using usuarioDTO = TechShopperBO.ProductosWS.usuarioDTO;
 
 
 namespace TechShopperWA
@@ -26,7 +28,7 @@ namespace TechShopperWA
             }
             if (!IsPostBack)
             {
-                ddlCategoria.DataSource = Enum.GetNames(typeof(categoriaDTO));
+                ddlCategoria.DataSource = Enum.GetNames(typeof(TechShopperBO.ProductosWS.categoriaDTO));
                 ddlCategoria.DataBind();
                 ddlCategoria.Items.Insert(0, new ListItem("-- Seleccione una categoría --", ""));
 
@@ -39,7 +41,7 @@ namespace TechShopperWA
 
                     var prod = client.ObtenerPorId(id);
 
-                    
+
 
                     if (prod != null)
                     {
@@ -53,7 +55,7 @@ namespace TechShopperWA
                         txtStockDisponible.Text = prod.stockDisponible.ToString();
                         txtStockMinimo.Text = prod.stockMinimo.ToString();
                         txtIdAdmin.Text = prod.usuario != null ? prod.usuario.idUsuario.ToString() : "";
-                        if(prod.imagenURL!= null)
+                        if (prod.imagenURL != null)
                         {
                             txtImg.Text = prod.imagenURL;
                         }
@@ -66,7 +68,7 @@ namespace TechShopperWA
                     int idAdmin = (int)Session["IdUsuario"];
                     txtIdAdmin.Text = idAdmin.ToString();
                 }
-                    
+
             }
         }
 
@@ -87,16 +89,14 @@ namespace TechShopperWA
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
-
             var client = new ProductoClient();
-
-            var prod = new productoDTO
+            var prod = new TechShopperBO.ProductosWS.productoDTO
             {
                 idProducto = string.IsNullOrEmpty(txtCodigo.Text) ? 0 : int.Parse(txtCodigo.Text),
                 nombre = txtNombre.Text,
                 descripcion = txtDescripcion.Text,
-                precio = Convert.ToDouble(txtPrecio.Text), 
-                categoria = (categoriaDTO)Enum.Parse(typeof(categoriaDTO), ddlCategoria.SelectedValue),
+                precio = Convert.ToDouble(txtPrecio.Text),
+                categoria = (TechShopperBO.ProductosWS.categoriaDTO)Enum.Parse(typeof(TechShopperBO.ProductosWS.categoriaDTO), ddlCategoria.SelectedValue),
                 marca = txtMarca.Text,
                 stockDisponible = int.Parse(txtStockDisponible.Text),
                 stockMinimo = int.Parse(txtStockMinimo.Text),
@@ -109,19 +109,30 @@ namespace TechShopperWA
 
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
-                //var clientMov = new MovimientoStockClient();
                 client.RegistrarProducto(prod);
             }
             else
             {
-                //int sisiosino = client.VerificarStock(prod.idProducto, prod.stockDisponible);
-                client.ActualizarProducto(prod);
-                /*if (sisiosino !=0)
+                var clientMov = new MovimientoStockClient();
+                var clientProd = new ProductoClient();
+
+                // Obtener el producto actual de la base de datos
+                var productoActual = clientProd.ObtenerPorId(prod.idProducto);
+                int stockAnterior = productoActual.stockDisponible;
+                int stockNuevo = prod.stockDisponible;
+
+                // Verificar si hay cambio en el stock
+                if (stockAnterior != stockNuevo)
                 {
-                    var clientMov = new MovimientoStockClient();
-                    clientMov.insertar();
-                }*/
-                
+                    int cantidad = Math.Abs(stockNuevo - stockAnterior);
+                    int hayVariacion = stockNuevo > stockAnterior ? 1 : -1; // 1 = Aumento, -1 = Disminución
+                    int idUsuario = (int)Session["IdUsuario"];
+                    int idProd = prod.idProducto;
+
+                    clientMov.RegistrarMovimiento(cantidad, idProd, idUsuario, hayVariacion);
+                }
+
+                client.ActualizarProducto(prod);
             }
 
             Response.Redirect("Productos.aspx");

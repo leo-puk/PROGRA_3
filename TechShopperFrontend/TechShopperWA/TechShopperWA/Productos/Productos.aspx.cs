@@ -22,7 +22,7 @@ namespace TechShopperWA
                 return;
             }
 
-           
+
 
             if (!IsPostBack)
             {
@@ -58,7 +58,7 @@ namespace TechShopperWA
             if (!string.IsNullOrEmpty(categoriaSeleccionada))
             {
                 productos = productos
-                    .Where(p => p.categoria.ToString()  == categoriaSeleccionada.ToUpper())
+                    .Where(p => p.categoria.ToString() == categoriaSeleccionada.ToUpper())
                     .ToList();
             }
 
@@ -93,7 +93,7 @@ namespace TechShopperWA
         {
             Response.Redirect("AgregarProductos.aspx");
         }
-        
+
         protected void btnVer_Click(object sender, EventArgs e)
         {
             var btn = (LinkButton)sender;
@@ -109,7 +109,7 @@ namespace TechShopperWA
         protected void gvProducto_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gvProducto.PageIndex = e.NewPageIndex;
-            CargarProductos(); 
+            CargarProductos();
         }
 
         protected void btnVistaClientes_Click(object sender, EventArgs e)

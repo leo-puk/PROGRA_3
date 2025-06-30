@@ -34,7 +34,7 @@ namespace TechShopperWA.InicionSesion
             }
 
             var client = new UsuarioClient();
-            var usuario = client.ObtenerAdministradorPorEmail(email); //Busca por correo
+            var usuario = client.ObtenerUsuarioPorEmail(email); //Busca por correo
 
             if (usuario != null)
             {
